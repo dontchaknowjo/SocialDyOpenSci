@@ -1,0 +1,1358 @@
+---
+title: "Supplmental Materials and Analysis"
+author: '[authors removed for anonymous review]'
+output:
+  pdf_document: 
+    toc: true
+    number_sections: true
+  html_document:
+    df_print: paged
+fontfamily: mathpazo
+fontsize: 11pt
+geometry: margin = 1in
+header-includes:
+  
+- \usepackage[left]{lineno}
+- \linenumbers
+- \usepackage{dcolumn}
+- \usepackage{caption}
+- \usepackage{float}
+- \usepackage{afterpage}
+- \usepackage{siunitx}
+- \usepackage{amsmath}
+---
+
+\newpage
+
+This is supplemental analysis and figures for the manuscript, "Beliefs about social dynamics and Open Science"
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,cache=FALSE)
+
+source("./custom_functions.R")
+
+packages<- c("afex", "vcd", "ggplot2", "likert", "lattice", "pbkrtest", "reshape2", "car",  "lme4", "effects", "lmerTest", "multcomp", "lsmeans", "Hmisc", "tidyr", "ordinal","brms","jtools","DHARMa","rstanarm","BayesFactor", "bayesplot","tidybayes", "magrittr","ggeffects","sjmisc","splines","tidyverse","bayestestR","brms","HDInterval","dplyr", "formattable","gt","tufte","tinytex","GPArotation","psych","corrplot","ltm","wordcloud","renv","performance","stringr","ggeffects","shinystan","shinybrms","brms","bayestestR","cowplot")
+
+ipak(packages)
+
+#Load Data from Study 1
+RawData1<-(read.csv("Study_1/RawData_S1.csv"))
+TEST_data_S1<-clean_data(RawData1)
+
+###just take the factors for factor analysis below
+TEST_data_warmthcompete<-dplyr::select(TEST_data_S1,c('Hierarchy':'Cooperate', 'FriendlyR':'NiceR','CapableR':'SkillfulR'))
+
+####Remove NAs
+TEST_data_warmthcompete=TEST_data_warmthcompete[complete.cases(TEST_data_warmthcompete), ]
+
+#Load Data from Study 2
+RawData2<-(read.csv("Study_2/RawData_S2.csv"))
+
+TEST_data_S2<-clean_data2(RawData2)
+
+#Load Data from Study 3
+
+```
+
+# Study 1
+
+### Frequency of scores on combined questions for each factor
+
+First we will plot the histograms for each factor, warmth, competence, hierarchy/zero-sum, cooperation/collaboration
+
+```{r, echo=FALSE,fig.align = 'center',warning=FALSE}
+
+x<-hist_functionc(TEST_data_S1,TEST_data_S1$WarmthT,"How warm are researchers \n in your field?")
+
+l<-hist_functionc(TEST_data_S1,TEST_data_S1$CompetenceT,"How competent are researchers \n in your field?")
+
+g<-hist_functionc(TEST_data_S1,TEST_data_S1$Hierarchy_ZeroSum,"How hierarchical/zero-sum \n is your field?")
+
+h<-hist_functionc(TEST_data_S1,TEST_data_S1$Cooperate_Collaborate,"How important is collabortion and \n cooperation in your field?")
+
+plot_grid(x, l,g,h, ncol = 2, nrow = 2,scale=.9)
+
+```
+
+### Frequency of Individual Answers
+
+Now we will plot the histograms of the individual items in our hierarchy/zero sum scale. Note for all plots, 5 means 'strongly agree'. However, some items were reverse coded for the factor analysis etc.
+
+```{r, echo=FALSE,fig.align = 'center',warning=FALSE}
+
+t2<-hist_functionc(TEST_data_S1,TEST_data_S1$Hierarchy,"There is a hierarchy, ranking, or pecking order \n in (participant field), and the people at the \n top have the most influence on which scholarship is valued")
+
+jun2<-hist_functionc(TEST_data_S1,6-TEST_data_S1$Junior,"In (participant field),even graduate student researchers \n  who have exciting new ideas or perspectives are \n able to influence which scholarship is valued.")
+
+NP2<-hist_functionc(TEST_data_S1,TEST_data_S1$Norms.Prestige,"The norms and best practices in (participant field) \n are decided by the highest-ranking members or most \n  prestigious researchers without much input or \n  influence from less well-known researchers.")
+
+WK2<-hist_functionc(TEST_data_S1,6-TEST_data_S1$Norms.Less.well.know,"Less well-known researchers have as much \n or more influence  on the norms \n and best practices in the field \n of (participant field) compared to prestigious or \n well-known researchers")
+
+SI2<-hist_functionc(TEST_data_S1,TEST_data_S1$Stealing.Ideas,"In order to succeed in (participant field) \n researchers must be wary of other rsearchers \n who may steal ideas or disrupt others' research")
+
+ZS2<-hist_functionc(TEST_data_S1,TEST_data_S1$Zero.Sum,"Success in (participant field) is a zero-sum game \n thainevitably has a few \n winners and many losers")
+
+Semin2<-hist_functionc(TEST_data_S1,6-TEST_data_S1$Seminar,"At a typical symposium or seminar talk in (participant field), \n graduate students and early career \n researchers ask as many questions as senior faculty.")
+
+Conf2<-hist_functionc(TEST_data_S1,TEST_data_S1$Conferences,"In (participant field), questions addressed to \n graduate students and  early career researchers \n are likely to be patronizing or hostile.")
+
+plot_grid(t2, jun2, ncol = 2, nrow = 1,scale=.9, labels=c("Hierarchy", "Junior"))
+
+plot_grid(NP2,WK2, ncol = 2, nrow = 1,scale=.9,labels=c("Norms.Prestige","Norms.less.well.known"),label_x=c(-.10,-.25))
+
+plot_grid(SI2,ZS2, ncol = 2, nrow = 1,scale=.9,labels=c("Stealing.Ideas","ZeroSum"),label_x=c(-.05,-.05))
+
+plot_grid(Semin2,Conf2, ncol = 2, nrow = 1,scale=.9,labels=c("Seminar","Conference"))
+
+#Plot the collaboration and Cooperation Items
+
+Collab2<-hist_functionc(TEST_data_S1,6-TEST_data_S1$Collaborate,"The biggest advances and the most original ideas in (participant field) \n arise from people working together collaboratively")
+
+Coop2<-hist_functionc(TEST_data_S1,6-TEST_data_S1$Cooperate,"In order to succeed in (participant field) \n researchers must Cooperate with other researchers")
+
+plot_grid(Coop2, Collab2, labels=c("Cooperate", "Collaborate"), ncol = 2, nrow = 1,scale=.9)
+
+```
+
+### KMO analysis for all questions
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+KMO_all<-KMO(r=cor(TEST_data_warmthcompete))
+bartlett_all<-cortest.bartlett(TEST_data_warmthcompete)
+
+```
+
+The KMO for the social dynamics questions is `r KMO_all[1]` which tells us whether its worth doing a factor analysis. Anything over .5, or conservatively .6 means we can do a factor analysis. Bartlett's test for sphericity also yielded a significant result (X2=`r bartlett_all[1]`,p=`r bartlett_all[2]`)
+
+### Correlation Matrix for all questions
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+#This is to plot a correlation matrix for each item
+datamatrix <- cor(TEST_data_warmthcompete)
+corrplot(datamatrix,number.cex = 0.3,addCoef.col = 1)
+```
+
+This is a correlation matrix for all items. Interestingly competence is *not* correlated with the hierarchy/competition items. The warmth items are negatively correlated with a lot of questions about hierarchy and zero-sum, which is unsurprising.
+
+## What predicts participants' perceptions of the social dynamics in their field?
+
+Below is an exploratory analysis (not pre-registered). To investigate this question we used the package brms [@bürkner2017] to fit a cumulative model, and ask whether participant's answer to, "To what extent do you identify with your field", and the number of years (log transformed) they had been in their field predict their scores on the hierarchy/zero-sum factor.
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+
+##Uncomment this if you want to run the model
+
+# formula = Hierarchy_ZeroSum~Cooperate_Collaborate+WarmthT+CompetenceT+Yearslog+Identify
+# # # 
+# fit_sd_S1 <- brm(formula, data= TEST_data_S1, save_all_pars = TRUE)
+# saveRDS(fit_sd_S1,file="fit_sd_S1.rds")
+# # 
+# fit_sd_S1_null <- brm(Hierarchy_ZeroSum ~ Cooperate_Collaborate+WarmthT+CompetenceT+Yearslog, data= TEST_data_S1, save_all_pars = TRUE)
+#saveRDS(fit_sd_S1_null,file="fit_sd_S1_null.rds")
+# 
+# fit_sd_S1_null2 <- brm(Hierarchy_ZeroSum ~ Cooperate_Collaborate+WarmthT+CompetenceT+Identify, data= TEST_data_S1, save_all_pars = TRUE)
+# saveRDS(fit_sd_S1_null2,file="fit_sd_S1_null2.rds")
+
+
+fit_sd_S1 <-readRDS(file="fit_sd_S1.rds")
+fit_sd_S1_null2 <-readRDS(file="fit_sd_S1_null2.rds")
+fit_sd_S1_null <-readRDS(file="fit_sd_S1_null.rds")
+
+BF<-bayes_factor(fit_sd_S1,fit_sd_S1_null)
+BF_1<-bayes_factor(fit_sd_S1_null2,fit_sd_S1)
+
+
+
+# Uncomment the following if you want to run and save the model
+# TEST_data_S1$Cooperate_Collaborate<-as.ordered(TEST_data_S1$Cooperate_Collaborate)
+# fit_sd_S1_Cooperate <- brm(formula = Cooperate_Collaborate ~ Hierarchy_ZeroSum+Identify+LogYears+WarmthT+CompetenceT, TEST_data_S1, save_all_pars = TRUE,family = cumulative('probit'),inits = 0)
+# 
+# saveRDS(fit_sd_S1_Cooperate,file="fit_sd_S1_Cooperate.rds")
+# 
+# fit_sd_S1_Cooperate_n <- brm( formula = Cooperate_Collaborate ~ Hierarchy_ZeroSum+Identify+WarmthT+CompetenceT, TEST_data_S1, save_all_pars = TRUE,family = cumulative('probit'),inits = 0)
+# 
+#  saveRDS(fit_sd_S1_Cooperate_n,file="fit_sd_S1_Cooperate_n.rds")
+# 
+# 
+# fit_sd_S1_Cooperate_n2 <- brm( formula = Cooperate_Collaborate ~ Hierarchy_ZeroSum+LogYears+WarmthT+CompetenceT, TEST_data_S1, save_all_pars = TRUE,family = cumulative('probit'),inits = 0)
+# 
+# saveRDS(fit_sd_S1_Cooperate_n2,file="fit_sd_S1_Cooperate_n2.rds")
+
+fit_sd_S1_Cooperate <-readRDS(file="fit_sd_S1_Cooperate.rds")
+fit_sd_S1_Cooperate_n <-readRDS(file="fit_sd_S1_Cooperate_n.rds")
+fit_sd_S1_Cooperate_n2 <-readRDS(file="fit_sd_S1_Cooperate_n2.rds")
+
+BF2<-bayes_factor(fit_sd_S1_Cooperate,fit_sd_S1_Cooperate_n)
+BF2_1<-bayes_factor(fit_sd_S1_Cooperate,fit_sd_S1_Cooperate_n2)
+
+conditional_effects(fit_sd_S1)
+conditional_effects(fit_sd_S1_Cooperate)
+```
+
+### Model Checks
+
+```{r, echo=FALSE,fig.align = 'center'}
+pp_sd<-pp_check(fit_sd_S1)
+pp_mat<-pp_check(fit_sd_S1_Cooperate)
+# pp_sd_code<-pp_check(fit_sd_data)
+# pp_sd_data<-pp_check(fit_sd_code)
+# pp_sd_instrument<-pp_check(fit_sd_instrument)
+
+plot_grid(pp_sd,pp_mat, ncol = 2, nrow = 2,scale=.9)
+```
+
+These are ok model fits. We calculated a Bayes Factor here to compare the full and null model (that does not include the number of years that a participant has been in their field). We find strong evidence that log transformed years predicts participants' score on the Hierarchical/Competitive factor (BF=`r BF[1]`), where academics that have been in their field longer think their field is less hierarchical. We also find that that log transformed years predicts whether you think Cooperation is important (BF=`r BF2[1]`). we don't find evidence that identifying with your field predicts your score on the Hierarchical/Competitive questions `r BF_1[1]` in favor of the null, but we do find evidence that how much you identify with your field predicts how much you think cooperation/collaboration is important (BF=`r BF2_1[1]`).
+
+### PD analysis
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+library(cowplot)
+
+percentage_in_rope1 <- rope(fit_sd_S1, range=c(-0.08,0.08),ci=1)
+
+rope1<-plot(percentage_in_rope1)+
+  ggplot2::labs(title = "How Hierarchical is your Field?")+xlim(-1,1)
+
+percentage_in_rope2 <- rope(fit_sd_S1_Cooperate, range=c(-0.08,0.08),ci=1)
+
+rope2<-plot(percentage_in_rope2)+
+  ggplot2::labs(title = "How important is Cooperation/Collaboration?")+xlim(-1,1)
+rope1
+rope2
+
+percentage_in_rope1$ROPE_Percentage<-(percentage_in_rope1$ROPE_Percentage)*100
+percentage_in_rope2$ROPE_Percentage<-(percentage_in_rope2$ROPE_Percentage)*100
+# percentage_in_rope3$ROPE_Percentage<-(percentage_in_rope3$ROPE_Percentage)*100
+# percentage_in_rope4$ROPE_Percentage<-(percentage_in_rope4$ROPE_Percentage)*100
+# pd2<-p_direction(fit_sd)
+# plot(pd2) 
+# pd2$pd<-((pd2$pd)*100)
+
+table3<-(percentage_in_rope1) %>%
+  gt() %>%
+   tab_header(
+    title = md("**ROPE Percentages**"),
+    subtitle=md("*How Hierarchical is your Field??*")
+  )%>%
+  cols_hide(columns=c('Effects','CI','Component',"ROPE_low","ROPE_high"))
+
+table4<-(percentage_in_rope2) %>%
+  gt() %>%
+   tab_header(
+    title = md("**ROPE Percentages**"),
+    subtitle=md("*How important is Cooperation/Collaboration?*")
+  )%>%
+  cols_hide(columns=c('Effects','CI','Component',"ROPE_low","ROPE_high"))
+
+
+
+table3
+table4
+
+```
+
+```{r, echo=FALSE,fig.align = 'center'}
+pd2<-p_direction(fit_sd_S1)
+
+p3<-plot(pd2) +
+  ggplot2::labs(title = "How Hierarchical/Competitive is your Field?")+xlim(-1,1)
+p3
+pd2
+
+pd_fit_sd_S1_Cooperate<-p_direction(fit_sd_S1_Cooperate)
+
+p3pd_sdmat<-plot(pd_fit_sd_S1_Cooperate) +
+  ggplot2::labs(title = "How important is it to cooperate?")+xlim(-1,1)
+p3pd_sdmat
+pd_fit_sd_S1_Cooperate
+
+```
+
+The 'probability of direction' analysis agrees with the Bayes Factor, and additionally finds that the more you think people in your field are warm, the less you think it is hierarchical/zero-sum. Moreover, the more you think others in your field are competent the more you endorse the questions about cooperation and collaboration.
+
+### Frequentist Model
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+#How do number of years and identity correlate
+
+x<-lm(Hierarchy_ZeroSum~Cooperate_Collaborate+WarmthT+CompetenceT+Yearslog+Identify, data=TEST_data_S1)
+
+p<-summary(x)
+p.n<-p[4]
+p.n<-as.numeric(unlist(p.n))
+
+y<-lm(Cooperate_Collaborate~Hierarchy_ZeroSum+WarmthT+CompetenceT+Yearslog+Identify, data=TEST_data_S1)
+
+q<-summary(y)
+
+q.n<-q[4]
+q.n<-as.numeric(unlist(q.n))
+
+
+```
+
+The frequentist tests agree with the Bayesian analysis. We find that the number of years a person has been in academia negatively correlates with how much they see collaboration and cooperation as important (*p*= `r p.n[23]`). We also find that the more you see people in your field as warm the less hierarchical/zero-sum you see it (*p*= `r p.n[21]`).
+
+Next we asked what predicted people's answers to the Cooperation and Collaboration questions. We found that the number of years a person has been in academia negatively correlates with how important a person thinks collaboration and cooperation is in their field (*p*= `r q.n[23]`). We also found that the more a participant said that people in their field were competent, the more important they thought collaboration and cooperation were (*p*= `r q.n[22]`). Finally the more someone said they identified with their field the more they thought that collaboration and cooperation were important (*p*= `r q.n[24]`)
+
+## Study 1: Survey items
+
+This is the text of the questions and how they load onto factors.
+
+**The following items load onto the hierarchy/zero-sum factor:**
+
+*In order to succeed in (participant field) researchers must be wary of other researchers who may try to steal ideas or disrupt others' research.* *Success in (participant field) is a zero-sum game that inevitably has a few winners and many losers.* *There is a hierarchy, ranking, or pecking order in (participant field), and the people at the top have the most influence on which scholarship is valued.* *In (participant field), even graduate student researchers who have exciting new ideas or perspectives are able to influence which scholarship is valued.* *The norms and best practices in (participant field) are decided by the highest-ranking members or most prestigious researchers without much input or influence from less well-known researchers.* *Less well-known researchers have as much or more influence on the norms and best practices in the field of (participant field) compared to prestigious or well-known researchers.* *At a typical symposium or seminar talk in (participant field), graduate students and early career researchers ask as many questions as senior faculty.* *In (participant field), questions addressed to graduate students and early career researchers are likely to be patronizing or hostile.*
+
+**The other two load onto the Cooperation/Collaboration factor (though a bit badly)** *"The biggest advances and the most original ideas in (participant field) arise from people working together collaboratively"* *"In order to succeed in (participant field) researchers must cooperate with other researchers."*
+
+# Study 2
+
+## Social Dynamics
+
+### Frequency of Answers to all questions
+
+```{r, echo=FALSE,fig.align = 'center',warning=FALSE}
+
+g<-hist_functionc(TEST_data_S1,TEST_data_S1$Hierarchy_ZeroSum,"How hierarchical/zero-sum \n is your field?")
+
+h<-hist_functionc(TEST_data_S1,TEST_data_S1$Cooperate_Collaborate,"How important is collabortion and \n cooperation in your field?")
+
+plot_grid(g,h, ncol = 2, nrow = 1,scale=.9)
+
+```
+
+```{r, echo=FALSE,fig.align = 'center',warning=FALSE}
+
+t2<-hist_functionc(TEST_data_S2,TEST_data_S2$Hierarchy,"There is a hierarchy, ranking, or pecking order \n in (participant field), and the people at the \n top have the most influence on which scholarship is valued")
+
+jun2<-hist_functionc(TEST_data_S2,6-TEST_data_S2$Junior,"In (participant field),even graduate student researchers \n  who have exciting new ideas or perspectives are \n able to influence which scholarship is valued.")
+
+NP2<-hist_functionc(TEST_data_S2,TEST_data_S2$Norms.Prestige,"The norms and best practices in (participant field) \n are decided by the highest-ranking members or most \n  prestigious researchers without much input or \n  influence from less well-known researchers.")
+
+WK2<-hist_functionc(TEST_data_S2,6-TEST_data_S2$Norms.Less.well.know,"Less well-known researchers have as much \n or more influence  on the norms \n and best practices in the field \n of (participant field) compared to prestigious or \n well-known researchers")
+
+SI2<-hist_functionc(TEST_data_S2,TEST_data_S2$Stealing.Ideas,"In order to succeed in (participant field) \n researchers must be wary of other rsearchers \n who may steal ideas or disrupt others' research")
+
+ZS2<-hist_functionc(TEST_data_S2,TEST_data_S2$Zero.Sum,"Success in (participant field) is a zero-sum game \n thainevitably has a few \n winners and many losers")
+
+Semin2<-hist_functionc(TEST_data_S2,6-TEST_data_S2$Seminar,"At a typical symposium or seminar talk in (participant field), \n graduate students and early career \n researchers ask as many questions as senior faculty.")
+
+Conf2<-hist_functionc(TEST_data_S2,TEST_data_S2$Conferences,"In (participant field), questions addressed to \n graduate students and  early career researchers \n are likely to be patronizing or hostile.")
+
+plot_grid(t2, jun2, ncol = 2, nrow = 1,scale=.9, labels=c("Hierarchy", "Junior"))
+
+plot_grid(NP2,WK2, ncol = 2, nrow = 1,scale=.9,labels=c("Norms.Prestige","Norms.less.well.known"),label_x=c(-.10,-.25))
+
+plot_grid(SI2,ZS2, ncol = 2, nrow = 1,scale=.9,labels=c("Stealing.Ideas","ZeroSum"),label_x=c(-.05,-.05))
+
+plot_grid(Semin2,Conf2, ncol = 2, nrow = 1,scale=.9,labels=c("Seminar","Conference"))
+
+#Plot the collaboration and Cooperation Items
+
+Collab2<-hist_functionc(TEST_data_S2,TEST_data_S2$Collaborate,"The biggest advances and the most original ideas in (participant field) \n arise from people working together collaboratively")
+
+Coop2<-hist_functionc(TEST_data_S2,TEST_data_S2$Cooperate,"In order to succeed in (participant field) \n researchers must Cooperate with other researchers")
+
+plot_grid(Coop2, Collab2, labels=c("Cooperate", "Collaborate"), ncol = 2, nrow = 1,scale=.9)
+
+```
+
+### Correlation plot
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+#This is making a new data frames, that has each of the values
+TEST_data_hiercomp<- dplyr::select(TEST_data_S2, c('Hierarchy':'Cooperate'))
+                             
+#Remove rows with missing values and keep only complete cases
+TEST_data_hiercomp_cut=TEST_data_hiercomp[complete.cases(TEST_data_hiercomp), ]
+
+#This is to plot a correlation matrix for each item
+datamatrix <- cor(TEST_data_hiercomp_cut)
+corrplot(datamatrix,number.cex = 0.5,addCoef.col = 1)
+
+
+```
+
+### KMO
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+
+KMO_hiercomp<-KMO(r=cor(TEST_data_hiercomp_cut))
+bartlett_hiercomp<-cortest.bartlett(TEST_data_hiercomp_cut)
+
+```
+
+The KMO for the social dynamics questions is `r KMO_hiercomp[1]` which tells us whether its worth doing a factor analysis. Anything over .5, or conservatively .6 means we can do a factor analysis. Bartlett's test for sphericity also yielded a significant result (X2=`r bartlett_hiercomp[1]`,p=`r bartlett_hiercomp[2]`)
+
+## Plans to implement open science and opinions about importance
+
+### Frequency of Answers
+
+```{r, echo=FALSE,fig.align = 'center',warning=FALSE}
+#histogram of Plans to share MS
+hisplans2<-hist_functionc(TEST_data_S2,TEST_data_S2$plan_MS+1,"For the next piece of research that I publish,\n I plan to publicly share the manuscript/preprint.")
+
+hisplans_code2<-hist_functionc(TEST_data_S2,TEST_data_S2$plan_code+1,"For the next piece of research that I publish,\n I plan to publicly share the code.")
+
+hisplans_data2<-hist_functionc(TEST_data_S2,TEST_data_S2$plan_data+1,"For the next piece of research that I publish,\n I plan to publicly share the data.")
+
+hisplans_instrument2<-hist_functionc(TEST_data_S2,TEST_data_S2$plan_instrument+1,"For the next piece of research that I publish,\n I plan to publicly share the stimuli/instrument.")
+
+hisplans_imp_man2<-hist_functionc(TEST_data_S2,TEST_data_S2$important_manuscripts+1,"It is important that researchers in my field share their manuscripts.")
+
+hisplans_imp_mat2<-hist_functionc(TEST_data_S2,TEST_data_S2$important_materials+1,"It is important that researchers in my field share their materials.")
+
+
+
+
+title_gg <- ggplot() + 
+  labs(title = "Plans to Share")
+
+gridded<-plot_grid(hisplans2,hisplans_code2,hisplans_instrument2,hisplans_data2, ncol = 2, nrow = 2,scale=.9)
+
+plot_grid(title_gg, gridded, ncol = 1, rel_heights = c(0.15, 1))
+
+title_gg2 <- ggplot() + 
+  labs(title = "Importance of Sharing")
+
+gridded2<-plot_grid(hisplans_imp_mat2,hisplans_imp_man2,hisplans_data2, ncol = 2, nrow = 1,scale=.9)
+
+plot_grid(title_gg2, gridded2, ncol = 1, rel_heights = c(0.15, 1))
+
+
+
+```
+
+Most people who took this survey have plans to share their manuscript and materials, and think it is important to do so. This was not a representative sample. When we analyze the representative sample we will ask whether there is an effect of population on these answers, to test whether, for example those who opt in to a survey like this are more likely to support open science.
+
+### Correlation plot
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+#First create a dataframe that only has the plans and importance questions
+TEST_data_plans_importance<- dplyr::select(TEST_data_S2, c('plan_MS', 'plan_data', 'plan_code', 'plan_instrument','important_manuscripts', 'important_materials'))
+TEST_data_plans_importance_cut=TEST_data_plans_importance[complete.cases(TEST_data_plans_importance), ]
+
+datamatrix_plans <- cor(TEST_data_plans_importance_cut)
+corrplot(datamatrix_plans,number.cex = 0.8,addCoef.col = 1, order = 'hclust',)
+
+
+```
+
+All items are correlated. However, there are stronger correlations within questions about materials (data, code, instrument, materials) compared to manuscripts (MS).
+
+### KMO
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+KMO_plans<-KMO(r=cor(TEST_data_plans_importance_cut))
+bartlett_plans<-cortest.bartlett(TEST_data_plans_importance_cut)
+
+```
+
+Based on the KMO and Bartlett's test, doing a factor analysis is acceptable (MSA= `r KMO_plans[1]` ) Bartlett's test for sphericity also yielded a significant result (X2=`r bartlett_plans[1]`,p=`r bartlett_plans[2]`)
+
+## Motivations for engaging in Open Science
+
+### Frequency of answers to individual questions
+
+```{r, echo=FALSE,fig.align = 'center', warning=FALSE}
+
+#plot of histograms about whether people are motivated by encouragement or requirements from Insitution/Funders ##########
+
+hisO_MSreq2<-hist_functionc(TEST_data_S2,TEST_data_S2$other_MS_require,"Other\n MS")
+hisS_MSreq2<-hist_functionc(TEST_data_S2,TEST_data_S2$self_MS_require,"Self\n MS")
+hisO_Matreq2<-hist_functionc(TEST_data_S2,TEST_data_S2$other_materials_require,"Other\n Materials")
+hisS_Matreq2<-hist_functionc(TEST_data_S2,TEST_data_S2$self_materials_require,"Self\n Materials")
+
+title_gg_req <- ggplot() + 
+  labs(title = "Requirements or encouragement from funders/Institution")
+
+gridded_req<-plot_grid(hisO_MSreq2,hisS_MSreq2,hisO_Matreq2,hisS_Matreq2, ncol = 2, nrow = 2,scale=.9)
+
+plot_grid(title_gg_req, gridded_req, ncol = 1, rel_heights = c(0.15, 1))
+
+###***#plot of histograms about whether people are motivated by encouragement by PI ##########
+
+hisO_MSlab2<-hist_functionc(TEST_data_S2,TEST_data_S2$other_MS_lab,"Other\n MS")
+hisS_MSlab2<-hist_functionc(TEST_data_S2,TEST_data_S2$self_MS_lab,"Self\n MS")
+hisO_Matlab2<-hist_functionc(TEST_data_S2,TEST_data_S2$other_materials_lab,"Other\n Materials")
+hisS_Matlab2<-hist_functionc(TEST_data_S2,TEST_data_S2$self_materials_lab,"Self\n Materials")
+
+
+title_gg_lab <- ggplot() + 
+  labs(title = "Requirements or encouragement from the P.I. of lab")
+
+gridded_lab<-plot_grid(hisO_MSlab2,hisS_MSlab2,hisO_Matlab2,hisS_Matlab2, ncol = 2, nrow = 2,scale=.9)
+
+plot_grid(title_gg_lab, gridded_lab, ncol = 1, rel_heights = c(0.15, 1))
+
+ 
+ ###***#plot of histograms about whether people are motivated by prestige ##########
+hisO_MSprest2<-hist_functionc(TEST_data_S2,TEST_data_S2$other_MS_prestige,"Other\n MS")
+hisS_MSprest2<-hist_functionc(TEST_data_S2,TEST_data_S2$self_MS_prestige,"Self\n MS")
+hisO_Matprest2<-hist_functionc(TEST_data_S2,TEST_data_S2$other_materials_prestige,"Other\n Materials")
+hisS_Matprest2<-hist_functionc(TEST_data_S2,TEST_data_S2$self_materials_prestige,"Self\n Materials")
+
+
+title_gg_prest <- ggplot() + 
+  labs(title = "Personal benefits such as prestige or citations.")
+
+gridded_prest<-plot_grid(hisO_MSprest2,hisS_MSprest2,hisO_Matprest2,hisS_Matprest2, ncol = 2, nrow = 2,scale=.9)
+
+plot_grid(title_gg_prest, gridded_prest, ncol = 1, rel_heights = c(0.15, 1))
+
+#plot of histograms about whether people are motivated to cooperate with others ##########
+hisO_MScooper2<-hist_functionc(TEST_data_S2,TEST_data_S2$other_MS_cooper,"Other\n MS")
+hisS_MScooper2<-hist_functionc(TEST_data_S2,TEST_data_S2$self_MS_cooper,"Self\n MS")
+hisO_Matcooper2<-hist_functionc(TEST_data_S2,TEST_data_S2$other_materials_cooper,"Other\n Materials")
+hisS_Matcooper2<-hist_functionc(TEST_data_S2,TEST_data_S2$self_materials_cooper,"Self\n Materials")
+
+
+title_gg_cooper <- ggplot() + 
+  labs(title = "Benefits for (participant field), such as for other researchers \nwho may be able to use the materials for their own work, \nor to encourage scientific progress in the field.")
+
+title_gg_cooper<-title_gg_cooper
+
+gridded_cooper<-plot_grid(hisO_MScooper2,hisS_MScooper2,hisO_Matcooper2,hisS_Matcooper2, ncol = 2, nrow = 2,scale=.9)
+
+plot_grid(title_gg_cooper, gridded_cooper, ncol = 1, rel_heights = c(0.2, 1))
+
+
+############# Benefits for public ##########
+hisO_MSpublic2<-hist_functionc(TEST_data_S2,TEST_data_S2$other_MS_public,"Other\n MS")
+hisS_MSpublic2<-hist_functionc(TEST_data_S2,TEST_data_S2$self_MS_public,"Self\n MS")
+hisO_Matpublic2<-hist_functionc(TEST_data_S2,TEST_data_S2$other_materials_public,"Other\n Materials")
+hisS_Matpublic2<-hist_functionc(TEST_data_S2,TEST_data_S2$self_materials_public,"Self\n Materials")
+
+title_gg_public <- ggplot() + 
+  labs(title = "Benefits for the public, such as increase in public trust of science, or downstream benefits \nof having reliable or reproducible science.")
+
+title_gg_public<-title_gg_public+theme(plot.title = element_text(size = 13))  
+gridded_public<-plot_grid(hisO_MSpublic2,hisS_MSpublic2,hisO_Matpublic2,hisS_Matpublic2, ncol = 2, nrow = 2,scale=.9)
+
+plot_grid(title_gg_public, gridded_public, ncol = 1, rel_heights = c(0.17, 1))
+
+
+```
+
+### Correlation Plots
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+#First create a dataframe that only has the plans and importance questions
+TEST_data_reasons_all<- dplyr::select(TEST_data_S2, c('other_MS_require':'self_materials_lab'))
+TEST_data_reasons_all_cut=TEST_data_reasons_all[complete.cases(TEST_data_reasons_all), ]
+
+#This is to plot a correlation matrix for each item
+datamatrix_reasons_all <- cor(TEST_data_reasons_all_cut)
+#corrplot(datamatrix_reasons_all,number.cex = 0.5,addCoef.col = .1)
+corrplot(datamatrix_reasons_all, order = 'hclust',number.cex = 0.8)
+
+```
+
+### KMO
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+KMO_reasons<-KMO(r=cor(TEST_data_reasons_all_cut))
+
+bartlett_reasons<-cortest.bartlett(TEST_data_reasons_all_cut)
+```
+
+Based on the KMO and Bartlett's test, doing a factor analysis is acceptable (MSA= `r KMO_plans[1]` ) Bartlett's test for sphericity also yielded a significant result (X2=`r bartlett_reasons[1]`,p=`r bartlett_reasons[2]`)
+
+### Model Check
+
+```{r, echo=FALSE,fig.align = 'center'}
+fit_reasons <-readRDS(file="fit_reasons.rds")
+pp_check(fit_reasons)
+```
+
+## What predicts participants' perceptions of the social dynamics in their field?
+
+### Model: What predicts participants' perceptions of the social dynamics in their field?
+
+We used the package brms [@bürkner2017] to ask whether there are effects of how much people identify with their field and the number of years they have been in their field on whether they see their field as hierarchical/zero-sum and whether the participants were answering about themselves or others.
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+
+
+##Uncomment this if you want to run the model
+
+
+# formula = Hierarchy_ZeroSum ~ Identify+LogYears
+# # 
+# fit_sd_pre <- brm(formula, data= TEST_data_S2, save_all_pars = TRUE)
+# 
+# fit_sd_pre_null <- brm(Hierarchy_ZeroSum ~ Identify, data= TEST_data_S2, save_all_pars = TRUE)
+# saveRDS(fit_sd_pre_null,file="fit_sd_pre_null.rds")
+
+# fit_sd_pre_null2 <- brm(Hierarchy_ZeroSum ~ LogYears, data= TEST_data_S2, save_all_pars = TRUE)
+# saveRDS(fit_sd_pre_null2,file="fit_sd_pre_null2.rds")
+
+fit_sd_pre <-readRDS(file="fit_sd_pre.rds")
+fit_sd_pre_null2 <-readRDS(file="fit_sd_pre_null2.rds")
+fit_sd_pre_null <-readRDS(file="fit_sd_pre_null.rds")
+
+BF<-bayes_factor(fit_sd_pre,fit_sd_pre_null)
+BF_1<-bayes_factor(fit_sd_pre_null2,fit_sd_pre)
+# # # 
+
+# # # 
+# saveRDS(fit_sd_pre,file="fit_sd_pre.rds")
+
+# ##Or load this if you do not want to run the model
+
+
+# Uncomment the following if you want to run and save the model
+# fit_sd_pre_Cooperate <- brm( formula = Cooperate ~ Identify+LogYears, TEST_data_S2 save_all_pars = TRUE,family = cumulative('probit'),inits = 0)
+# # # # # 
+ # saveRDS(fit_sd_pre_Cooperate,file="fit_sd_pre_Cooperate.rds")
+#Or load this:
+fit_sd_pre_Cooperate <-readRDS(file="fit_sd_pre_Cooperate.rds")
+
+# fit_sd_pre_Cooperate_n <- brm( formula = Cooperate ~ Identify, TEST_data_S2 save_all_pars = TRUE,family = cumulative('probit'),inits = 0)
+# # # # # # 
+#  saveRDS(fit_sd_pre_Cooperate_n,file="fit_sd_pre_Cooperate_n.rds")
+fit_sd_pre_Cooperate_n <-readRDS(file="fit_sd_pre_Cooperate_n.rds")
+
+# fit_sd_pre_Cooperate_n2 <- brm( formula = Cooperate ~ LogYears, TEST_data_S2 save_all_pars = TRUE,family = cumulative('probit'),inits = 0)
+# # # # # # # 
+# saveRDS(fit_sd_pre_Cooperate_n2,file="fit_sd_pre_Cooperate_n2.rds")
+
+fit_sd_pre_Cooperate_n2 <-readRDS(file="fit_sd_pre_Cooperate_n2.rds")
+
+BF2<-bayes_factor(fit_sd_pre_Cooperate,fit_sd_pre_Cooperate_n)
+BF2_1<-bayes_factor(fit_sd_pre_Cooperate,fit_sd_pre_Cooperate_n2)
+
+marginal_effects(fit_sd_pre)
+marginal_effects(fit_sd_pre_Cooperate)
+```
+
+### Model Check: What predicts participants' perceptions of the social dynamics in their field?
+
+```{r, echo=FALSE,fig.align = 'center'}
+pp_sd<-pp_check(fit_sd_pre)
+pp_mat<-pp_check(fit_sd_pre_Cooperate)
+# pp_sd_code<-pp_check(fit_sd_data)
+# pp_sd_data<-pp_check(fit_sd_code)
+# pp_sd_instrument<-pp_check(fit_sd_instrument)
+
+plot_grid(pp_sd,pp_mat, ncol = 2, nrow = 2,scale=.9)
+```
+
+We calculated a Bayes Factor here to compare the full and null model (that does not include the number of years that a participant has been in their field). We find strong evidence that log transformed years predicts participants' score on the Hierarchical/Competitive factor (BF=`r BF[1]`), where academics that have been in their field longer think their field is less hierarchical. We also find that that log transformed years predicts whether you think Cooperation is important (BF=`r BF2[1]`). we don't find evidence that identifying with your field predicts your score on the Hierarchical/Competitive questions `r BF_1[1]` in favor of the null nor do we find evidence that how much you identify with your field predicts how much you think Cooperation is important (BF=`r BF2_1[1]`).
+
+### ROPE and pd analysis: What predicts participants' perceptions of the social dynamics in their field?
+
+Next we will ask about effects. We will use the ROPE method to test whether the effects land within a null region, which would suggest they don't have an effect on the outcome variable.
+
+```{r, echo=FALSE,fig.align = 'center'}
+library(cowplot)
+
+percentage_in_rope1 <- rope(fit_sd_pre, range=c(-0.08,0.08),ci=1)
+
+rope1<-plot(percentage_in_rope1)+
+  ggplot2::labs(title = "How Hierarchical is your Field?")+xlim(-1,1)
+
+percentage_in_rope2 <- rope(fit_sd_pre_Cooperate, range=c(-0.08,0.08),ci=1)
+
+rope2<-plot(percentage_in_rope2)+
+  ggplot2::labs(title = "Is Collaboration Important?")+xlim(-1,1)
+rope1
+rope2
+
+percentage_in_rope1$ROPE_Percentage<-(percentage_in_rope1$ROPE_Percentage)*100
+percentage_in_rope2$ROPE_Percentage<-(percentage_in_rope2$ROPE_Percentage)*100
+# percentage_in_rope3$ROPE_Percentage<-(percentage_in_rope3$ROPE_Percentage)*100
+# percentage_in_rope4$ROPE_Percentage<-(percentage_in_rope4$ROPE_Percentage)*100
+# pd2<-p_direction(fit_sd)
+# plot(pd2) 
+# pd2$pd<-((pd2$pd)*100)
+
+table3<-(percentage_in_rope1) %>%
+  gt() %>%
+   tab_header(
+    title = md("**ROPE Percentages**"),
+    subtitle=md("*Do you plan to share your manuscript?*")
+  )%>%
+  cols_hide(columns=c('Effects','CI','Component',"ROPE_low","ROPE_high"))
+
+table4<-(percentage_in_rope2) %>%
+  gt() %>%
+   tab_header(
+    title = md("**ROPE Percentages**"),
+    subtitle=md("*Do you plan to share your materials?*")
+  )%>%
+  cols_hide(columns=c('Effects','CI','Component',"ROPE_low","ROPE_high"))
+
+
+
+table3
+table4
+
+```
+
+```{r, echo=FALSE,fig.align = 'center'}
+pd2<-p_direction(fit_sd_pre)
+
+p3<-plot(pd2) +
+  ggplot2::labs(title = "How Hierarchical/Competitive is your Field?")+xlim(-1,1)
+p3
+pd2
+
+pd_fit_sd_pre_Cooperate<-p_direction(fit_sd_pre_Cooperate)
+
+p3pd_sdmat<-plot(pd_fit_sd_pre_Cooperate) +
+  ggplot2::labs(title = "How important is it to cooperate?")+xlim(-1,1)
+p3pd_sdmat
+pd_fit_sd_pre_Cooperate
+
+```
+
+This is strange -- usually the outputs for the probability of direction analyses agree with ROPE. Both the Bayes Factor and the pd agree that the variables have an effect, but the ROPE analysis does not. Annoying!
+
+### Frequentist: What predicts participants' perceptions of the social dynamics in their field?
+
+```{r, echo=FALSE,fig.align = 'center'}
+formula = Hierarchy_ZeroSum ~ Identify+LogYears
+# # 
+fit_sd_pre_freq <- lm(Hierarchy_ZeroSum ~ Identify+LogYears, data= TEST_data_S2)
+summary(fit_sd_pre)
+
+TEST_data_S2$Collaboratef<-ordered(factor(TEST_data_S2$Collaborate))
+TEST_data_S2$Coooperatef<-ordered(factor(TEST_data_S2$Cooperate))
+fit_sd_preC_freq <- clm(Coooperatef ~ Identify+LogYears, data= TEST_data_S2)
+summary(fit_sd_preC_freq)
+```
+
+The frequentist tests show an effect of LogYears on participants' Hierarchy ratings, and a marginal effect of the extent participants Identify with their field on whether they think its important to cooperate.
+
+## Perceptions of social dynamics and open science practices attitudes
+
+### Plans: Do participants' ideas about social dynamics correlate with whether they plan to share their manuscript or materials?
+
+#### Model Check
+
+```{r, echo=FALSE,fig.align = 'center'}
+fit_sd <-readRDS(file="fit_sd.rds")
+pp_sd<-pp_check(fit_sd)
+
+fit_sd_materials <-readRDS(file="fit_sd_materials.rds")
+pp_mat<-pp_check(fit_sd_materials)
+
+# pp_sd_code<-pp_check(fit_sd_data)
+
+# pp_sd_data<-pp_check(fit_sd_code)
+
+# pp_sd_instrument<-pp_check(fit_sd_instrument)
+
+plot_grid(pp_sd,pp_mat, ncol = 2, nrow = 2,scale=.9)
+```
+
+This model check looks good.
+
+#### Manuscripts
+
+Next we will ask about effects. We will use the ROPE method to test whether the effects land within a null region, which would suggest they don't have an effect on the outcome variable.
+
+```{r, echo=FALSE,fig.align = 'center',echo=FALSE,warnings=FALSE}
+
+ROPEC(fit_sd,"Do you plan to share your next manuscript?")
+
+plot(rope(fit_sd),range=c(-0.1,0.1),ci=1)+
+  ggplot2::labs(title = "Do you plan to share your next manuscript?")+xlim(-1,1)
+
+```
+
+```{r, echo=FALSE,fig.align = 'center'}
+pd2<-p_direction(fit_sd)
+
+p3<-plot(pd2) +
+  ggplot2::labs(title = "Do you plan to share MS?")+xlim(-1,1)
+pd2
+p3
+
+
+```
+
+These analyses suggests a small amount of evidence that how strongly someone identifies with the field affects whether they plan to share their manuscript.
+
+#### Materials
+
+```{r, echo=FALSE,fig.align = 'center',echo=FALSE,warnings=FALSE}
+
+ROPEC(fit_sd_materials,"Do you plan to share materials?")
+
+plot(rope(fit_sd_materials),range=c(-0.1,0.1),ci=1)+
+  ggplot2::labs(title = "Do you plan to share materials?")+xlim(-1,1)
+
+pd_sdmat<-p_direction(fit_sd_materials)
+
+p3pd_sdmat<-plot(pd_sdmat) +
+  ggplot2::labs(title = "Do you plan to share materials?")+xlim(-1,1)
+p3pd_sdmat
+```
+
+However none of the other factors influences participants' plans to share materials. Now we will ask whether participants' perception of social dynamics affects their views about whether its important to share manuscripts and materials.
+
+### Importance: Do participants' ideas about social dynamics correlate with whether they think its important to share manuscript or materials?
+
+### Model Check
+
+```{r, echo=FALSE,fig.align = 'center'}
+fit_sd_impMS <-readRDS(file="fit_sd_impMS.rds")
+fit_sd_imp_mat <-readRDS(file="fit_sd_imp_mat.rds")
+
+pp_impMS<- pp_check(fit_sd_impMS)
+pp_imp_mat<- pp_check(fit_sd_imp_mat)
+
+
+plot_grid(pp_impMS,pp_imp_mat, ncol = 2, nrow = 1,scale=.9)
+```
+
+#### Manuscripts
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+ROPEC(fit_sd_impMS,"How important is it to share manuscripts?")
+
+plot(rope(fit_sd_impMS),range=c(-0.1,0.1),ci=1)+
+  ggplot2::labs(title = "How important is it to share manuscripts?")+xlim(-1,1)
+
+
+
+```
+
+```{r, echo=FALSE,fig.align = 'center'}
+pdfit_sd_impMS<-p_direction(fit_sd_impMS)
+
+p3fit_sd_impMS<-plot(pdfit_sd_impMS) +
+  ggplot2::labs(title = "How important is it to share manuscripts?")+xlim(-1,1)
+p3fit_sd_impMS
+
+
+```
+
+These analyses suggest that none of the factors correlated with participants' answers on whether it was important to share manuscripts.
+
+#### Materials
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+
+ROPEC(fit_sd_imp_mat,"How important is it \n to share Materials?")
+
+plot(rope(fit_sd_imp_mat),range=c(-0.1,0.1),ci=1)+
+  ggplot2::labs(title = "How important is it \n to share Materials?")+xlim(-1,1)
+
+pd_fit_sd_imp_mat<-p_direction(fit_sd_imp_mat)
+
+p3fit_sd_imp_mat<-plot(pd_fit_sd_imp_mat) +
+  ggplot2::labs(title = "How important is it \n to share Materials?")+xlim(-1,1)
+p3fit_sd_imp_mat
+```
+
+Likewise, none of the factors correlated with participants' answers on whether it was important to share materials.
+
+## Motivations and open science practices/attitudes
+
+### Plans: Do participants' ideas about motivations correlate with whether they plan to share manuscript or materials?
+
+#### Model Check
+
+```{r, echo=FALSE,fig.align = 'center'}
+fit_reasons_MS <-readRDS(file="fit_reasons_MS.rds")
+fit_reasons_Mat <-readRDS(file="fit_reasons_Mat.rds")
+
+
+pp_reasons_MS<-pp_check(fit_reasons_MS)
+pp_reasons_mat<-pp_check(fit_reasons_Mat)
+
+
+plot_grid(pp_reasons_MS,pp_reasons_mat, ncol = 2, nrow = 1,scale=.9)
+```
+
+#### Manuscripts
+
+```{r, echo=FALSE,fig.align = 'center'}
+library(cowplot)
+
+ROPEC(fit_reasons_MS,"Do you plan to share your next manuscript?")
+plot(rope(fit_reasons_MS),range=c(-0.1,0.1),ci=1)+
+  ggplot2::labs(title = "Do you plan to share your next manuscript?")+xlim(-1,1)
+
+
+```
+
+```{r, echo=FALSE,fig.align = 'center'}
+pdfit_reasons_MS<-p_direction(fit_reasons_MS)
+
+p3fit_reasons_MS<-plot(pdfit_reasons_MS) +
+  ggplot2::labs(title = "Do you plan to share your next manuscript?")+xlim(-1,1)
+
+pdfit_reasons_MS
+p3fit_reasons_MS
+
+```
+
+Based on these analyses, it seems that participants' answers about whether others and themselves share for the public good predicts their answers as to whether they plan to share manuscripts. Surprisingly higher endorsement that themselves or others share for the public good corresponds to lower importance attributed to this behavior. The two cooperation questions marginally predict people's answers. The more you say you and others share their manuscripts to cooperate with others, the more you say you plan to share manuscripts. Finally, the more you say you identify with your field the more you say you plan to share your manuscript. People who say they and others share their manuscript because of the public good are less likely to say that they will share their manuscript. The more someone identifies with their the field, the more they say they will publicly share their manuscript. Finally, both the ROPE and pd analyses agree that there are smaller effects of saying you or others share their manuscript to cooperate with others -- which predicts that participants will be more likely to say they will share their next manuscript.
+
+#### Materials
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+ROPEC(fit_reasons_Mat,"Do you plan to share materials for your next manuscript?")
+
+plot(rope(fit_reasons_Mat),range=c(-0.1,0.1),ci=1)+
+  ggplot2::labs(title = "Do you plan to share  materials for your next manuscript?")+xlim(-1,1)
+
+pd_fit_reasons_Mat<-p_direction(fit_reasons_Mat)
+
+p3fit_reasons_Mat<-plot(pd_fit_reasons_Mat) +
+  ggplot2::labs(title = "Plan to share Materials")+xlim(-1,1)
+p3fit_reasons_Mat
+```
+
+For materials, we find evidence that the more you say yourself and others share materials because of requirements/encouragement from the P.I. of their lab, the more likely they are to say they will share their materials. The more they say others (but not themselves) share to cooperate with other researchers the more likely they are to say they will share their materials.
+
+### Importance: Do participants' motivations for sharing or their ideas about other participants' motivations correlate with whether they think its important to share?
+
+#### Model Check
+
+```{r, echo=FALSE,fig.align = 'center'}
+fit_reasons_MS_imp <-readRDS(file="fit_reasons_MS_imp.rds")
+fit_reasons_Mat_imp <-readRDS(file="fit_reasons_Mat_imp.rds")
+
+pp_reasons_MS_imp<-pp_check(fit_reasons_MS_imp)
+pp_reasons_mat_imp<-pp_check(fit_reasons_Mat_imp)
+
+plot_grid(pp_reasons_MS_imp,pp_reasons_mat_imp, ncol = 2, nrow = 1,scale=.9)
+```
+
+#### Manuscripts
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+ROPEC(fit_reasons_MS_imp,"How important is it to share manuscripts?")
+plot(rope(fit_reasons_MS_imp),range=c(-0.1,0.1),ci=1)+
+  ggplot2::labs(title = "How important is it to share manuscripts?")+xlim(-1,1)
+
+
+```
+
+```{r, echo=FALSE,fig.align = 'center'}
+pdfit_reasons_MS_imp<-p_direction(fit_reasons_MS_imp)
+
+p3fit_reasons_MS_imp<-plot(pdfit_reasons_MS_imp) +
+  ggplot2::labs(title = "How important is it to share manuscripts?")+xlim(-1,1)
+
+pdfit_reasons_MS_imp
+p3fit_reasons_MS_imp
+
+
+```
+
+Based on these analyses, there are marginal effects of the two cooperation factors on whether people think its important to share manuscripts with the public. The more that they say others and themselves do it to cooperate with other researchers, the more likely they are to say its important.
+
+#### Materials
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+ROPEC(fit_reasons_Mat_imp,"How important is it to share materials?")
+plot(rope(fit_reasons_Mat_imp),range=c(-0.1,0.1),ci=1)+
+  ggplot2::labs(title = "How important is it to share materials?")+xlim(-1,1)
+
+
+pd_fit_reasons_Mat_imp<-p_direction(fit_reasons_Mat_imp)
+
+p3fit_reasons_Mat_imp<-plot(pd_fit_reasons_Mat_imp) +
+  ggplot2::labs(title = "How important is it to share materials?")+xlim(-1,1)
+p3fit_reasons_Mat_imp
+```
+
+For materials, the more you say you share materials to cooperate with other researchers the more important you say it is to share materials.
+
+## Interactions between perceptions of social dynamics and motivations
+
+### Plans: Do beliefs about social dynamics and motivations interact to predict participants' plans to share (only including self cooperation ratings)?
+
+#### Model Check
+
+```{r, echo=FALSE,fig.align = 'center'}
+fit_interact <-readRDS(file="fit_interact.rds")
+fit_interact_mat<-readRDS(file="fit_interact_mat.rds")
+
+pp_interact<-pp_check(fit_interact)
+pp_int_mat<-pp_check(fit_interact_mat)
+
+plot_grid(pp_interact,pp_int_mat, ncol = 2, nrow = 2,scale=.9)
+```
+
+#### Manuscripts
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+ROPEC(fit_interact,"Do you plan to share your next manuscript?")
+
+plot(rope(fit_interact),range=c(-0.1,0.1),ci=1)+
+  ggplot2::labs(title = "Do you plan to share your next manuscript?")+xlim(-1,1)
+
+
+
+```
+
+```{r, echo=FALSE,fig.align = 'center'}
+pdfit_interact<-p_direction(fit_interact)
+
+pdfit_interact<-plot(pdfit_interact) +
+  ggplot2::labs(title = "Do you plan to share your next manuscript?")+xlim(-1,1)
+
+pdfit_interact
+pdfit_interact
+
+```
+
+This suggests that for sharing manuscripts there are main effects of of your ideas of social dynamics, and whether you say you share to cooperate, and whether you say other participants share to cooperate with others. Interestingly all three make it more likely that you'll say you'll share your MS. When looking at interactions they are negative, so the more you think your field is hierarchical and the more you think others share for cooperative reasons, the less you share, and same for when thinking about yourself. There is also a three way interaction between these three items...
+
+#### Materials
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+ROPEC(fit_interact_mat,"Do you plan to share materials for your next manuscript?")
+
+plot(rope(fit_interact_mat),range=c(-0.1,0.1),ci=1)+
+  ggplot2::labs(title = "Do you plan to share materials for your next manuscript?")+xlim(-1,1)
+
+```
+
+```{r, echo=FALSE,fig.align = 'center'}
+pdfit_interact_mat<-p_direction(fit_interact_mat)
+
+pdfit_interact_mat<-plot(pdfit_interact_mat) +
+  ggplot2::labs(title = "Do you plan to share materials for your next manuscript?")+xlim(-1,1)
+
+pdfit_interact_mat
+pdfit_interact_mat
+
+```
+
+There are no clear effects on whether people plan to share materials.
+
+### Importance: Do participants' ideas of social dynamics and ideas about reasons interact to predict whether they say its important to share? (only including self cooperation ratings)
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+##Uncomment this if you want to run the model
+# TEST_data_S2$plan_MS<-ordered(TEST_data_S2$plan_MS)
+# 
+# fit_interact_imp<- brm(important_manuscripts ~ Hierarchy_ZeroSum*self_MS_cooper+Identify+LogYears, 
+#                        data=TEST_data_S2 
+#                        family=cumulative(probit),
+#                        save_all_pars = TRUE, 
+#                        iter= 6000, warmup= 1000, 
+#                        thin= 1,
+#                        inits = "0",
+#                        prior=priors)
+# # # #
+# # # #
+# saveRDS(fit_interact_imp,file="fit_interact_imp.rds")
+
+##Or load this if you do not want to run the model
+fit_interact_imp <-readRDS(file="fit_interact_imp.rds")
+# 
+
+# TEST_data_S2$plan_materials<-ordered(TEST_data_S2$plan_materials)
+
+# fit_interact_mat_imp <- brm( formula = important_materials ~ Hierarchy_ZeroSum*self_materials_cooper+Identify+LogYears, 
+#                              TEST_data_S2 
+#                              family = cumulative('probit'),
+#                              save_all_pars = TRUE,
+#                              inits = "0",
+#                              prior=priors)
+# # # # # #
+# saveRDS(fit_interact_mat_imp,file="fit_interact_mat_imp.rds")
+
+##Or load this if you do not want to run the model
+fit_interact_mat_imp <-readRDS(file="fit_interact_mat_imp.rds")
+
+
+
+
+
+```
+
+#### Model Check
+
+```{r, echo=FALSE,fig.align = 'center'}
+pp_interact_imp<-pp_check(fit_interact_imp)
+pp_int_mat_imp<-pp_check(fit_interact_mat_imp)
+
+plot_grid(pp_interact_imp,pp_int_mat_imp, ncol = 2, nrow = 2,scale=.9)
+
+
+```
+
+#### Manuscripts
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+ROPEC(fit_interact_imp,"Is it important to share manuscripts?")
+
+
+plot(rope(fit_interact_imp),range=c(-0.1,0.1),ci=1)+
+  ggplot2::labs(title = "Is it important to share manuscripts?")+xlim(-4,4)
+
+
+```
+
+```{r, echo=FALSE,fig.align = 'center'}
+pdfit_interact_imp<-p_direction(fit_interact_imp)
+
+p3fit_interact_imp<-plot(pdfit_interact_imp) +
+  ggplot2::labs(title = "Is it important to share manuscripts?")
+p3fit_interact_imp
+
+```
+
+In this model there are no clear effects
+
+#### Materials
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+
+ROPEC(fit_interact_mat_imp,"Is it important to share materials?")
+
+plot(rope(fit_interact_mat_imp),range=c(-0.1,0.1),ci=1)+
+  ggplot2::labs(title = "Is it important to share materials?")+xlim(-4,4)
+
+```
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+pd_fit_interact_mat_imp<-p_direction(fit_interact_mat_imp)
+
+p3fit_interact_mat_imp<-plot(pd_fit_interact_mat_imp) +
+  ggplot2::labs(title = 'Interactions ~ Importance Materials')+xlim(-10,10)
+p3fit_interact_mat_imp
+```
+
+There are also no clear effects on whether people say its important to share materials.
+
+## 3-way interaction between social dynamics, self cooperation and other cooperation
+
+### Plans: Do beliefs about social dynamics and reasons interact to predict participants' plans to share? (Including 3-way interaction)
+
+```{r, echo=FALSE,fig.align = 'center'}
+ ##Uncomment this if you want to run the model
+TEST_data_S2$plan_MS<-ordered(TEST_data_S2$plan_MS)
+
+
+# 
+# fit3_interact<- brm(plan_MS ~ Hierarchy_ZeroSum*self_MS_cooper*other_MS_cooper+Identify+LogYears,
+#                     data=TEST_data_S2
+#                     family=cumulative(probit),
+#                     save_all_pars = TRUE,
+#                     iter= 6000,
+#                     warmup= 1000,
+#                     thin= 1,
+#                     init= "0",
+#                     prior = priors)
+# # #
+# # #
+
+
+# saveRDS(fit3_interact,file="fit3_interact.rds")
+
+##Or load this if you do not want to run the model
+fit3_interact <-readRDS(file="fit3_interact.rds")
+# 
+
+# TEST_data_S2$plan_materials<-ordered(TEST_data_S2$plan_materials)
+
+# fit3_interact_mat <- brm( 
+#   formula = plan_materials ~Hierarchy_ZeroSum*self_materials_cooper*other_MS_cooper+Identify+LogYears, 
+#   TEST_data_S2 family = cumulative('probit'),
+#   save_all_pars = TRUE,
+#   inits = "0",
+#   prior=priors)
+# # # # #
+# saveRDS(fit3_interact_mat,file="fit3_interact_mat.rds")
+
+##Or load this if you do not want to run the model
+fit3_interact_mat<-readRDS(file="fit3_interact_mat.rds")
+
+
+
+```
+
+#### Model Check
+
+```{r, echo=FALSE,fig.align = 'center'}
+pp_interact<-pp_check(fit3_interact)
+pp_int_mat<-pp_check(fit3_interact_mat)
+
+plot_grid(pp_interact,pp_int_mat, ncol = 2, nrow = 2,scale=.9)
+
+
+```
+
+#### Manuscripts
+
+```{r, echo=FALSE,fig.align = 'center'}
+library(cowplot)
+
+ROPEC(fit3_interact,"Do you plan to share your manuscript?")
+
+
+plot(rope(fit3_interact),range=c(-0.1,0.1),ci=1)+
+  ggplot2::labs(title = "Do you plan to share your manuscript?")+xlim(-4,4)
+
+
+```
+
+```{r, echo=FALSE,fig.align = 'center'}
+pdfit3_interact<-p_direction(fit3_interact)
+
+p3fit3_interact<-plot(pdfit3_interact) +
+  ggplot2::labs(title = "Do you plan to share your manuscript?")
+
+p3fit3_interact
+
+pdfit3_interact
+
+```
+
+This suggests that there are main effects of of your ideas of social dynamics, and whether you say you share to cooperate, and whether you say other participants share to cooperate with others. Interestingly all three make it more likely that you'll say you'll share your manuscript. When looking at interactions they are negative, so the more you think your field is hierarchical and the more you think others share for cooperative reasons, the less you share, and same for when thinking about yourself. There is also a three way interaction between these three items.
+
+#### Materials
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+ROPEC(fit3_interact_mat,"Do you plan to share your materials?")
+
+
+plot(rope(fit3_interact_mat),range=c(-0.1,0.1),ci=1)+
+  ggplot2::labs(title = "Do you plan to share your manuscript?")+xlim(-4,4)
+
+
+pd_fit3_interact_mat<-p_direction(fit3_interact_mat)
+
+p3fit3_interact_mat<-plot(pd_fit3_interact_mat) +
+  ggplot2::labs(title = 'Do you plan to share your manuscript?')+xlim(-10,10)
+p3fit3_interact_mat
+
+pd_fit3_interact_mat
+
+```
+
+The effects are trending in a similar direction for materials: there are main effects of of your ideas of social dynamics, and whether you say you share to cooperate, and whether you say other participants share to cooperate with others. Interestingly all three make it more likely that you'll say you'll share your materials. When looking at interactions they are negative, so the more you think your field is hierarchical and the more you think others share for cooperative reasons, the less you share, and same for when thinking about yourself. There is also a three way interaction between these three items.
+
+### Importance: Do participants' ideas of social dynamics and ideas about reasons interact to predict whether they say its important to share? (Including 3-way interaction)
+
+```{r, echo=FALSE,fig.align = 'center'}
+##Uncomment this if you want to run the model
+# TEST_data_S2$plan_MS<-ordered(TEST_data_S2$plan_MS)
+# 
+# fit3_interact_imp<- brm(important_manuscripts ~ Hierarchy_ZeroSum*self_MS_cooper*other_MS_cooper+Identify+LogYears, 
+#                         data=TEST_data_S2 
+#                         family=cumulative(probit),
+#                         save_all_pars = TRUE, 
+#                         iter= 6000, warmup= 1000, 
+#                         thin= 1,
+#                         inits = "0",
+# 
+# saveRDS(fit3_interact_imp,file="fit3_interact_imp.rds")
+
+##Or load this if you do not want to run the model
+fit3_interact_imp <-readRDS(file="fit3_interact_imp.rds")
+# 
+
+TEST_data_S2$plan_materials<-ordered(TEST_data_S2$plan_materials)
+# 
+# fit3_interact_mat_imp <- brm( formula = important_materials ~ Hierarchy_ZeroSum*self_materials_cooper*other_MS_cooper+Identify+LogYears, 
+#                               TEST_data_S2 
+#                               family = cumulative('probit'),
+#                               save_all_pars = TRUE,
+#                               inits = "0",
+#                               prior=priors)
+# # # # # # #
+# saveRDS(fit3_interact_mat_imp,file="fit3_interact_mat_imp.rds")
+
+##Or load this if you do not want to run the model
+fit3_interact_mat_imp <-readRDS(file="fit3_interact_mat_imp.rds")
+
+
+pp_interact_imp<-pp_check(fit3_interact_imp)
+pp_int_mat_imp<-pp_check(fit3_interact_mat_imp)
+
+plot_grid(pp_interact,pp_int_mat, ncol = 2, nrow = 2,scale=.9)
+
+
+```
+
+#### Model Check
+
+```{r, echo=FALSE,fig.align = 'center'}
+pp_interact_imp<-pp_check(fit3_interact_imp)
+pp_int_mat_imp<-pp_check(fit3_interact_mat_imp)
+
+plot_grid(pp_interact,pp_int_mat, ncol = 2, nrow = 2,scale=.9)
+
+
+
+```
+
+#### Manuscripts
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+## Rope Analysis
+
+ROPEC(fit3_interact_imp, "Is it important to share Manuscripts?")
+
+plot(rope(fit3_interact_imp),range=c(-0.1,0.1),ci=1)+
+  ggplot2::labs(title = "Is it important to sharemanuscripts?")+xlim(-4,4)
+
+## PD Analysis
+
+pdfit3_interact_imp<-p_direction(fit3_interact_imp)
+
+p3fit3_interact_imp<-plot(pdfit3_interact_imp) +
+  ggplot2::labs(title = "Is it important to share manuscripts")
+
+pdfit3_interact_imp
+
+p3fit3_interact_imp
+
+```
+
+#### Materials
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+## Rope Analysis
+
+ROPEC(fit3_interact_mat_imp, "Is it important to share materials?")
+
+plot(rope(fit3_interact_mat_imp),range=c(-0.1,0.1),ci=1)+
+  ggplot2::labs(title = "Is it important to share materials?")+xlim(-4,4)
+
+## PD Analysis
+
+pdfit3_interact_imp_mat<-p_direction(fit3_interact_mat_imp)
+
+p3fit3_interact_imp_mat<-plot(pdfit3_interact_imp_mat) +
+  ggplot2::labs(title = "Is it important to share materials?")
+
+pdfit3_interact_imp_mat
+
+p3fit3_interact_imp_mat
+
+```

@@ -1,0 +1,8 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+paper_cache/*
+supplmental-materials_cache/*
+fit_reasons.rds
+fit_reasons_null.rds

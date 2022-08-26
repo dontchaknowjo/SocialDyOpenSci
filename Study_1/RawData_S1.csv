@@ -1,0 +1,343 @@
+ID,StartDate,EndDate,Status,IPAddress,Progress,Duration (in seconds),Finished,RecordedDate,ResponseId,RecipientLastName,UserLanguage,Field,Hierarchy,Junior,Norms Prestige,Norms Less well know,Stealing Ideas,Zero Sum,Seminar,Conferences,Collaborate,Cooperate,Friendly,Kind,Likable,Nice,WarmthT,Capable,Competent,Efficient,Skillful,CompT,Years,Identify,Q86,JuniorNR,JuniorNR2,JuniorNR3,Norms NR,CollaborationNR,Trust NR,SeminarNR,LogYears
+334,3/23/22 6:43,3/23/22 6:44,0,NA,100,103,1,3/23/22 6:44,R_1jxEPmdS0tv2Dlj,NA,EN,psychology,3,3,3,3,3,3,3,3,3,2,4,4,4,2,3.5,3,5,4,4,4,1,2,NA,NA,NA,3,3,3,4,3,0
+336,4/11/22 16:27,4/11/22 17:02,0,NA,100,2095,1,4/11/22 17:02,R_3HkbjYFeR9bLZ2N,NA,EN,Psychology,4,1,3,NA,4,2,2,4,2,2,6,5,5,5,5.25,4,4,3,5,4,1,2,"Especially with the advent of work-from-home practices, online, collaborative platforms are sorely lacking.",NA,NA,5,NA,4,4,4,0
+24,3/7/22 14:55,3/7/22 14:59,0,NA,100,261,1,3/7/22 14:59,R_2vY9Ia0t9Bb0RA4,NA,EN,developmental cognitive science,3,2,3,4,4,4,2,4,1,2,6,6,6,6,6,6,6,6,7,6.25,2,3,NA,NA,NA,4,2,5,4,4,0.693147181
+155,3/9/22 9:13,3/9/22 9:17,0,NA,100,263,1,3/9/22 9:17,R_vB2amh43UYyC6e5,NA,EN,Cognitive science,4,4,4,4,3,2,3,2,1,1,4,4,6,3,4.25,6,6,2,7,5.25,2,4,NA,NA,NA,2,2,5,5,3,0.693147181
+245,3/10/22 18:25,3/10/22 18:30,0,NA,100,340,1,3/10/22 18:30,R_3h0fxVEL0ncPHjx,NA,EN,Chemical education,1,1,1,2,1,1,3,1,1,1,7,7,7,7,7,7,7,7,7,7,2,4,NA,NA,NA,5,4,5,5,3,0.693147181
+292,3/11/22 13:56,3/11/22 14:00,0,NA,100,218,1,3/11/22 14:00,R_2Pj22nVoNkypG1w,NA,EN,Communication Studies,5,2,5,4,1,1,1,4,1,1,5,6,5,6,5.5,5,6,3,4,4.5,2,5,NA,NA,NA,4,2,5,5,5,0.693147181
+307,3/12/22 21:39,3/12/22 21:42,0,NA,100,173,1,3/12/22 21:42,R_3MrHTNQmygwwNGO,NA,EN,psychology,3,2,3,4,3,3,4,2,1,1,6,5,5,5,5.25,6,6,6,6,6,2,3,NA,NA,NA,4,2,5,5,2,0.693147181
+325,3/19/22 7:12,3/19/22 7:16,0,NA,100,231,1,3/19/22 7:16,R_2BsYapwC8nBxetS,NA,EN,Biomechanics,3,3,4,4,3,3,3,1,1,2,5,3,4,5,4.25,4,5,6,4,4.75,2,3,This was really cool.,NA,NA,3,2,5,4,3,0.693147181
+335,4/1/22 4:19,4/1/22 4:23,0,NA,100,255,1,4/1/22 4:23,R_2B2siFKddJoRoJa,NA,EN,Psychology,4,2,3,3,3,1,1,1,1,1,6,6,7,6,6.25,7,7,6,6,6.5,2,4,NA,NA,NA,4,3,5,5,5,0.693147181
+9,3/7/22 14:39,3/7/22 14:54,0,NA,100,878,1,3/7/22 14:54,R_2ebbdZyHs4r9KrG,NA,EN,Psychology,4,4,4,5,4,2,5,2,1,1,6,6,7,6,6.25,7,7,6,7,6.75,3,5,NA,NA,NA,2,1,5,5,1,1.098612289
+14,3/7/22 14:43,3/7/22 14:46,0,NA,100,149,1,3/7/22 14:46,R_2YPR1GbspotkcFc,NA,EN,Systems Neuroscience,4,4,4,4,4,2,3,3,1,1,6,6,6,6,6,7,7,7,7,7,3,3,NA,NA,NA,2,2,5,5,3,1.098612289
+42,3/7/22 15:18,3/7/22 15:32,0,NA,100,859,1,3/7/22 15:32,R_ABZ9t5ULRd2XYBz,NA,EN,Social cognitive development,5,2,4,4,1,5,3,1,1,1,6,3,7,3,4.75,7,7,5,7,6.5,3,5,Thanks for doing this! Really excited to see what comes from this (big fan of Rebecca Saxe's and Ashley Thomas' work). ,NA,NA,NA,NA,NA,NA,NA,NA
+75,3/7/22 17:00,3/7/22 17:04,0,NA,100,257,1,3/7/22 17:04,R_2UVGeW1Qi7pVcS7,NA,EN,Neuroimaging,4,2,4,4,4,3,3,4,1,1,4,4,4,4,4,6,6,3,5,5,3,3,NA,NA,NA,4,2,5,5,3,1.098612289
+181,3/10/22 5:07,3/10/22 5:11,0,NA,100,251,1,3/10/22 5:11,R_2ePuouJomp67Qhk,NA,EN,Cultural evolution,5,3,2,5,3,4,2,2,2,1,5,5,5,5,5,5,5,5,5,5,3,2,NA,NA,NA,3,1,4,5,4,1.098612289
+185,3/10/22 5:19,3/10/22 5:23,0,NA,100,230,1,3/10/22 5:23,R_1DSuv72DDCezYtP,NA,EN,biostatistics,3,2,2,4,1,1,4,2,2,2,3,3,4,3,3.25,6,6,4,3,4.75,3,4,NA,NA,NA,4,2,4,4,2,1.098612289
+215,3/10/22 7:48,3/10/22 7:54,0,NA,100,366,1,3/10/22 7:54,R_11i2iW3k7fwZqvb,NA,EN,Computer Science,4,2,5,4,2,3,3,3,1,2,3,3,2,2,2.5,6,6,4,6,5.5,3,3,NA,NA,NA,4,2,5,4,3,1.098612289
+225,3/10/22 8:44,3/10/22 8:47,0,NA,100,169,1,3/10/22 8:47,R_1Hjeu8AJ2c2ZkYi,NA,EN,Social Psychology,4,3,2,4,3,3,4,1,2,2,6,6,5,5,5.5,6,5,4,6,5.25,3,5,NA,NA,NA,3,2,4,4,2,1.098612289
+311,3/13/22 15:43,3/13/22 15:51,0,NA,100,472,1,3/13/22 15:51,R_1GWdiGH5fdx3qel,NA,EN,Machine Learning,5,2,4,5,3,4,1,4,1,1,5,4,4,4,4.25,6,6,6,6,6,3,4,NA,NA,NA,4,1,5,5,5,1.098612289
+39,3/7/22 15:12,3/7/22 15:18,0,NA,100,359,1,3/7/22 15:18,R_3OlGVXLCiRB4NvQ,NA,EN,Science communication,2,1,1,1,2,1,1,1,1,1,7,6,7,6,6.5,6,6,5,6,5.75,4,5,"In science communication you often cross over into other social science fields, such as psychology, political science or psychol",NA,NA,5,5,5,5,5,1.386294361
+137,3/8/22 6:02,3/8/22 6:08,0,NA,100,363,1,3/8/22 6:08,R_2vcBwvW9ZE7CZ01,NA,EN,legal education,4,1,4,3,1,2,3,3,2,1,6,6,6,6,6,7,6,6,6,6.25,4,5,NA,NA,NA,5,3,4,5,3,1.386294361
+174,3/9/22 18:28,3/9/22 18:31,0,NA,100,184,1,3/9/22 18:31,R_3pnxmHqBoC0rEJ3,NA,EN,Neuroscience,3,1,3,4,3,3,4,4,1,1,6,5,3,4,4.5,6,6,4,4,5,4,5,NA,NA,NA,5,2,5,5,2,1.386294361
+258,3/11/22 10:46,3/11/22 10:48,0,NA,100,114,1,3/11/22 10:48,R_2Pb6oEPYNJ4s0wk,NA,EN,Communication Studies,4,1,3,4,1,1,1,1,1,1,7,7,7,7,7,7,7,4,7,6.25,4,5,NA,NA,NA,5,2,5,5,5,1.386294361
+269,3/11/22 10:58,3/11/22 11:06,0,NA,100,467,1,3/11/22 11:06,R_2a8jSdxq9cZ0E5r,NA,EN,Communication,5,2,4,5,1,1,2,1,2,2,7,5,7,6,6.25,6,6,4,5,5.25,4,4,NA,NA,NA,4,1,4,4,4,1.386294361
+290,3/11/22 12:45,3/11/22 12:54,0,NA,100,516,1,3/11/22 12:54,R_pQ37hf5OxJfoWvT,NA,EN,Communication,4,2,2,2,NA,2,1,1,2,1,7,6,6,6,6.25,6,6,5,6,5.75,4,1,"From my experience, social dynamics in the communication tend to depend  not on class status but on university, either degree or",NA,NA,4,4,4,5,5,1.386294361
+301,3/12/22 5:09,3/12/22 5:13,0,NA,100,243,1,3/12/22 5:13,R_2Va3IIHlG4jRnxM,NA,EN,Comm studies,4,2,4,3,2,2,2,2,2,2,5,5,5,5,5,5,5,5,5,5,4,3,NA,NA,NA,4,3,4,4,4,1.386294361
+315,3/14/22 9:42,3/14/22 9:45,0,NA,100,193,1,3/14/22 9:45,R_26msNt54J4YB1F6,NA,EN,Zoology,4,2,4,4,4,4,2,4,1,2,7,7,5,7,6.5,6,7,6,6,6.25,4,3,NA,NA,NA,4,2,5,4,4,1.386294361
+7,3/7/22 14:38,3/7/22 14:43,0,NA,100,304,1,3/7/22 14:43,R_3OlAw6AnXcjPRmq,NA,EN,Arts Administration,4,1,5,4,4,1,1,1,1,4,7,7,5,5,6,3,5,2,3,3.25,5,5,"Arts 
+Administration is a relatively new field, just coming into it on in the last 20 years.",NA,NA,5,2,5,2,5,1.609437912
+77,3/7/22 17:02,3/7/22 17:06,0,NA,100,241,1,3/7/22 17:06,R_1CsaIVR5ZLsSE2Y,NA,EN,psychology,5,4,4,4,2,4,4,2,2,1,4,5,5,5,4.75,4,5,6,6,5.25,5,4,NA,NA,NA,2,2,4,5,2,1.609437912
+79,3/7/22 17:12,3/7/22 17:18,0,NA,100,356,1,3/7/22 17:18,R_2QnQue8SbJ9LWqK,NA,EN,social psychology / computational social science,5,2,5,4,1,2,1,2,1,1,6,5,4,4,4.75,4,4,3,4,3.75,5,5,The question about zero-sum & 'few winners with many losers' was a bit double-barreled - such that I do not think research is ze,NA,NA,4,2,5,5,5,1.609437912
+102,3/7/22 18:49,3/7/22 18:55,0,NA,100,356,1,3/7/22 18:55,R_WlCNBLrt3jMAJB7,NA,EN,dev psych,4,2,3,4,4,3,2,2,1,1,5,5,5,6,5.25,6,6,7,7,6.5,5,4,NA,NA,NA,4,2,5,5,4,1.609437912
+131,3/8/22 0:44,3/8/22 0:48,0,NA,100,214,1,3/8/22 0:48,R_DSSge4cHswI3uwh,NA,EN,Communication,4,2,4,4,2,1,2,3,1,2,5,5,5,5,5,4,4,4,4,4,5,3,NA,NA,NA,4,2,5,4,4,1.609437912
+186,3/10/22 5:37,3/10/22 5:49,0,NA,100,735,1,3/10/22 5:49,R_ptUcjGdKD81QCM9,NA,EN,Developmental psychology,5,2,3,4,2,2,2,3,1,5,6,5,5,5,5.25,5,4,6,3,4.5,5,3,"Really hard to answer - I can basically only speak for my lab and department, with some hearsay from other departments which wil",NA,NA,4,2,5,1,4,1.609437912
+219,3/10/22 8:11,3/10/22 8:17,0,NA,100,401,1,3/10/22 8:17,R_31pbTgpfIFU1uzX,NA,EN,Communication and Media Studies,4,1,2,4,2,1,2,1,2,4,6,6,6,5,5.75,5,4,3,7,4.75,5,5,"Communication and Media Studies is a strange field in the sense that we are expected to read, cite, and engage with research fro",NA,NA,5,2,4,2,4,1.609437912
+233,3/10/22 10:09,3/10/22 10:15,0,NA,100,371,1,3/10/22 10:15,R_PBAeGcAkpImkV0d,NA,EN,Psychology,4,1,4,4,3,4,3,2,1,1,6,5,5,5,5.25,5,5,5,5,5,5,4,When thinking about people in my field I wasn’t sure if I should think about people in conferences (usually very friendly and ,NA,NA,5,2,5,5,3,1.609437912
+250,3/10/22 21:23,3/10/22 21:26,0,NA,100,131,1,3/10/22 21:26,R_3Dw0oJso55DgIZV,NA,EN,Communication,5,1,4,2,4,4,2,2,1,1,5,5,5,5,5,5,5,5,5,5,5,5,NA,NA,NA,5,4,5,5,4,1.609437912
+271,3/11/22 11:02,3/11/22 11:14,0,NA,100,700,1,3/11/22 11:14,R_udFUONqwjGXAM2B,NA,EN,Communication Studies,4,3,4,4,2,2,2,1,1,1,6,6,4,6,5.5,3,4,2,5,3.5,5,4,NA,NA,NA,3,2,5,5,4,1.609437912
+302,3/12/22 10:00,3/12/22 10:04,0,NA,100,212,1,3/12/22 10:04,R_2mIkXdSFVnA54uB,NA,EN,pharmacy,5,3,5,2,1,3,4,2,1,3,7,7,7,7,7,7,7,5,5,6,5,4,NA,NA,NA,3,4,5,3,2,1.609437912
+319,3/15/22 5:44,3/15/22 5:48,0,NA,100,212,1,3/15/22 5:48,R_2PchWQY0SfogQH2,NA,EN,Psychology,5,2,3,4,4,5,4,4,3,3,5,3,3,4,3.75,6,6,6,6,6,5,3,NA,NA,NA,4,2,3,3,2,1.609437912
+254,3/11/22 0:37,3/11/22 0:45,0,NA,100,518,1,3/11/22 0:45,R_s7kcMtFrv1f86v7,NA,EN,Psychology,4,2,4,4,2,1,2,5,1,1,6,5,6,5,5.5,7,7,6,6,6.5,5.5,5,NA,NA,NA,4,2,5,5,4,1.704748092
+29,3/7/22 15:00,3/7/22 15:09,0,NA,100,497,1,3/7/22 15:09,R_3MGyMjfBGlMWgy2,NA,EN,Clinical psychology,4,3,2,3,4,2,2,2,1,2,6,6,6,6,6,4,4,3,3,3.5,6,3,I also worked in social psychology for 3 years-and noticed a stark difference in the social dynamics of the fields. Clinical psy,NA,NA,3,3,5,4,4,1.791759469
+34,3/7/22 15:02,3/7/22 15:05,0,NA,100,195,1,3/7/22 15:05,R_XYOcGLPxvyD4RlT,NA,EN,Developmental Psychology,5,4,4,5,4,4,5,3,2,2,5,5,5,5,5,7,5,6,7,6.25,6,4,NA,NA,NA,2,1,4,4,1,1.791759469
+37,3/7/22 15:10,3/7/22 15:14,0,NA,100,243,1,3/7/22 15:14,R_1pRP6MKligDAgVI,NA,EN,Communication,5,2,3,4,2,5,3,2,2,2,6,6,6,6,6,5,5,5,5,5,6,5,NA,NA,NA,4,2,4,4,3,1.791759469
+71,3/7/22 16:51,3/7/22 16:56,0,NA,100,306,1,3/7/22 16:56,R_2RWJlNlI7Ga1yAF,NA,EN,cognitive neuroscience,5,2,3,4,2,2,3,3,2,2,4,4,4,4,4,6,6,4,5,5.25,6,4,"These questions were difficult to answer. In my experience, I have been very well-supported. But I'm also aware that there are p",NA,NA,4,2,4,4,3,1.791759469
+76,3/7/22 17:00,3/7/22 17:04,0,NA,100,269,1,3/7/22 17:04,R_3Jwknx55UWwgNsc,NA,EN,Neuroscience,2,1,4,3,3,2,3,1,3,2,6,6,4,6,5.5,4,4,4,4,4,6,5,NA,NA,NA,5,3,3,4,3,1.791759469
+92,3/7/22 18:03,3/7/22 18:07,0,NA,100,245,1,3/7/22 18:07,R_QaE8uEqjdBNN4Mp,NA,EN,Moral development,5,3,5,4,4,3,3,2,1,1,4,3,4,4,3.75,7,6,6,7,6.5,6,4,NA,NA,NA,3,2,5,5,3,1.791759469
+99,3/7/22 18:47,3/7/22 18:49,0,NA,100,122,1,3/7/22 18:49,R_cBky6wwZdvV8Y9z,NA,EN,Social psychology,5,2,4,4,4,1,4,4,2,1,4,5,5,5,4.75,6,6,5,5,5.5,6,2,NA,NA,NA,4,2,4,5,2,1.791759469
+121,3/7/22 21:00,3/7/22 21:03,0,NA,100,183,1,3/7/22 21:03,R_1E7rCu0er8QXR1e,NA,EN,psychology,5,3,4,3,3,5,3,2,2,1,5,5,5,5,5,4,4,4,3,3.75,6,1,NA,NA,NA,3,3,4,5,3,1.791759469
+141,3/8/22 8:56,3/8/22 8:59,0,NA,100,192,1,3/8/22 8:59,R_2z8gyp454VaVYYA,NA,EN,Social Psychology,4,4,3,3,2,2,3,2,2,2,4,4,4,4,4,5,5,3,5,4.5,6,4,NA,NA,NA,2,3,4,4,3,1.791759469
+220,3/10/22 8:18,3/10/22 8:20,0,NA,100,151,1,3/10/22 8:20,R_3haTpzVEWqGY5vl,NA,EN,Communication,4,2,4,4,4,4,2,2,2,3,6,4,5,5,5,4,4,3,5,4,6,4,NA,NA,NA,4,2,4,3,4,1.791759469
+239,3/10/22 13:37,3/10/22 13:40,0,NA,100,198,1,3/10/22 13:40,R_5q0yne8kWUoxCN3,NA,EN,Education,4,4,4,5,1,1,4,1,3,2,5,5,5,5,5,3,3,4,3,3.25,6,2,NA,NA,NA,2,1,3,4,2,1.791759469
+240,3/10/22 14:54,3/10/22 15:03,0,NA,100,557,1,3/10/22 15:03,R_2VkhU1CMBlbzolS,NA,EN,Personality psychology,4,1,2,1,1,3,2,1,3,4,4,6,4,3,4.25,7,7,4,7,6.25,6,4,NA,NA,NA,5,5,3,2,4,1.791759469
+255,3/11/22 0:39,3/11/22 0:44,0,NA,100,317,1,3/11/22 0:44,R_1kNXceQzJHaSyqb,NA,EN,Communication,3,3,5,5,3,5,2,3,4,4,5,5,5,5,5,4,4,4,5,4.25,6,2,"I am in a niche area that skews very young and therefore feel there is less pressure from """"tradition"""", but it still exists in ",NA,NA,3,1,2,2,4,1.791759469
+305,3/12/22 10:49,3/12/22 10:51,0,NA,100,147,1,3/12/22 10:51,R_2dupACyvXtLdqhu,NA,EN,Communication,4,2,2,2,1,3,3,2,2,3,6,6,6,6,6,6,4,4,4,4.5,6,3,NA,NA,NA,4,4,4,3,3,1.791759469
+314,3/14/22 9:08,3/14/22 9:44,0,NA,100,2140,1,3/14/22 9:44,R_3syJXxumFxWbR6j,NA,EN,Communication Studies,5,2,5,5,3,4,2,3,3,3,6,5,6,6,5.75,6,5,4,5,5,6,5,NA,NA,NA,4,1,3,3,4,1.791759469
+337,4/13/22 9:11,4/13/22 9:14,0,NA,100,189,1,4/13/22 9:14,R_2BsrF9CRL6KJ2j4,NA,EN,Education,4,3,4,4,2,1,2,2,1,2,5,5,6,5,5.25,7,7,6,6,6.5,6,2,NA,NA,NA,3,2,5,4,4,1.791759469
+5,3/7/22 14:35,3/7/22 14:37,0,NA,100,141,1,3/7/22 14:37,R_1itAvkajddstaIc,NA,EN,developmental psychology,4,2,3,5,2,5,4,3,2,2,6,5,5,5,5.25,5,4,4,4,4.25,7,5,NA,NA,NA,4,1,4,4,2,1.945910149
+32,3/7/22 15:00,3/8/22 7:23,0,NA,100,59026,1,3/8/22 7:23,R_1is1llD3j5rNWnT,NA,EN,Psychological Sciences,4,4,4,4,2,4,5,3,4,4,3,3,4,3,3.25,4,4,3,4,3.75,7,5,NA,NA,NA,2,2,2,2,1,1.945910149
+61,3/7/22 16:08,3/8/22 12:47,0,NA,100,74342,1,3/8/22 12:47,R_1KkTmB1u0J7DRQi,NA,EN,Developmental cognitive neuroscience,2,1,2,3,4,2,3,2,1,1,6,6,6,6,6,6,6,5,6,5.75,7,4,NA,NA,NA,5,3,5,5,3,1.945910149
+87,3/7/22 17:42,3/7/22 17:47,0,NA,100,314,1,3/7/22 17:47,R_2413DdBcVN7yJ9v,NA,EN,behavioural economics,4,1,3,3,2,2,2,2,1,1,6,5,6,6,5.75,6,6,5,6,5.75,7,3,NA,NA,NA,5,3,5,5,4,1.945910149
+90,3/7/22 17:58,3/7/22 18:03,0,NA,100,322,1,3/7/22 18:03,R_2BfEuGR0KK5vUxE,NA,EN,economics,5,5,5,5,3,2,5,5,2,2,2,1,2,2,1.75,5,5,6,6,5.5,7,3,Would be interested to see the results :),NA,NA,1,1,4,4,1,1.945910149
+115,3/7/22 20:01,3/7/22 20:05,0,NA,100,264,1,3/7/22 20:05,R_2AMQAZ7tWppjpka,NA,EN,neuroscience,4,3,5,5,2,1,2,4,2,2,6,6,6,5,5.75,6,6,4,6,5.5,7,4,NA,NA,NA,3,1,4,4,4,1.945910149
+119,3/7/22 20:27,3/7/22 20:31,0,NA,100,248,1,3/7/22 20:31,R_OCrzaKsOhZOkjND,NA,EN,Psychology,4,4,3,5,3,2,5,3,2,1,5,6,6,4,5.25,6,6,4,6,5.5,7,4,NA,NA,NA,2,1,4,5,1,1.945910149
+132,3/8/22 4:38,3/8/22 4:43,0,NA,100,286,1,3/8/22 4:43,R_3e4dMU6jJRm9kep,NA,EN,Computational Neuroscience,5,4,5,5,1,3,4,2,3,4,5,3,5,4,4.25,5,6,5,6,5.5,7,1,NA,NA,NA,2,1,3,2,2,1.945910149
+154,3/9/22 8:57,3/9/22 9:00,0,NA,100,197,1,3/9/22 9:00,R_3rP6RUvsjWhVSG0,NA,EN,Biomechanics,4,4,4,2,4,5,4,3,3,1,6,5,5,5,5.25,5,5,5,5,5,7,5,NA,NA,NA,2,4,3,5,2,1.945910149
+182,3/10/22 5:09,3/10/22 5:13,0,NA,100,213,1,3/10/22 5:13,R_21BA7znAqIzZAkQ,NA,EN,Psychology,4,2,4,4,1,1,3,2,2,2,5,5,5,6,5.25,5,5,4,4,4.5,7,5,NA,NA,NA,4,2,4,4,3,1.945910149
+184,3/10/22 5:17,3/10/22 5:29,0,NA,100,729,1,3/10/22 5:29,R_3RaRjwSv7K2llKG,NA,EN,Social psychology,5,5,5,5,3,2,4,4,4,1,6,5,5,6,5.5,6,6,5,5,5.5,7,5,NA,NA,NA,1,1,2,5,2,1.945910149
+313,3/14/22 8:47,3/14/22 8:53,0,NA,100,327,1,3/14/22 8:53,R_1oeexPRtBCf6eUi,NA,EN,Very,4,2,5,5,5,5,5,1,1,1,4,2,2,6,3.5,2,2,2,3,2.25,7,5,NA,NA,NA,4,1,5,5,1,1.945910149
+321,3/16/22 16:37,3/16/22 16:40,0,NA,100,167,1,3/16/22 16:40,R_wTM7Q3zuN9zOS3v,NA,EN,Communication Research,4,1,4,4,2,2,2,2,1,1,6,6,6,6,6,6,6,6,6,6,7,5,NA,NA,NA,5,2,5,5,4,1.945910149
+6,3/7/22 14:36,3/7/22 14:40,0,NA,100,227,1,3/7/22 14:40,R_1Hk29aNnwplzg3N,NA,EN,cognitive neuroscience,5,4,5,4,4,4,5,3,1,2,6,3,5,3,4.25,7,7,5,7,6.5,8,5,NA,NA,NA,2,2,5,4,1,2.079441542
+8,3/7/22 14:39,3/7/22 14:42,0,NA,100,190,1,3/7/22 14:42,R_3Rl42sXGIyIXvI8,NA,EN,Developmental Psychology,5,1,5,5,2,4,5,3,2,2,6,5,6,6,5.75,6,5,3,6,5,8,4,NA,NA,NA,5,1,4,4,1,2.079441542
+16,3/7/22 14:43,3/7/22 14:48,0,NA,100,291,1,3/7/22 14:48,R_T89Wv0BYMuaMqrv,NA,EN,Cognitive Neuroscience,4,2,3,4,4,2,2,4,2,1,5,4,5,4,4.5,6,5,3,6,5,8,5,NA,NA,NA,4,2,4,5,4,2.079441542
+67,3/7/22 16:36,3/7/22 16:38,0,NA,100,145,1,3/7/22 16:38,R_2aIySdWMGslP624,NA,EN,Social psychology,5,4,3,5,4,5,5,4,2,3,4,4,5,4,4.25,4,4,3,3,3.5,8,5,NA,NA,NA,2,1,4,3,1,2.079441542
+69,3/7/22 16:44,3/7/22 16:48,0,NA,100,192,1,3/7/22 16:48,R_2UfL3gm5jNREDPG,NA,EN,"Psychology, neuroscience ",5,2,4,4,2,5,4,4,2,4,3,3,3,3,3,6,6,4,6,5.5,8,4,NA,NA,NA,4,2,4,2,2,2.079441542
+70,3/7/22 16:51,3/7/22 16:55,0,NA,100,222,1,3/7/22 16:55,R_3pmNyw1oGqOpIYk,NA,EN,Psychology,5,4,4,5,4,4,4,3,1,1,4,5,5,4,4.5,4,5,3,4,4,8,4,NA,NA,NA,2,1,5,5,2,2.079441542
+105,3/7/22 19:01,3/7/22 19:03,0,NA,100,104,1,3/7/22 19:03,R_1ozoi1MiVzZeIhW,NA,EN,Psychology,5,2,4,4,4,4,2,2,2,4,5,4,5,4,4.5,5,4,4,5,4.5,8,3,NA,NA,NA,4,2,4,2,4,2.079441542
+108,3/7/22 19:14,3/7/22 19:18,0,NA,100,245,1,3/7/22 19:18,R_RKNdzJuiabOGt0d,NA,EN,cognitive science,5,4,5,4,3,3,4,3,2,1,4,4,5,5,4.5,6,7,4,4,5.25,8,4,NA,NA,NA,2,2,4,5,2,2.079441542
+166,3/9/22 10:42,3/9/22 10:45,0,NA,100,179,1,3/9/22 10:45,R_3h2MAap29d57iLf,NA,EN,aerospace engineering,4,2,5,5,4,3,5,1,1,2,4,4,4,4,4,7,7,7,7,7,8,5,NA,NA,NA,4,1,5,4,1,2.079441542
+194,3/10/22 6:45,3/10/22 6:47,0,NA,100,131,1,3/10/22 6:47,R_1IYLidOLXopacAp,NA,EN,judgment and decision making,4,2,2,5,1,2,5,1,2,2,5,5,5,5,5,7,7,5,6,6.25,8,3,NA,NA,NA,4,1,4,4,1,2.079441542
+213,3/10/22 7:35,3/10/22 7:37,0,NA,100,151,1,3/10/22 7:37,R_qCn9guuftRwDNbr,NA,EN,Psychology,5,2,5,5,3,5,5,2,1,2,5,5,3,4,4.25,6,6,5,6,5.75,8,5,NA,NA,NA,4,1,5,4,1,2.079441542
+244,3/10/22 17:49,3/10/22 17:55,0,NA,100,346,1,3/10/22 17:55,R_1JWvU2CaZvjxdY4,NA,EN,communication,4,2,4,3,2,3,3,2,2,2,6,6,6,6,6,5,5,5,4,4.75,8,2,NA,NA,NA,4,3,4,4,3,2.079441542
+263,3/11/22 10:49,3/11/22 10:52,0,NA,100,164,1,3/11/22 10:52,R_1OpkYK66yYQ0rBG,NA,EN,Health communication,4,2,4,2,2,3,1,2,1,2,5,5,6,5,5.25,5,6,5,6,5.5,8,4,NA,NA,NA,4,4,5,4,5,2.079441542
+265,3/11/22 10:51,3/11/22 11:32,0,NA,100,2421,1,3/11/22 11:32,R_2DYwtm76G7OvV6M,NA,EN,Communication,4,2,4,3,2,4,4,3,3,4,4,4,4,4,4,5,5,5,5,5,8,3,NA,NA,NA,4,3,3,2,2,2.079441542
+299,3/11/22 20:18,3/11/22 20:21,0,NA,100,196,1,3/11/22 20:21,R_2ttD75nCm8n15UL,NA,EN,Consumer behavior,5,2,5,4,3,2,1,3,1,2,5,5,6,5,5.25,5,6,4,5,5,8,5,NA,NA,NA,4,2,5,4,5,2.079441542
+323,3/18/22 8:20,3/18/22 8:24,0,NA,100,223,1,3/18/22 8:24,R_2DNCbWjexq7aDdY,NA,EN,Communication,5,3,5,5,4,4,3,2,2,2,5,4,4,5,4.5,7,7,5,7,6.5,8,3,NA,NA,NA,3,1,4,4,3,2.079441542
+11,3/7/22 14:41,3/7/22 14:44,0,NA,100,204,1,3/7/22 14:44,R_DFOGJHd2hAOXUHv,NA,EN,Philosophy,5,2,4,5,2,2,2,3,4,5,3,2,4,2,2.75,5,4,2,7,4.5,9,3,NA,NA,NA,4,1,2,1,4,2.197224577
+26,3/7/22 14:58,3/9/22 8:29,0,NA,100,149478,1,3/9/22 8:29,R_2q8ebMWkWLu4P6b,NA,EN,motor control,5,4,4,5,2,2,2,2,4,2,5,5,5,5,5,2,2,5,3,3,9,3,NA,NA,NA,2,1,2,4,4,2.197224577
+73,3/7/22 16:52,3/7/22 17:01,0,NA,100,530,1,3/7/22 17:01,R_3L1HoZ3wVJMcId8,NA,EN,Political Science,2,4,2,1,4,2,1,1,3,2,4,4,5,4,4.25,5,5,3,3,4,9,2,I think my field has geographically defined hierarchies that do not all work the same way.  I answered for the American version.,NA,NA,2,5,3,4,5,2.197224577
+120,3/7/22 20:41,3/7/22 20:43,0,NA,100,140,1,3/7/22 20:43,R_3k1XkJNZahlJVxO,NA,EN,Psychology,5,2,5,5,4,4,4,5,1,2,3,4,3,3,3.25,2,2,2,2,2,9,5,NA,NA,NA,4,1,5,4,2,2.197224577
+139,3/8/22 7:27,3/8/22 7:29,0,NA,100,142,1,3/8/22 7:29,R_2YfVqjLBZlg8O4r,NA,EN,Psychology,4,4,4,4,4,2,4,2,1,2,5,5,5,4,4.75,6,6,4,6,5.5,9,5,NA,NA,NA,2,2,5,4,2,2.197224577
+148,3/8/22 15:13,3/8/22 15:18,0,NA,100,282,1,3/8/22 15:18,R_1GOzuhube1ZeSTM,NA,EN,polymer materials,5,2,3,4,1,2,1,2,2,2,5,5,5,5,5,5,5,5,5,5,9,4,I don't like the sliding scales - there is a huge heterogeneity in personalities across the field (some amazing incredible peopl,NA,NA,4,2,4,4,5,2.197224577
+178,3/10/22 4:21,3/10/22 4:24,0,NA,100,176,1,3/10/22 4:24,R_2YPMOV8S5IJZuSZ,NA,EN,Evolutionary psychology,4,2,2,2,1,5,2,5,2,4,5,3,3,3,3.5,4,3,5,4,4,9,3,NA,NA,NA,4,4,4,2,4,2.197224577
+187,3/10/22 5:42,3/10/22 5:46,0,NA,100,246,1,3/10/22 5:46,R_3k5oRaGCFL1MpK9,NA,EN,economics,5,5,NA,4,2,4,4,4,4,4,3,3,3,3,3,3,4,4,4,3.75,9,3,NA,NA,NA,1,2,2,2,2,2.197224577
+242,3/10/22 16:02,3/10/22 16:06,0,NA,100,205,1,3/10/22 16:06,R_1OZjTU5gcq9Kqmf,NA,EN,Psychology,5,4,4,4,4,2,5,2,3,2,4,4,4,4,4,6,6,2,5,4.75,9,5,NA,NA,NA,2,2,3,4,1,2.197224577
+252,3/10/22 22:06,3/10/22 22:10,0,NA,100,245,1,3/10/22 22:10,R_TuPqcCZUxl7tNap,NA,EN,Communication studies,5,2,5,5,4,4,3,4,3,3,4,3,3,3,3.25,4,4,4,4,4,9,5,NA,NA,NA,4,1,3,3,3,2.197224577
+316,3/14/22 9:59,3/14/22 10:08,0,NA,100,523,1,3/14/22 10:08,R_sjscM7NlQIXLp3r,NA,EN,Communication,4,2,4,4,2,2,2,2,1,3,7,6,6,6,6.25,6,7,6,6,6.25,9,5,"Despite being exposed to the social dynamics of my field for several years now, I still feel that my view is limited. I have, fo",NA,NA,4,2,5,3,4,2.197224577
+25,3/7/22 14:57,3/7/22 15:01,0,NA,100,204,1,3/7/22 15:01,R_300GCQfxH4e7dD8,NA,EN,Developmental Psychology,4,2,3,4,1,2,2,1,2,2,6,6,6,6,6,4,5,6,6,5.25,10,3,NA,NA,NA,4,2,4,4,4,2.302585093
+44,3/7/22 15:21,3/7/22 15:26,0,NA,100,278,1,3/7/22 15:26,R_3GkXUf8kPfxQTEp,NA,EN,Developmental science,5,3,5,5,2,2,5,3,4,3,7,6,7,6,6.5,6,5,5,6,5.5,10,3,NA,NA,NA,3,1,2,3,1,2.302585093
+49,3/7/22 15:41,3/7/22 15:50,0,NA,100,574,1,3/7/22 15:50,R_1hZmGkh1z70TtZI,NA,EN,medical informatics,5,2,4,4,4,5,4,3,1,4,3,4,4,4,3.75,4,4,4,4,4,10,3,"For me, the questions about """"nice"""", """"kind"""" etc were tricky to answer because I think the majority of people in research are ",NA,NA,4,2,5,2,2,2.302585093
+54,3/7/22 15:51,3/7/22 15:56,0,NA,100,294,1,3/7/22 15:56,R_1r0vCR6ZkYQDGmH,NA,EN,dev cog neuro,5,4,3,4,2,1,2,1,2,4,6,5,5,5,5.25,7,7,6,6,6.5,10,4,NA,NA,NA,2,2,4,2,4,2.302585093
+58,3/7/22 15:57,3/7/22 15:59,0,NA,100,110,1,3/7/22 15:59,R_2S6K6Z9hQxYlYrj,NA,EN,cognitive neuroscience,4,2,3,3,2,2,3,2,1,1,6,5,6,5,5.5,4,4,4,4,4,10,4,NA,NA,NA,4,3,5,5,3,2.302585093
+60,3/7/22 16:07,3/7/22 16:09,0,NA,100,128,1,3/7/22 16:09,R_DBttEzCYOwJfBFn,NA,EN,philosophy,5,4,4,4,4,4,3,4,1,2,5,4,4,4,4.25,5,5,4,6,5,10,3,NA,NA,NA,2,2,5,4,3,2.302585093
+74,3/7/22 16:54,3/7/22 16:57,0,NA,100,193,1,3/7/22 16:57,R_2VmzNU4IlQbr4cP,NA,EN,psychology,4,2,4,4,4,4,4,2,3,2,5,5,4,5,4.75,2,2,4,2,2.5,10,4,NA,NA,NA,4,2,3,4,2,2.302585093
+103,3/7/22 18:55,3/7/22 18:58,0,NA,100,174,1,3/7/22 18:58,R_3Eb3bc6KxGH2cBm,NA,EN,Psychology,5,4,4,5,4,2,4,3,2,2,3,4,3,4,3.5,4,4,2,5,3.75,10,5,NA,NA,NA,2,1,4,4,2,2.302585093
+114,3/7/22 19:53,3/7/22 19:57,0,NA,100,246,1,3/7/22 19:57,R_3CVI8FtlGVE7ogO,NA,EN,Psychology,5,2,5,5,4,5,5,4,1,2,4,4,4,4,4,5,5,5,4,4.75,10,5,NA,NA,NA,4,1,5,4,1,2.302585093
+129,3/7/22 22:53,3/7/22 23:00,0,NA,100,385,1,3/7/22 23:00,R_2cpeF9HKubwmeXI,NA,EN,Developmental Psychology,2,1,2,4,1,2,3,2,2,2,6,5,6,5,5.5,6,6,5,6,5.75,10,4,NA,NA,NA,5,2,4,4,3,2.302585093
+134,3/8/22 4:48,3/8/22 4:53,0,NA,100,318,1,3/8/22 4:53,R_8cBriYgZL3J5TJD,NA,EN,Psychology/Social Psychology,4,2,4,4,3,2,3,2,1,1,6,5,5,5,5.25,5,5,4,6,5,10,4,NA,NA,NA,4,2,5,5,3,2.302585093
+142,3/8/22 9:18,3/8/22 9:22,0,NA,100,188,1,3/8/22 9:22,R_SDn6stJIOp3Tcml,NA,EN,Microbial ecology,1,2,4,4,2,1,2,3,2,1,5,5,4,5,4.75,5,7,7,7,6.5,10,5,NA,NA,NA,4,2,4,5,4,2.302585093
+147,3/8/22 13:46,3/8/22 13:50,0,NA,100,224,1,3/8/22 13:50,R_2EiPg2HTb60UhHZ,NA,EN,Developmental psychology,4,2,2,4,1,5,4,1,3,1,6,6,7,7,6.5,6,6,2,3,4.25,10,5,NA,NA,NA,4,2,3,5,2,2.302585093
+176,3/10/22 3:43,3/10/22 3:46,0,NA,100,187,1,3/10/22 3:46,R_1BYl7JylWd6Jky0,NA,EN,Psychology,4,2,2,2,1,1,3,2,2,2,6,6,5,5,5.5,7,7,6,6,6.5,10,2,NA,NA,NA,4,4,4,4,3,2.302585093
+179,3/10/22 5:04,3/10/22 5:06,0,NA,100,127,1,3/10/22 5:06,R_1QmapGKbp9pqilu,NA,EN,Anthropology,4,2,4,4,2,2,2,2,4,4,6,5,3,4,4.5,3,4,2,4,3.25,10,2,NA,NA,NA,4,2,2,2,4,2.302585093
+188,3/10/22 6:36,3/10/22 6:39,0,NA,100,152,1,3/10/22 6:39,R_2wuGiB0L5aoilWB,NA,EN,Organizational Behavior,4,5,3,4,2,1,1,2,1,2,6,5,5,4,5,6,6,4,5,5.25,10,3,NA,NA,NA,1,2,5,4,5,2.302585093
+189,3/10/22 6:42,3/10/22 6:46,0,NA,100,210,1,3/10/22 6:46,R_2DMqW8LS1RJ6eFI,NA,EN,cognitive psychology,5,2,3,5,2,4,5,1,1,1,6,6,6,6,6,6,6,6,6,6,10,4,NA,NA,NA,4,1,5,5,1,2.302585093
+195,3/10/22 6:46,3/10/22 6:51,0,NA,100,290,1,3/10/22 6:51,R_1GPtaHGgYpsjHHh,NA,EN,Psychology,5,4,4,4,3,5,5,4,3,4,3,2,1,3,2.25,2,1,1,3,1.75,10,4,NA,NA,NA,2,2,3,2,1,2.302585093
+198,3/10/22 6:51,3/10/22 6:54,0,NA,100,187,1,3/10/22 6:54,R_1MXq0H9cEOn17hM,NA,EN,Clinical psychology/academia,5,2,3,4,1,5,4,1,1,1,5,5,5,6,5.25,5,6,5,5,5.25,10,5,NA,NA,NA,4,2,5,5,2,2.302585093
+202,3/10/22 6:55,3/10/22 6:59,0,NA,100,220,1,3/10/22 6:59,R_25FgF2SHYKIBwQ1,NA,EN,Social psychology,4,2,2,4,3,1,3,2,1,1,5,5,4,5,4.75,5,5,2,4,4,10,5,NA,NA,NA,4,2,5,5,3,2.302585093
+226,3/10/22 8:51,3/10/22 9:01,0,NA,100,587,1,3/10/22 9:01,R_24ckSznhuS7yqkK,NA,EN,Communication,3,1,3,4,2,2,1,2,1,1,6,6,6,6,6,4,4,2,4,3.5,10,3,This paper is on open science and is published in Communication's flagship journal: https://doi.org/10.1093/joc/jqz052,NA,NA,NA,NA,NA,NA,NA,NA
+234,3/10/22 10:10,3/10/22 10:12,0,NA,100,133,1,3/10/22 10:12,R_1ruzi5kGoc1uH9o,NA,EN,Geography,1,1,3,2,2,2,2,1,1,2,6,7,6,7,6.5,4,5,3,5,4.25,10,4,NA,NA,NA,5,4,5,4,4,2.302585093
+238,3/10/22 11:54,3/10/22 12:00,0,NA,100,348,1,3/10/22 12:00,R_cLRrlo21HwziOQN,NA,EN,English literature,4,4,2,5,4,4,4,1,4,4,5,3,6,5,4.75,6,7,4,7,6,10,4,NA,NA,NA,2,1,2,2,2,2.302585093
+246,3/10/22 20:13,3/10/22 20:15,0,NA,100,137,1,3/10/22 20:15,R_2wGZmDR2Vy6yr1s,NA,EN,Social psychology,3,3,4,4,1,4,2,4,1,1,6,5,4,6,5.25,6,5,7,6,6,10,3,NA,NA,NA,3,2,5,5,4,2.302585093
+257,3/11/22 9:57,3/11/22 10:00,0,NA,100,173,1,3/11/22 10:00,R_2AEHjPyXNgANfFW,NA,EN,Psychology,5,2,4,5,5,4,2,4,5,1,6,4,6,4,5,7,7,7,7,7,10,4,"These perceptions vary by identity characteristics and access to resources (e.g., training at a high-prestige institution)",NA,NA,4,1,1,5,4,2.302585093
+268,3/11/22 10:56,3/11/22 10:58,0,NA,100,138,1,3/11/22 10:58,R_0cEN4lfTKjvb7l7,NA,EN,Communication,2,2,3,3,2,2,5,5,3,2,3,3,3,3,3,5,5,2,4,4,10,3,NA,NA,NA,4,3,3,4,1,2.302585093
+284,3/11/22 12:09,3/11/22 12:23,0,NA,100,821,1,3/11/22 12:23,R_sjQ5vlHs5ncjCGB,NA,EN,Communication,2,2,1,4,1,1,2,2,4,4,5,5,4,3,4.25,3,3,2,3,2.75,10,4,"Communication is one of the biggest of the big-tent """"disciplines,"""" encompassing several different subdisciplines that each ope",NA,NA,4,2,2,2,4,2.302585093
+285,3/11/22 12:19,3/11/22 12:24,0,NA,100,317,1,3/11/22 12:24,R_3Pzwm0SD7GugIPw,NA,EN,Communication Studies,3,3,2,2,1,3,3,4,3,3,4,4,4,4,4,4,4,4,4,4,10,4,NA,NA,NA,3,4,3,3,3,2.302585093
+309,3/13/22 15:35,3/13/22 15:37,0,NA,100,146,1,3/13/22 15:37,R_2xLu5U36CYP8SVS,NA,EN,communication,5,3,5,5,3,1,3,3,5,5,5,3,4,3,3.75,7,7,6,7,6.75,10,4,NA,NA,NA,3,1,1,1,3,2.302585093
+28,3/7/22 14:59,3/7/22 15:01,0,NA,100,129,1,3/7/22 15:01,R_1ibu1mmAYymmlgv,NA,EN,Psychology,5,3,4,5,4,2,4,3,2,2,4,4,4,4,4,5,5,5,5,5,11,5,NA,NA,NA,3,1,4,4,2,2.397895273
+66,3/7/22 16:35,3/7/22 16:39,0,NA,100,254,1,3/7/22 16:39,R_AzLjC6FluDDSykN,NA,EN,Cognitive science,3,2,2,2,2,2,4,3,2,1,5,3,3,4,3.75,5,5,4,4,4.5,11,5,NA,NA,NA,4,4,4,5,2,2.397895273
+168,3/9/22 11:33,3/9/22 11:39,0,NA,100,382,1,3/9/22 11:39,R_28NVyjj2W6shOPK,NA,EN,computational neuroscience,5,4,5,5,4,5,5,2,1,2,4,4,3,3,3.5,5,5,2,6,4.5,11,4,hard to answer on average how the field is for the scale questions. maybe good to add variance?,NA,NA,2,1,5,4,1,2.397895273
+172,3/9/22 15:54,3/9/22 15:58,0,NA,100,216,1,3/9/22 15:58,R_25WrJaDLcVgl6wP,NA,EN,Psychology,4,2,4,4,3,4,4,3,4,2,5,5,4,4,4.5,5,4,3,4,4,11,4,NA,NA,NA,4,2,2,4,2,2.397895273
+180,3/10/22 5:04,3/10/22 5:06,0,NA,100,155,1,3/10/22 5:06,R_3p3w0SwGs5XpZxu,NA,EN,Cognitive science,3,2,2,4,1,1,2,2,1,1,6,6,6,6,6,6,6,4,6,5.5,11,5,NA,NA,NA,4,2,5,5,4,2.397895273
+206,3/10/22 7:16,3/10/22 7:20,0,NA,100,246,1,3/10/22 7:20,R_1LXNjLgQkv11gbB,NA,EN,Psychology,4,3,4,4,3,5,3,3,2,2,5,5,4,5,4.75,5,5,2,4,4,11,4,NA,NA,NA,3,2,4,4,3,2.397895273
+224,3/10/22 8:30,3/10/22 8:33,0,NA,100,176,1,3/10/22 8:33,R_2tyZQWSNFVhFDHb,NA,EN,Communication,4,4,4,4,1,4,2,2,2,2,6,5,6,5,5.5,5,5,4,6,5,11,4,NA,NA,NA,2,2,4,4,4,2.397895273
+330,3/21/22 3:54,3/21/22 4:02,0,NA,100,490,1,3/21/22 4:02,R_2QzIFJH6Mp53SyI,NA,EN,Philosophy,5,4,5,4,4,4,2,3,5,5,4,3,2,3,3,4,4,5,5,4.5,11,4,I think dynamics are actively in flux in philosophy (and changing for the better) so it's sometimes hard to settle on a good res,NA,NA,2,2,1,1,4,2.397895273
+333,3/23/22 5:07,3/23/22 5:10,0,NA,100,155,1,3/23/22 5:10,R_3FJ9cgvw87WPa9Z,NA,EN,language acquisition,3,2,2,2,3,3,2,1,1,1,7,7,7,7,7,7,7,7,7,7,11,5,NA,NA,NA,4,4,5,5,4,2.397895273
+12,3/7/22 14:41,3/7/22 14:47,0,NA,100,392,1,3/7/22 14:47,R_32Xy0YNyaTHtXRK,NA,EN,Cognitive neuroscience,5,2,4,5,2,2,2,2,4,1,5,2,6,4,4.25,6,6,5,6,5.75,12,5,NA,NA,NA,4,1,2,5,4,2.48490665
+38,3/7/22 15:11,3/7/22 15:15,0,NA,100,243,1,3/7/22 15:15,R_1eJBuZusFSI9D1P,NA,EN,developmental cognitive neuroscience,3,2,2,2,3,2,4,3,1,1,6,6,5,6,5.75,7,7,5,7,6.5,12,4,NA,NA,NA,4,4,5,5,2,2.48490665
+89,3/7/22 17:54,3/7/22 17:57,0,NA,100,175,1,3/7/22 17:57,R_1pzCWUUUGIlC9qP,NA,EN,Philosophy,5,2,4,5,1,2,4,1,3,4,3,3,5,3,3.5,4,4,3,2,3.25,12,4,NA,NA,NA,4,1,3,2,2,2.48490665
+123,3/7/22 21:23,3/7/22 21:31,0,NA,100,488,1,3/7/22 21:31,R_12K2o5qvwHRymUN,NA,EN,developmental psychology,5,4,3,3,2,2,5,3,4,1,7,7,7,7,7,7,7,7,7,7,12,5,"I think some questions are difficult to answer (of course these questions were not meant to capture nuance, just expressing some",NA,NA,2,3,2,5,1,2.48490665
+128,3/7/22 22:48,3/7/22 22:53,0,NA,100,334,1,3/7/22 22:53,R_1N4uKcRPz2ovWmF,NA,EN,Public policy,5,3,2,2,1,2,5,2,2,2,5,5,4,4,4.5,5,6,6,6,5.75,12,5,NA,NA,NA,3,4,4,4,1,2.48490665
+151,3/8/22 19:30,3/8/22 19:35,0,NA,100,260,1,3/8/22 19:35,R_W2ICnpqVgK0lmBb,NA,EN,Social Neuroscience,3,1,3,4,2,4,2,2,4,3,6,5,5,5,5.25,5,5,5,5,5,12,5,NA,NA,NA,5,2,2,3,4,2.48490665
+196,3/10/22 6:49,3/10/22 6:51,0,NA,100,123,1,3/10/22 6:51,R_1P4TRjk5IVG3MPZ,NA,EN,Clinical psychology,5,2,3,5,1,2,1,1,1,1,6,5,3,5,4.75,7,7,2,7,5.75,12,5,NA,NA,NA,4,1,5,5,5,2.48490665
+209,3/10/22 7:23,3/10/22 7:29,0,NA,100,358,1,3/10/22 7:29,R_2tleuNeeBPtJmcX,NA,EN,Marketing,5,3,4,5,2,3,2,2,3,3,6,6,5,6,5.75,5,5,6,5,5.25,12,3,"Best of luck, look forward to the results!",NA,NA,3,1,3,3,4,2.48490665
+287,3/11/22 12:27,3/11/22 12:32,0,NA,100,265,1,3/11/22 12:32,R_3HTd3a0TxsMfuhr,NA,EN,Communication Studies,4,4,4,4,1,4,2,3,4,4,5,4,4,4,4.25,4,3,4,4,3.75,12,2,NA,NA,NA,2,2,2,2,4,2.48490665
+294,3/11/22 14:17,3/11/22 14:20,0,NA,100,180,1,3/11/22 14:20,R_vNv2AeAOQteNdTP,NA,EN,Media Studies,5,4,5,5,5,5,2,5,3,2,2,2,2,2,2,4,4,4,4,4,12,3,NA,NA,NA,2,1,3,4,4,2.48490665
+300,3/11/22 20:55,3/11/22 20:58,0,NA,100,165,1,3/11/22 20:58,R_1gMHnC5NwabokRa,NA,EN,Communication,5,5,5,5,3,5,5,4,2,2,5,3,2,4,3.5,5,5,2,1,3.25,12,5,NA,NA,NA,1,1,4,4,1,2.48490665
+135,3/8/22 4:49,3/8/22 4:53,0,NA,100,244,1,3/8/22 4:53,R_1pu79wbeQ52HkD3,NA,EN,cognitive development,4,2,4,4,4,2,4,2,3,2,6,6,6,6,6,6,5,5,5,5.25,13,4,NA,NA,NA,4,2,3,4,2,2.564949357
+161,3/9/22 10:05,3/9/22 10:09,0,NA,100,277,1,3/9/22 10:09,R_3kmOaePfmxaczAl,NA,EN,library and information science,4,2,2,4,2,2,2,2,1,2,6,4,5,5,5,5,5,4,6,5,13,5,NA,NA,NA,4,2,5,4,4,2.564949357
+227,3/10/22 8:52,3/10/22 9:03,0,NA,100,621,1,3/10/22 9:03,R_27mx1mW4eBVVHUO,NA,EN,Social psychology,5,2,5,3,4,5,5,5,2,1,4,2,4,3,3.25,6,6,3,6,5.25,13,5,NA,NA,NA,4,3,4,5,1,2.564949357
+241,3/10/22 15:52,3/10/22 15:54,0,NA,100,119,1,3/10/22 15:54,R_1ow4cS1UbAFp3wN,NA,EN,clinical psychology,5,2,4,5,2,2,4,5,3,1,5,5,5,4,4.75,7,7,6,6,6.5,13,5,NA,NA,NA,4,1,3,5,2,2.564949357
+312,3/14/22 0:54,3/14/22 1:01,0,NA,100,411,1,3/14/22 1:01,R_pxYrjT75K76Mnp7,NA,EN,Psychology,4,4,2,4,2,5,5,4,2,1,6,4,6,4,5,4,4,5,5,4.5,13,4,NA,NA,NA,2,2,4,5,1,2.564949357
+329,3/20/22 13:18,3/20/22 13:23,0,NA,100,253,1,3/20/22 13:23,R_r0lodxCRvx6o1fb,NA,EN,Biology,5,5,4,4,4,4,5,4,2,3,5,3,5,3,4,6,6,7,5,6,13,3,NA,NA,NA,1,2,4,3,1,2.564949357
+2,3/7/22 14:31,3/7/22 14:35,0,NA,100,215,1,3/7/22 14:35,R_2WAr5WSBEifruLu,NA,EN,Psychology,4,2,4,4,3,3,4,3,2,2,6,5,4,5,5,5,5,4,5,4.75,14,5,NA,NA,NA,4,2,4,4,2,2.63905733
+27,3/7/22 14:58,3/7/22 15:03,0,NA,100,289,1,3/7/22 15:03,R_DTvX4fV5kx9Hx9D,NA,EN,cognitive neuroscience,5,5,5,5,4,4,3,4,1,2,3,3,2,2,2.5,6,5,5,6,5.5,14,4,I think perceived social dynamics vary in this discipline by gender quite a bit. My experience as a woman in a methods-heavy sub,NA,NA,1,1,5,4,3,2.63905733
+45,3/7/22 15:26,3/7/22 15:28,0,NA,100,112,1,3/7/22 15:28,R_24kfCDvzqgXlZ5C,NA,EN,cognitive science,4,2,2,5,2,3,2,2,2,2,5,5,5,5,5,6,6,5,6,5.75,14,4,NA,NA,NA,4,1,4,4,4,2.63905733
+59,3/7/22 16:00,3/7/22 16:10,0,NA,100,571,1,3/7/22 16:10,R_SHv8suxxaujG5dn,NA,EN,Neuroscience,5,1,5,4,4,1,4,3,2,1,5,5,5,5,5,6,6,6,6,6,14,5,NA,NA,NA,5,2,4,5,2,2.63905733
+124,3/7/22 21:34,3/7/22 21:37,0,NA,100,130,1,3/7/22 21:37,R_2b1xtkmvAf5Cwom,NA,EN,developmental psychology,5,2,2,3,1,4,4,2,1,4,6,5,5,6,5.5,6,7,6,7,6.5,14,2,NA,NA,NA,4,3,5,2,2,2.63905733
+144,3/8/22 12:52,3/8/22 12:56,0,NA,100,238,1,3/8/22 12:56,R_12AAx3v6rWQ9CKR,NA,EN,Chemical Engineering,5,3,4,5,3,5,4,3,3,2,4,4,2,2,3,5,3,4,4,4,14,5,NA,NA,NA,3,1,3,4,2,2.63905733
+214,3/10/22 7:44,3/10/22 7:51,0,NA,100,401,1,3/10/22 7:51,R_3EQqi1p44RsQyU2,NA,EN,social psychology,5,1,3,4,1,2,2,2,2,2,6,6,6,6,6,6,6,6,6,6,14,5,NA,NA,NA,5,2,4,4,4,2.63905733
+216,3/10/22 7:52,3/10/22 7:56,0,NA,100,251,1,3/10/22 7:56,R_OPzAIMZY9R8p8VH,NA,EN,Social Psychology,5,5,5,5,5,5,5,5,1,1,2,2,3,3,2.5,5,5,2,5,4.25,14,5,"I think cooperation drives the REAL advances in the field, but is not rewarded or encouraged, and “bropen science” is simply",NA,NA,1,1,5,5,1,2.63905733
+259,3/11/22 10:48,3/11/22 10:52,0,NA,100,222,1,3/11/22 10:52,R_2EofJTWav8nOmuc,NA,EN,Communication,3,2,4,5,2,1,4,2,1,1,5,5,6,6,5.5,7,7,4,7,6.25,14,3,NA,NA,NA,4,1,5,5,2,2.63905733
+318,3/14/22 20:23,3/14/22 20:27,0,NA,100,268,1,3/14/22 20:27,R_114HO7gShB2ZDNn,NA,EN,Communication Studies,3,1,2,2,2,2,2,2,1,1,6,4,4,5,4.75,6,5,4,6,5.25,14,5,NA,NA,NA,5,4,5,5,4,2.63905733
+48,3/7/22 15:38,3/7/22 15:43,0,NA,100,279,1,3/7/22 15:43,R_300PRONXh1vhhQW,NA,EN,Sociology,2,2,2,3,4,2,1,2,3,3,4,5,5,5,4.75,5,4,3,6,4.5,15,4,NA,NA,NA,4,3,3,3,5,2.708050201
+83,3/7/22 17:29,3/7/22 17:33,0,NA,100,231,1,3/7/22 17:33,R_1GUZ8R81ADA8A3Y,NA,EN,Autism/psychology,4,2,2,4,3,2,4,2,2,2,5,5,5,NA,5,NA,NA,NA,NA,NA,15,4,I am at one of the primary research institutes for my area and it was a little challenging to seperate our institution specifics,NA,NA,4,2,4,4,2,2.708050201
+91,3/7/22 18:00,3/7/22 18:03,0,NA,100,169,1,3/7/22 18:03,R_12DUUfotjJVYEGr,NA,EN,Gifted education,4,1,4,5,1,4,3,2,1,2,6,6,5,6,5.75,5,5,6,6,5.5,15,3,NA,NA,NA,5,1,5,4,3,2.708050201
+113,3/7/22 19:50,3/7/22 19:57,0,NA,100,408,1,3/7/22 19:57,R_PFiTsWsIcnLn745,NA,EN,Psycholinguistics,3,2,4,4,1,2,2,3,2,1,6,4,5,5,5,5,5,5,5,5,15,4,NA,NA,NA,4,2,4,5,4,2.708050201
+117,3/7/22 20:03,3/7/22 20:07,0,NA,100,236,1,3/7/22 20:07,R_3NR5tj2DBkmEeBB,NA,EN,linguistics,5,2,3,5,1,1,4,1,2,4,6,4,6,5,5.25,7,7,2,7,5.75,15,5,NA,NA,NA,4,1,4,2,2,2.708050201
+118,3/7/22 20:20,3/7/22 20:25,0,NA,100,311,1,3/7/22 20:25,R_3HSOqiol3IK1fcV,NA,EN,Neuroscience,5,3,5,5,4,4,5,1,4,4,3,1,6,5,3.75,5,5,5,5,5,15,3,Nice that you are doing this. Many aspects of the research culture need to change.,NA,NA,3,1,2,2,1,2.708050201
+125,3/7/22 22:08,3/7/22 22:11,0,NA,100,150,1,3/7/22 22:11,R_eFm3iihkoaOxail,NA,EN,Psychology,5,5,4,4,4,5,4,3,1,2,2,3,2,2,2.25,5,5,2,5,4.25,15,4,NA,NA,NA,1,2,5,4,2,2.708050201
+190,3/10/22 6:43,3/10/22 6:49,0,NA,100,335,1,3/10/22 6:49,R_tML8ORCZNObuT1n,NA,EN,social psychology,5,3,5,5,3,5,5,4,4,5,5,5,4,5,4.75,5,4,4,5,4.5,15,2,"i was split between identifying with social psychology, cultural evolution, or methods/meta-science. the norms in these fields a",NA,NA,3,1,2,1,1,2.708050201
+197,3/10/22 6:50,3/10/22 7:00,0,NA,100,588,1,3/10/22 7:00,R_1FxIcuxuBA3gRhM,NA,EN,Sociology,4,2,2,2,3,2,2,3,2,1,5,5,5,5,5,4,4,3,4,3.75,15,5,NA,NA,NA,4,4,4,5,4,2.708050201
+199,3/10/22 6:52,3/10/22 7:07,0,NA,100,879,1,3/10/22 7:07,R_1pDrvopQ1BOcfbz,NA,EN,Psychopathology,4,4,4,5,3,2,5,2,1,2,4,3,5,4,4,5,5,4,4,4.5,15,3,NA,NA,NA,2,1,5,4,1,2.708050201
+205,3/10/22 7:09,3/10/22 7:12,0,NA,100,194,1,3/10/22 7:12,R_1KvQVxeKjtGeMYQ,NA,EN,Political psychology,4,2,3,3,2,2,3,2,2,2,4,4,4,4,4,5,5,4,5,4.75,15,2,NA,NA,NA,4,3,4,4,3,2.708050201
+222,3/10/22 8:20,3/10/22 8:25,0,NA,100,307,1,3/10/22 8:25,R_2ZBqYF8DtmDIW4K,NA,EN,Communication technology,2,1,3,3,2,2,4,2,2,3,6,6,5,5,5.5,7,7,5,6,6.25,15,4,NA,NA,NA,5,3,4,3,2,2.708050201
+223,3/10/22 8:23,3/10/22 8:34,0,NA,100,636,1,3/10/22 8:34,R_3Gy9WIOcXpd5w6J,NA,EN,Paleobiology,4,3,2,4,2,4,2,1,2,1,6,5,4,4,4.75,6,6,4,6,5.5,15,5,"There are notable differences between early career/grad student perspectives  and older generations, but the societies have been",NA,NA,3,2,4,5,4,2.708050201
+280,3/11/22 11:34,3/11/22 11:37,0,NA,100,175,1,3/11/22 11:37,R_Z3Hv7amEnSQY6sN,NA,EN,Communication,4,2,4,3,1,2,3,2,3,3,5,4,6,4,4.75,7,6,4,6,5.75,15,2,it's hard to generalize broadly; there are exceptions to everything.,NA,NA,4,3,3,3,3,2.708050201
+328,3/20/22 9:59,3/20/22 10:03,0,NA,100,203,1,3/20/22 10:03,R_3hhdT9ulJ84LezT,NA,EN,psychology,5,2,4,2,4,1,3,2,2,2,5,5,5,5,5,4,5,3,5,4.25,15,5,NA,NA,NA,4,4,4,4,3,2.708050201
+64,3/7/22 16:23,3/7/22 16:27,0,NA,100,187,1,3/7/22 16:27,R_1o0GlKMiNu8ouMh,NA,EN,psychology,4,2,2,2,1,1,2,2,2,1,5,5,6,6,5.5,5,6,3,5,4.75,16,3,NA,NA,NA,4,4,4,5,4,2.772588722
+68,3/7/22 16:42,3/7/22 16:45,0,NA,100,187,1,3/7/22 16:45,R_1LtgVpPVuean2UR,NA,EN,Psychology,4,2,3,2,2,2,3,2,1,2,5,4,4,4,4.25,4,4,3,4,3.75,16,3,NA,NA,NA,4,4,5,4,3,2.772588722
+100,3/7/22 18:47,3/7/22 18:52,0,NA,100,307,1,3/7/22 18:52,R_yWnUOPrcNAfOGQh,NA,EN,communication sciences and disorders,5,2,5,4,2,1,4,1,1,1,6,5,6,4,5.25,6,6,3,4,4.75,16,4,NA,NA,NA,4,2,5,5,2,2.772588722
+130,3/7/22 22:59,3/7/22 23:04,0,NA,100,272,1,3/7/22 23:04,R_yILeNe856XxSCsh,NA,EN,Cognitive developmental psychology,5,4,5,5,4,4,3,2,1,2,4,4,4,4,4,4,6,6,6,5.5,16,5,NA,NA,NA,2,1,5,4,3,2.772588722
+159,3/9/22 9:36,3/9/22 9:38,0,NA,100,160,1,3/9/22 9:38,R_1H8fLzeRheoHwVA,NA,EN,computational neuroscience,5,2,4,2,2,2,5,2,1,2,5,4,4,5,4.5,6,6,3,6,5.25,16,4,NA,NA,NA,4,4,5,4,1,2.772588722
+207,3/10/22 7:21,3/10/22 7:26,0,NA,100,283,1,3/10/22 7:26,R_C33Ddzrchjwh4oV,NA,EN,Neuroeconomics,5,1,3,4,2,2,2,4,1,2,4,4,6,4,4.5,6,6,4,6,5.5,16,4,Field is interdisciplinary- high variance. But field “founders” ( mostly men) have extreme influence.,NA,NA,5,2,5,4,4,2.772588722
+211,3/10/22 7:26,3/10/22 7:29,0,NA,100,230,1,3/10/22 7:29,R_3OleSuEA1D6sVZg,NA,EN,Psychology,4,4,4,4,4,3,2,4,2,1,5,5,5,5,5,4,5,3,4,4,16,5,NA,NA,NA,2,2,4,5,4,2.772588722
+278,3/11/22 11:21,3/11/22 11:23,0,NA,100,117,1,3/11/22 11:23,R_1CeGduQs8m4jSeY,NA,EN,Communication,4,4,4,2,2,4,2,4,2,1,6,6,6,4,5.5,5,6,6,6,5.75,16,2,NA,NA,NA,2,4,4,5,4,2.772588722
+293,3/11/22 14:11,3/11/22 14:15,0,NA,100,261,1,3/11/22 14:15,R_2CTDvM908Znfxqf,NA,EN,Communication,4,2,3,3,2,1,1,1,2,3,5,6,5,5,5.25,6,6,6,6,6,16,3,NA,NA,NA,4,3,4,3,5,2.772588722
+295,3/11/22 14:42,3/11/22 14:45,0,NA,100,140,1,3/11/22 14:45,R_2cpVyT2HUJzkxXP,NA,EN,Communication Studies,4,1,2,5,1,2,1,1,1,1,7,7,7,7,7,5,5,2,5,4.25,16,5,thank you for doing this study!,NA,NA,5,1,5,5,5,2.772588722
+56,3/7/22 15:53,3/8/22 6:44,0,NA,100,53476,1,3/8/22 6:44,R_2S02vU45uuLAHqe,NA,EN,Psychology,4,2,4,4,1,1,2,1,2,3,6,5,5,5,5.25,5,5,4,5,4.75,17,2,NA,NA,NA,4,2,4,3,4,2.833213344
+72,3/7/22 16:51,3/7/22 16:56,0,NA,100,299,1,3/7/22 16:56,R_4SMpLT26AX8Pkzv,NA,EN,Vision,5,2,4,5,2,2,4,2,2,4,5,2,5,2,3.5,6,5,4,6,5.25,17,4,NA,NA,NA,4,1,4,2,2,2.833213344
+111,3/7/22 19:36,3/7/22 19:45,0,NA,100,503,1,3/7/22 19:45,R_2CHsBK2XOvylflj,NA,EN,Speech-language pathology,5,4,4,5,2,2,3,2,2,2,4,4,5,6,4.75,5,5,4,6,5,17,2,NA,NA,NA,2,1,4,4,3,2.833213344
+127,3/7/22 22:43,3/7/22 22:47,0,NA,100,223,1,3/7/22 22:47,R_1C7Tny30Xxh2kLL,NA,EN,Psychology,5,2,4,5,2,4,4,2,1,1,4,3,5,3,3.75,6,6,4,5,5.25,17,5,NA,NA,NA,4,1,5,5,2,2.833213344
+163,3/9/22 10:24,3/9/22 10:33,0,NA,100,517,1,3/9/22 10:33,R_yKfOvlowvxeV1jr,NA,EN,Behavioral ecology,4,4,5,5,5,4,5,1,4,4,4,4,4,4,4,6,4,4,3,4.25,17,5,"It seems that some labs at high ranking universities, with many resources, produce many trainees and have a disproportionate inf",NA,NA,2,1,2,2,1,2.833213344
+169,3/9/22 11:52,3/9/22 11:59,0,NA,100,437,1,3/9/22 11:59,R_3HhQqHAu7VuMPK5,NA,EN,biomechanics,4,2,2,5,2,2,4,2,1,3,6,7,6,5,6,7,NA,4,6,5.666666667,17,5,"Biomechanics is my research area, and my answers apply to this field that intersects engineering, kinesiology, and biology.  If ",NA,NA,4,1,5,3,2,2.833213344
+177,3/10/22 3:59,3/10/22 4:02,0,NA,100,179,1,3/10/22 4:02,R_2ymkaNp9Qap4z1g,NA,EN,Social Psychology,4,4,4,5,2,3,4,2,3,4,5,3,2,3,3.25,2,2,3,3,2.5,17,1,NA,NA,NA,2,1,3,2,2,2.833213344
+192,3/10/22 6:44,3/10/22 6:45,0,NA,100,104,1,3/10/22 6:45,R_1PTvHXScn86mQ1c,NA,EN,neuroscience,5,4,5,5,4,4,4,2,1,1,5,4,5,4,4.5,7,6,2,7,5.5,17,5,NA,NA,NA,2,1,5,5,2,2.833213344
+276,3/11/22 11:13,3/11/22 11:25,0,NA,100,753,1,3/11/22 11:25,R_umJ81gj23knSBod,NA,EN,Communication and Media Studies,5,2,2,5,4,2,5,2,2,2,6,5,5,5,5.25,3,3,4,4,3.5,17,3,"I have had the experience more than once of being desk rejected from a top tier journal due to """"fit,"""" despite the fact that th",NA,NA,4,1,4,4,1,2.833213344
+20,3/7/22 14:53,3/7/22 15:54,0,NA,100,3653,1,3/7/22 15:54,R_1od92mONA1u1GnE,NA,EN,Cognitive neuroscience,4,2,3,4,2,4,5,1,2,2,5,5,5,5,5,4,4,4,4,4,18,3,NA,NA,NA,4,2,4,4,1,2.890371758
+46,3/7/22 15:29,3/7/22 15:33,0,NA,100,255,1,3/7/22 15:33,R_SITcREmXYeqpQkN,NA,EN,Psychological Science,4,4,4,5,3,4,4,3,2,1,4,4,4,4,4,6,6,5,7,6,18,4,NA,NA,NA,2,1,4,5,2,2.890371758
+82,3/7/22 17:26,3/7/22 17:30,0,NA,100,270,1,3/7/22 17:30,R_2X4CorOt681djH2,NA,EN,developmental psychology,4,2,4,5,4,4,3,2,2,2,4,4,2,3,3.25,4,4,2,4,3.5,18,4,"lots of hypocrisy/divergence in public vs private behaviors. many colleagues read as nice; behind the scenes, not so much (based",NA,NA,4,1,4,4,3,2.890371758
+218,3/10/22 8:04,3/10/22 8:06,0,NA,100,127,1,3/10/22 8:06,R_W9AnNH5339VeUhP,NA,EN,Communication,4,1,4,4,3,2,1,2,1,1,7,6,7,6,6.5,5,5,5,5,5,18,5,"This was a really interesting study, I will pass along to several colleagues. ",NA,NA,5,2,5,5,5,2.890371758
+221,3/10/22 8:19,3/10/22 8:23,0,NA,100,278,1,3/10/22 8:23,R_12uwOaRZ6U8RnU8,NA,EN,Communciation Studies,2,1,2,2,1,1,1,2,2,3,6,6,7,5,6,5,5,3,5,4.5,18,4,"Thank you for doing this survey. I'll be curious to see how """"nice"""" and """"kind"""" factor out --- mainly because there's somewhat",NA,NA,5,4,4,3,5,2.890371758
+251,3/10/22 21:31,3/10/22 21:34,0,NA,100,232,1,3/10/22 21:34,R_xF2cdVEcrbPRKZb,NA,EN,Chemistry,4,3,3,4,2,4,3,1,1,1,6,5,6,6,5.75,7,7,7,7,7,18,4,The chemistry twitter community is very open and supportive! I think they (we?) are making an impact on these norms in our field,NA,NA,3,2,5,5,3,2.890371758
+272,3/11/22 11:03,3/11/22 11:31,0,NA,100,1669,1,3/11/22 11:31,R_2TyLacVd7ZZZjSS,NA,EN,Communication,5,2,5,5,1,2,4,2,1,2,6,6,7,6,6.25,5,5,4,5,4.75,18,5,NA,NA,NA,4,1,5,4,2,2.890371758
+291,3/11/22 12:58,3/11/22 13:01,0,NA,100,152,1,3/11/22 13:01,R_vqqH9GCH4VGiJSV,NA,EN,Communication Studies,4,3,4,4,3,2,3,4,2,1,5,5,4,5,4.75,6,6,5,5,5.5,18,3,NA,NA,NA,3,2,4,5,3,2.890371758
+57,3/7/22 15:54,3/7/22 15:59,0,NA,100,296,1,3/7/22 15:59,R_D7W96YR8MNTQ2A1,NA,EN,Philosophy,5,2,2,5,1,3,4,3,2,3,2,2,2,2,2,4,4,3,4,3.75,19,5,"Philosophy is undergoing big changes in its social dynamics: more decentralization, more pluralism, greater importance of applie",NA,NA,4,1,4,3,2,2.944438979
+88,3/7/22 17:48,3/7/22 17:53,0,NA,100,301,1,3/7/22 17:53,R_1mJye0UqBPH7bXm,NA,EN,Psychology,4,2,4,5,2,4,4,4,4,2,6,5,4,5,5,4,4,5,4,4.25,19,4,NA,NA,NA,4,1,2,4,2,2.944438979
+31,3/7/22 15:00,3/7/22 15:10,0,NA,100,559,1,3/7/22 15:10,R_24FRP1Mk3HHBFyR,NA,EN,Cognitive Neuroscience,4,2,4,4,4,4,4,2,2,2,5,5,5,5,5,5,5,5,5,5,20,4,NA,NA,NA,4,2,4,4,2,2.995732274
+35,3/7/22 15:02,3/7/22 15:05,0,NA,100,213,1,3/7/22 15:05,R_2SwflWnEWeoUEul,NA,EN,economics,5,2,4,4,3,2,5,4,2,1,5,4,4,4,4.25,7,7,6,7,6.75,20,5,NA,NA,NA,4,2,4,5,1,2.995732274
+41,3/7/22 15:17,3/7/22 15:20,0,NA,100,200,1,3/7/22 15:20,R_3dS4pkQ8iicweJW,NA,EN,Political science,1,2,5,5,4,4,4,4,2,2,4,3,6,3,4,6,6,3,6,5.25,20,5,NA,NA,NA,4,1,4,4,2,2.995732274
+85,3/7/22 17:36,3/7/22 17:42,0,NA,100,326,1,3/7/22 17:42,R_1CqkW9KORmWZPBI,NA,EN,developmental psychology,5,4,5,4,3,5,4,3,2,2,6,4,4,5,4.75,6,6,4,5,5.25,20,5,NA,NA,NA,2,2,4,4,2,2.995732274
+326,3/19/22 16:15,3/19/22 16:17,0,NA,100,113,1,3/19/22 16:17,R_3m8IscTGDTwNmx5,NA,EN,Psychology,5,4,3,3,3,2,4,2,3,2,6,5,5,5,5.25,3,3,4,4,3.5,20,4,NA,NA,NA,2,3,3,4,2,2.995732274
+4,3/7/22 14:34,3/7/22 14:36,0,NA,100,123,1,3/7/22 14:36,R_1IK3d75bWJeNijx,NA,EN,social psychology,4,2,2,4,2,2,2,1,2,1,4,4,4,4,4,4,4,3,4,3.75,21,3,NA,NA,NA,4,2,4,5,4,3.044522438
+94,3/7/22 18:14,3/7/22 18:18,0,NA,100,242,1,3/7/22 18:18,R_3HoaeSKQID4Sb4N,NA,EN,cognitive neuroscience,2,2,2,4,1,1,2,2,1,2,6,7,6,6,6.25,6,7,6,6,6.25,21,4,NA,NA,NA,4,2,5,4,4,3.044522438
+136,3/8/22 4:50,3/8/22 4:55,0,NA,100,269,1,3/8/22 4:55,R_sXnIdVbivBbw42l,NA,EN,cognitive science,4,2,3,4,2,2,4,2,2,1,5,6,4,5,5,6,6,5,5,5.5,21,4,"I answered according to my sense of the overall dynamics, but it is very heterogeneous. Some schools and departments and advisor",NA,NA,4,2,4,5,2,3.044522438
+303,3/12/22 10:16,3/12/22 10:22,0,NA,100,338,1,3/12/22 10:22,R_1gcnrccrFHn82i1,NA,EN,Communication,2,2,2,2,2,1,4,1,2,4,6,5,6,6,5.75,6,6,4,6,5.5,21,3,NA,NA,NA,4,4,4,2,2,3.044522438
+107,3/7/22 19:13,3/7/22 19:15,0,NA,100,118,1,3/7/22 19:15,R_2V9FfQgvB9iToXG,NA,EN,Cognitive Science,5,3,4,5,2,3,2,1,3,2,6,5,5,5,5.25,4,4,3,4,3.75,22,5,NA,NA,NA,3,1,3,4,4,3.091042453
+126,3/7/22 22:37,3/7/22 22:44,0,NA,100,441,1,3/7/22 22:44,R_1FaYsa6xKPJIXiW,NA,EN,Psycholinguistics,2,2,2,5,1,2,4,1,2,2,5,4,4,5,4.5,6,6,3,5,5,22,3,NA,NA,NA,4,1,4,4,2,3.091042453
+170,3/9/22 12:17,3/9/22 12:21,0,NA,100,231,1,3/9/22 12:21,R_XmGMj9LmrpHW2kh,NA,EN,biomechanics,4,2,4,5,1,2,3,1,2,1,5,4,5,4,4.5,6,6,5,6,5.75,22,3,NA,NA,NA,4,1,4,5,3,3.091042453
+230,3/10/22 9:17,3/10/22 9:19,0,NA,100,109,1,3/10/22 9:19,R_eIF3qQGTNQ9PUGJ,NA,EN,communication,4,1,1,3,1,1,1,1,1,1,7,7,7,7,7,7,6,5,7,6.25,22,5,good luck~,NA,NA,5,3,5,5,5,3.091042453
+236,3/10/22 10:22,3/10/22 10:24,0,NA,100,107,1,3/10/22 10:24,R_sGBuMAM8tDJIGB3,NA,EN,Biophysics,4,5,5,5,4,3,4,2,2,2,4,3,4,4,3.75,6,6,5,6,5.75,22,4,NA,NA,NA,1,1,4,4,2,3.091042453
+78,3/7/22 17:07,3/7/22 17:09,0,NA,100,160,1,3/7/22 17:09,R_3PdHBsdUPCqTIH3,NA,EN,Philosophy,5,2,5,3,2,2,1,1,3,2,6,4,4,4,4.5,6,6,2,5,4.75,23,5,NA,NA,NA,4,3,3,4,5,3.135494216
+153,3/9/22 6:20,3/9/22 6:23,0,NA,100,175,1,3/9/22 6:23,R_3qlL8jPoMBHxefj,NA,EN,developmental science,5,2,5,5,4,5,1,2,3,1,2,2,2,3,2.25,5,5,5,5,5,23,4,NA,NA,NA,4,1,3,5,5,3.135494216
+212,3/10/22 7:33,3/10/22 7:36,0,NA,100,232,1,3/10/22 7:36,R_qyhk2CmdTPu3AC5,NA,EN,Mental health services research,4,2,2,5,2,1,4,1,1,1,5,6,6,5,5.5,4,4,3,5,4,23,5,NA,NA,NA,4,1,5,5,2,3.135494216
+267,3/11/22 10:54,3/11/22 10:56,0,NA,100,143,1,3/11/22 10:56,R_2CfDUdz7ivPHHfH,NA,EN,Journalism studies,4,1,2,4,2,3,2,1,3,3,5,5,6,5,5.25,7,7,5,6,6.25,23,4,NA,NA,NA,5,2,3,3,4,3.135494216
+273,3/11/22 11:04,3/11/22 11:09,0,NA,100,273,1,3/11/22 11:09,R_O3XfOi5kDMc03st,NA,EN,Communication,4,1,2,3,2,1,2,2,3,3,5,6,6,6,5.75,6,6,5,5,5.5,24,4,"So much of this is not worded right for my discipline. For example, in your invitation, you said feel free to share with people ",NA,NA,5,3,3,3,4,3.17805383
+106,3/7/22 19:04,3/7/22 19:15,0,NA,100,692,1,3/7/22 19:15,R_3pu4t0HMBQyEtBJ,NA,EN,Psychology,5,2,2,4,3,2,3,4,4,3,5,5,5,5,5,6,6,4,4,5,25,5,NA,NA,NA,4,2,2,3,3,3.218875825
+133,3/8/22 4:41,3/8/22 4:45,0,NA,100,257,1,3/8/22 4:45,R_2e9JWnPStN63peE,NA,EN,neuroscience,4,4,3,3,1,1,3,3,2,2,4,4,3,3,3.5,5,5,3,3,4,25,3,"I think a major, under-discussed problematic source of status differences is in respect of the monstrous fees charged for gold O",NA,NA,2,3,4,4,3,3.218875825
+208,3/10/22 7:23,3/10/22 7:25,0,NA,100,125,1,3/10/22 7:25,R_3JFvQbEeB3hK2fK,NA,EN,personality psychology,4,4,2,4,2,2,5,1,4,4,5,3,4,4,4,6,6,4,6,5.5,25,2,NA,NA,NA,2,2,2,2,1,3.218875825
+232,3/10/22 9:37,3/10/22 9:39,0,NA,100,134,1,3/10/22 9:39,R_1g1sgSoi8OCKAqm,NA,EN,Communication,2,2,2,4,2,1,2,1,1,2,5,5,5,5,5,6,6,6,7,6.25,25,1,NA,NA,NA,4,2,5,4,4,3.218875825
+274,3/11/22 11:05,3/11/22 11:15,0,NA,100,612,1,3/11/22 11:15,R_1i8N7Sk1UZOLVKH,NA,EN,Communication,5,3,4,5,2,5,3,3,2,2,5,4,4,4,4.25,5,5,4,4,4.5,25,2,The instructions on how to calculate how many years I have been doing research or scholarship are confusing. It looks like you'r,NA,NA,3,1,4,4,3,3.218875825
+22,3/7/22 14:54,3/7/22 15:04,0,NA,100,610,1,3/7/22 15:04,R_1g100DyJYLUkQeo,NA,EN,Cognitive neuroscience,5,2,4,5,3,3,4,1,4,1,4,3,4,4,3.75,5,5,4,5,4.75,26,4,"It is extremely competitive. When the stakes get higher, kindness is tested. ",NA,NA,4,1,2,5,2,3.258096538
+51,3/7/22 15:47,3/7/22 15:51,0,NA,100,235,1,3/7/22 15:51,R_YblwWrrwpDs2Tex,NA,EN,psychology,4,2,4,4,2,1,4,1,1,1,6,5,6,5,5.5,3,4,4,3,3.5,26,5,NA,NA,NA,4,2,5,5,2,3.258096538
+95,3/7/22 18:20,3/7/22 18:24,0,NA,100,249,1,3/7/22 18:24,R_2Qglz9dkrt5mAvY,NA,EN,Cognitive science,4,2,4,5,4,2,2,2,1,1,4,3,4,3,3.5,6,6,5,6,5.75,26,4,"Context matters -- a department can be kind and supportive, but conferences might be something else entirely.",NA,NA,4,1,5,5,4,3.258096538
+247,3/10/22 20:42,3/10/22 20:44,0,NA,100,136,1,3/10/22 20:44,R_0992VnUPBk36E6t,NA,EN,Physics,1,1,1,2,1,1,1,1,3,1,6,6,6,6,6,7,7,7,7,7,26,4,NA,NA,NA,5,4,3,5,5,3.258096538
+116,3/7/22 20:03,3/7/22 20:06,0,NA,100,213,1,3/7/22 20:06,R_2sQHmb85m2LUlUx,NA,EN,Neuroscience,4,3,2,4,3,3,5,4,3,2,4,4,4,4,4,5,4,3,5,4.25,27,3,NA,NA,NA,3,2,3,4,1,3.295836866
+288,3/11/22 12:29,3/11/22 13:06,0,NA,100,2188,1,3/11/22 13:06,R_6eWVKthhfF8rVnP,NA,EN,communication studies,5,1,4,5,2,1,2,2,1,2,5,4,4,4,4.25,5,5,3,5,4.5,27,5,"unfortunately, communication studies is subject to entrenched, structural racism, sexism, heteronormativity, and ableism, as are",NA,NA,5,1,5,4,4,3.295836866
+173,3/9/22 17:05,3/9/22 17:09,0,NA,100,246,1,3/9/22 17:09,R_pPJXXQ8wzRgSt2h,NA,EN,Biomedical engineering,4,2,2,4,1,1,4,2,2,2,5,5,5,5,5,7,7,4,7,6.25,28,4,Biomedical Engineering is fairly broad and there are subdiciplines that would be considered outliers compared to the overall mea,NA,NA,4,2,4,4,2,3.33220451
+204,3/10/22 7:04,3/10/22 7:08,0,NA,100,195,1,3/10/22 7:08,R_2thsg3zJwpdy1HB,NA,EN,Cognitive Psychology,4,2,1,4,1,1,1,2,1,1,5,6,6,6,5.75,7,7,6,6,6.5,28,4,NA,NA,NA,4,2,5,5,5,3.33220451
+50,3/7/22 15:41,3/7/22 15:44,0,NA,100,188,1,3/7/22 15:44,R_1d44RnP81Qtctud,NA,EN,Philosophy,4,2,4,4,3,4,4,2,2,4,5,3,5,3,4,4,4,1,4,3.25,30,5,NA,NA,NA,4,2,4,2,2,3.401197382
+53,3/7/22 15:49,3/7/22 15:51,0,NA,100,172,1,3/7/22 15:51,R_3kyQC2zx3ZWNdLH,NA,EN,Social psychology,4,2,2,4,4,2,3,1,2,2,6,5,5,5,5.25,6,6,5,6,5.75,30,5,NA,NA,NA,4,2,4,4,3,3.401197382
+63,3/7/22 16:22,3/7/22 16:25,0,NA,100,213,1,3/7/22 16:25,R_2COrvk850J2UqZI,NA,EN,cognitive neuroscience,4,3,2,4,2,1,4,1,1,2,5,5,5,5,5,6,6,4,6,5.5,30,3,NA,NA,NA,3,2,5,4,2,3.401197382
+109,3/7/22 19:15,3/7/22 19:20,0,NA,100,266,1,3/7/22 19:20,R_25Bc6FwtGS3F7rm,NA,EN,linguistics,5,2,5,5,2,2,4,3,2,2,2,2,NA,NA,2,4,3,4,3,3.5,30,3,The power gradient in linguistics isn't primarily senior vs junior. It's institutional -- a grad student at a top dept outranks ,NA,NA,4,1,4,4,2,3.401197382
+249,3/10/22 20:54,3/10/22 20:58,0,NA,100,201,1,3/10/22 20:58,R_t0wqPkRNbKQM6Wd,NA,EN,Library/Information Science,5,1,2,2,4,1,2,1,3,2,5,5,5,5,5,5,5,3,5,4.5,30,5,NA,NA,NA,5,4,3,4,4,3.401197382
+275,3/11/22 11:07,3/11/22 11:09,0,NA,100,113,1,3/11/22 11:09,R_1jy2saugdyaRrZK,NA,EN,Communication,4,2,4,4,2,2,2,2,4,4,6,6,6,6,6,6,6,6,NA,6,30,4,NA,NA,NA,4,2,2,2,4,3.401197382
+30,3/7/22 15:00,3/7/22 15:02,0,NA,100,172,1,3/7/22 15:02,R_UcCDWOnSCFXBvgJ,NA,EN,Developmental psychology,4,2,3,2,1,2,3,2,1,1,6,6,6,6,6,6,6,5,6,5.75,32,4,Also identify as a cognitive scientist.,NA,NA,4,4,5,5,3,3.465735903
+21,3/7/22 14:53,3/7/22 14:57,0,NA,100,249,1,3/7/22 14:57,R_3QMI804miY5kzJK,NA,EN,social psychology,4,2,3,2,2,2,4,1,3,2,6,5,5,5,5.25,5,5,4,5,4.75,35,5,"Open science in social psych was initially spearheaded by more senior scholars (some not in psych), but was most robustly embrac",NA,NA,4,4,3,4,2,3.555348061
+55,3/7/22 15:52,3/7/22 16:01,0,NA,100,524,1,3/7/22 16:01,R_2PgQ0Ynb0si8oJG,NA,EN,cognitive neuroscience,4,2,2,5,1,2,2,2,4,4,6,5,6,6,5.75,4,4,3,4,3.75,40,5,"Fun, but I found some questions a little ambiguous.
+e.g.: to what extend does research in my field require collaborating with ot",NA,NA,4,1,2,2,4,3.688879454
+283,3/11/22 12:09,3/11/22 12:45,0,NA,100,2156,1,3/11/22 12:45,R_3HXD1QY6aASa4di,NA,EN,Speech-Language Pathology,5,4,4,5,4,3,3,4,3,3,5,5,5,5,5,5,5,4,5,4.75,42,2,"There is a clear divide between """"scholars"""" and """"practitioners"""" in my discipline.  I believe the field would be much improved",NA,NA,2,1,3,3,3,3.737669618
+289,3/11/22 12:34,3/11/22 12:38,0,NA,100,205,1,3/11/22 12:38,R_1Ouxd452D7oDAYF,NA,EN,Communication Studies,4,2,4,4,1,2,3,3,4,4,6,6,6,6,6,5,5,5,5,5,42,3,NA,NA,NA,4,2,2,2,3,3.737669618
+235,3/10/22 10:21,3/10/22 10:29,0,NA,100,483,1,3/10/22 10:29,R_3CDG0obh1PIchvB,NA,EN,Chemistry,4,4,4,5,2,2,2,1,5,4,6,5,4,5,5,5,5,4,5,4.75,43,5,NA,NA,NA,2,1,1,2,4,3.761200116
+260,3/11/22 10:48,3/11/22 11:41,0,NA,100,3165,1,3/11/22 11:41,R_3qDw8hI7DH8qnTq,NA,EN,communication,3,2,3,3,1,1,2,2,4,4,6,4,5,5,5,7,7,5,6,6.25,45,3,"Communication is a discipline made up of many parts, some more competitive than others, and some more cooperative than others. M",NA,NA,4,3,2,2,4,3.80666249
+277,3/11/22 11:20,3/11/22 11:23,0,NA,100,199,1,3/11/22 11:23,R_vPo82gV9FnA5ZHr,NA,EN,Communication Studies,4,1,2,4,2,2,4,3,2,4,7,6,7,6,6.5,7,7,5,6,6.25,45,5,NA,NA,NA,5,2,4,2,2,3.80666249
+282,3/11/22 12:00,3/11/22 12:05,0,NA,100,260,1,3/11/22 12:05,R_1eRG4eSOX39yUbU,NA,EN,Political Science,5,2,3,4,2,2,2,1,4,2,6,4,5,5,5,6,6,5,5,5.5,47,2,NA,NA,NA,4,2,2,4,4,3.850147602
+286,3/11/22 12:24,3/11/22 12:33,0,NA,100,543,1,3/11/22 12:33,R_3HqAV1mQZyBcrHL,NA,EN,Communication,5,4,4,2,2,2,2,2,1,2,5,3,3,4,3.75,5,5,4,5,4.75,47,5,NA,NA,NA,2,4,5,4,4,3.850147602
+231,3/10/22 9:32,3/10/22 9:35,0,NA,100,198,1,3/10/22 9:35,R_2PbAUplPVtNi4tC,NA,EN,Psychology,4,2,3,4,3,2,4,1,1,2,5,4,5,5,4.75,4,4,3,5,4,48,4,NA,NA,NA,4,2,5,4,2,3.871201011
+1,3/3/22 8:55,3/3/22 8:56,0,NA,75,60,0,3/10/22 8:56,R_3GcVQgFUIROtcAq,NA,EN,Developmental Psychology,2,4,2,5,1,1,5,2,4,4,5,2,5,2,3.5,6,2,4,6,4.5,NA,NA,NA,NA,NA,2,1,2,2,1,NA
+3,3/7/22 14:34,3/7/22 14:37,0,NA,100,188,1,3/7/22 14:37,R_2Pig216LX7ZkDyh,NA,EN,Neuroscience,5,4,4,4,1,4,5,5,5,1,3,2,4,4,3.25,3,4,1,7,3.75,NA,2,NA,NA,NA,2,2,1,5,1,NA
+10,3/7/22 14:40,3/7/22 14:42,0,NA,20,97,0,3/14/22 15:42,R_27Nhox6NxRbJLOF,NA,EN,Neuroscience,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+13,3/7/22 14:41,3/7/22 14:41,0,NA,10,6,0,3/14/22 15:41,R_23ZxpfJnsgGys9C,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+17,3/7/22 14:50,3/7/22 14:51,0,NA,20,46,0,3/14/22 15:51,R_1hX6AcyJte4UOds,NA,EN,Neuroscience,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+18,3/7/22 14:51,3/7/22 14:57,0,NA,75,356,0,3/14/22 15:57,R_211ElspCeYR63zt,NA,EN,developmental social cognition,5,2,5,4,5,4,4,4,2,2,6,4,5,6,5.25,7,7,6,7,6.75,NA,NA,NA,NA,NA,4,2,4,4,2,NA
+19,3/7/22 14:52,3/7/22 14:53,0,NA,20,42,0,3/14/22 15:54,R_XAk9V18nxyHeG8p,NA,EN,Developmental cognitive science,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+23,3/7/22 14:54,3/7/22 14:55,0,NA,10,16,0,3/14/22 15:55,R_1ps77gxXKTkMa4T,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+33,3/7/22 15:01,3/7/22 15:02,0,NA,20,28,0,3/14/22 16:02,R_3lLiCESKHQu8K5T,NA,EN,psychology,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+36,3/7/22 15:08,3/7/22 15:08,0,NA,10,5,0,3/14/22 16:09,R_22RCnNHYVvtdLk4,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+40,3/7/22 15:14,3/7/22 15:14,0,NA,20,19,0,3/14/22 16:14,R_3NX0v7WSQMcHda6,NA,EN,Cognitive Science,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+I think,NA,NA,4,2,5,5,3,1.098612289,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+43,3/7/22 15:20,3/7/22 15:20,0,NA,20,22,0,3/14/22 16:21,R_2RNYmPDu6jzL5eW,NA,EN,Social cognition,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+47,3/7/22 15:37,3/7/22 15:37,0,NA,20,19,0,3/14/22 16:37,R_20PANWXSvVgrtFK,NA,EN,Cognitive Science,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+52,3/7/22 15:48,3/7/22 15:49,0,NA,20,32,0,3/14/22 16:49,R_2QoBBYWdKotEGO4,NA,EN,Psychology,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+62,3/7/22 16:12,3/7/22 16:12,0,NA,20,20,0,3/14/22 17:12,R_24r8CsMcobnnW0N,NA,EN,Psychology,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+65,3/7/22 16:24,3/7/22 16:29,0,NA,10,252,0,3/14/22 17:29,R_PTJS8g756YKUX7P,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+80,3/7/22 17:14,3/7/22 17:14,0,NA,10,13,0,3/14/22 18:14,R_2Yn2znsTh1ACf9c,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+81,3/7/22 17:25,3/7/22 17:26,0,NA,20,49,0,3/14/22 18:26,R_sv7IwfEDl9RZ8yd,NA,EN,Education,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+84,3/7/22 17:30,3/7/22 17:31,0,NA,20,43,0,3/14/22 18:31,R_2zo3UJkYyYKg2GD,NA,EN,Gender and sexuality studies,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+86,3/7/22 17:37,3/7/22 17:38,0,NA,20,13,0,3/14/22 18:38,R_2y31FukpM1D640b,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+93,3/7/22 18:08,3/7/22 18:17,0,NA,20,546,0,3/14/22 19:17,R_eFZDyP7KEGLl5hT,NA,EN,social cognitive psychology,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+96,3/7/22 18:20,3/7/22 18:21,0,NA,10,18,0,3/14/22 19:21,R_20UPvJDZXt3pJO4,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+97,3/7/22 18:32,3/7/22 18:32,0,NA,10,23,0,3/14/22 19:32,R_2BnBaXibaQULr8x,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+98,3/7/22 18:44,3/7/22 18:44,0,NA,10,47,0,3/14/22 19:44,R_xlyOJpaF8GribZv,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+101,3/7/22 18:48,3/7/22 18:48,0,NA,20,30,0,3/14/22 19:48,R_24cl3Z8moGoyHx2,NA,EN,developmental psychology,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+104,3/7/22 18:59,3/7/22 19:02,0,NA,20,236,0,3/14/22 20:02,R_7PBOKmj0KDCJTNv,NA,EN,developmental psychology,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+110,3/7/22 19:22,3/7/22 19:24,0,NA,100,122,1,3/7/22 19:24,R_3LZwy812y6GG8tX,NA,EN,neuroscience,5,3,4,4,5,5,3,4,2,1,4,3,4,3,3.5,4,4,4,5,4.25,NA,4,NA,NA,NA,3,2,4,5,3,NA
+112,3/7/22 19:37,3/7/22 19:38,0,NA,10,31,0,3/14/22 20:38,R_3iL9GV6pyix27kE,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+122,3/7/22 21:09,3/7/22 21:11,0,NA,20,119,0,3/14/22 22:11,R_2dGhl0Nd2AOrlyO,NA,EN,Psychology,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+138,3/8/22 6:14,3/8/22 6:18,0,NA,75,227,0,3/15/22 7:18,R_1S79jlsaLWllxIt,NA,EN,Gaming,4,2,2,2,3,4,1,2,2,2,5,4,5,4,4.5,4,4,3,5,4,NA,NA,NA,NA,NA,4,4,4,4,5,NA
+140,3/8/22 8:00,3/8/22 8:01,0,NA,20,78,0,3/15/22 9:01,R_2TLhFx3x3Ft58Qa,NA,EN,interdisciplinary,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+143,3/8/22 11:03,3/8/22 11:07,0,NA,75,192,0,3/15/22 12:07,R_NUvBu12WwPVr8Jj,NA,EN,Anthropology,4,2,2,5,2,4,3,3,2,4,5,6,3,4,4.5,5,3,2,5,3.75,NA,NA,NA,NA,NA,4,1,4,2,3,NA
+145,3/8/22 13:04,3/8/22 13:05,0,NA,20,81,0,3/15/22 14:05,R_3kCmqp865XuS0g5,NA,EN,Chemical engineering,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+146,3/8/22 13:10,3/8/22 13:10,0,NA,20,17,0,3/15/22 14:10,R_2c7u3VfPK4lQ4xi,NA,EN,Chemical Engineering,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+149,3/8/22 18:45,3/8/22 18:47,0,NA,20,74,0,3/15/22 19:47,R_2PyTX3wSnO1Ek1f,NA,EN,Chemistry,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+150,3/8/22 19:27,3/8/22 19:31,0,NA,75,254,0,3/15/22 20:31,R_9GiCa0YcHz4Dpf3,NA,EN,Psychology,4,4,5,4,2,5,3,4,2,2,5,5,4,6,5,5,4,4,4,4.25,NA,NA,NA,NA,NA,2,2,4,4,3,NA
+152,3/8/22 22:31,3/8/22 22:32,0,NA,20,37,0,3/15/22 23:32,R_3PHnyUZR8Enc3gL,NA,EN,Sociology,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+156,3/9/22 9:14,3/9/22 9:22,0,NA,10,484,0,3/16/22 10:22,R_3jerImyg2R3uqjt,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+157,3/9/22 9:32,3/9/22 9:33,0,NA,20,56,0,3/16/22 10:33,R_2y1rHDcYsOFiCCT,NA,EN,computational neuroscience,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+158,3/9/22 9:34,3/9/22 9:36,0,NA,75,150,0,3/16/22 10:40,R_cTNrv6fKjjhNgpX,NA,EN,Biomedical Engineering,4,4,4,4,4,4,4,2,1,1,5,4,5,5,4.75,5,5,3,5,4.5,NA,NA,NA,NA,NA,2,2,5,5,2,NA
+160,3/9/22 9:59,3/9/22 9:59,0,NA,20,32,0,3/16/22 10:59,R_3ndx9eLtfaznggj,NA,EN,Political Science,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+162,3/9/22 10:18,3/9/22 10:18,0,NA,10,12,0,3/16/22 11:18,R_2QJOdI1G6lxCit8,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+164,3/9/22 10:28,3/9/22 10:50,0,NA,75,1271,0,3/16/22 11:50,R_2VabDaHJiwCb9pL,NA,EN,Cognitive neuroscience,4,2,2,4,2,2,4,1,2,3,6,5,5,5,5.25,5,5,5,4,4.75,NA,NA,NA,NA,NA,4,2,4,3,2,NA
+165,3/9/22 10:30,3/9/22 10:33,0,NA,20,173,0,3/16/22 11:33,R_O8NoaOKFApnpEMF,NA,EN,Neuroscience,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+167,3/9/22 11:24,3/9/22 11:24,0,NA,20,22,0,3/16/22 12:24,R_3DegvKEsvrGMJ8A,NA,EN,additive manufacturing,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+171,3/9/22 15:17,3/9/22 15:17,0,NA,20,21,0,3/16/22 16:17,R_QbHWhbfRfVV40k9,NA,EN,Computational cognitive neuroscience,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+175,3/9/22 20:30,3/9/22 20:32,0,NA,20,72,0,3/16/22 21:32,R_2aP1S6xXHgExEwe,NA,EN,cognitive science,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+183,3/10/22 5:11,3/10/22 5:46,0,NA,10,2147,0,3/17/22 6:46,R_1LvdcEmGc2b1Hhm,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+191,3/10/22 6:43,3/10/22 6:44,0,NA,20,56,0,3/17/22 7:44,R_2SoxC3IWf2qcwym,NA,EN,Developmental psych / cognitive development,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+193,3/10/22 6:44,3/10/22 6:47,0,NA,75,160,0,3/17/22 7:47,R_2ya9LWUpPRJhqTh,NA,EN,Clinical psychology,4,1,4,5,2,4,3,2,1,4,4,3,3,4,3.5,5,4,5,4,4.5,NA,NA,NA,NA,NA,5,1,5,2,3,NA
+200,3/10/22 6:52,3/10/22 6:52,0,NA,20,19,0,3/17/22 7:52,R_Y6Aas7G6wt5TL33,NA,EN,psychology,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+201,3/10/22 6:52,3/10/22 6:53,0,NA,20,45,0,3/17/22 7:53,R_AFDvKBWitvWy9CF,NA,EN,Psychology,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+203,3/10/22 6:59,3/10/22 7:00,0,NA,20,25,0,3/17/22 8:00,R_2ttKfnM932YKBKu,NA,EN,Linguistics,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+210,3/10/22 7:24,3/10/22 7:25,0,NA,20,27,0,3/17/22 8:25,R_1pmWzw7ctAIlgn9,NA,EN,psychology,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+217,3/10/22 8:03,3/10/22 8:04,0,NA,10,4,0,3/17/22 9:04,R_vq71NWeec2ymcW5,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Volume 7,NA,NA,5,2,5,5,5,2.302585093,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+228,3/10/22 8:53,3/10/22 8:54,0,NA,20,53,0,3/17/22 9:54,R_2wcOwBJgCSnzfQW,NA,EN,Communication,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+229,3/10/22 9:01,3/10/22 9:02,0,NA,10,17,0,3/17/22 10:02,R_spRkbUY3mMMfgDT,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+237,3/10/22 11:03,3/10/22 11:04,0,NA,10,18,0,3/17/22 12:04,R_DqVrm9ts1zBl3k5,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+243,3/10/22 17:18,3/10/22 17:20,0,NA,71,109,0,3/17/22 18:20,R_ylktAiZjoiMkbzH,NA,EN,Environmental psychology,4,1,3,4,2,2,1,1,3,2,7,7,7,7,7,5,6,6,6,5.75,NA,NA,NA,NA,NA,5,2,3,4,5,NA
+248,3/10/22 20:49,3/10/22 20:50,0,NA,10,41,0,3/17/22 21:50,R_3fNX2hc6zbG8NAJ,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+253,3/10/22 23:17,3/10/22 23:20,0,NA,71,178,0,3/18/22 0:20,R_a2Jb5ZApiNGFb8t,NA,EN,clinical psychology,5,2,5,5,1,5,5,3,3,1,3,2,3,2,2.5,6,6,7,7,6.5,NA,NA,NA,NA,NA,4,1,3,5,1,NA
+256,3/11/22 8:38,3/11/22 8:39,0,NA,19,45,0,3/18/22 9:39,R_e9TaCWXX4dcFFyV,NA,EN,psychology,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+261,3/11/22 10:48,3/11/22 10:49,0,NA,19,87,0,3/18/22 11:49,R_Ofz2sOkBYFdRB9D,NA,EN,Communication,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+262,3/11/22 10:48,3/11/22 10:51,0,NA,71,155,0,3/18/22 11:51,R_AtimCzyVJjoZGo1,NA,EN,Group Research,3,2,4,2,1,2,2,2,1,1,6,5,5,4,5,6,5,4,6,5.25,NA,NA,NA,NA,NA,4,4,5,5,4,NA
+264,3/11/22 10:49,3/11/22 10:49,0,NA,19,49,0,3/18/22 11:50,R_DuWemA4GE3IDt3r,NA,EN,Communication,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+266,3/11/22 10:51,3/11/22 13:18,0,NA,71,8791,0,3/18/22 14:18,R_1DnxLCxhWYScORO,NA,EN,Communication Studies,2,2,2,2,1,1,2,1,3,3,6,6,6,6,6,4,4,4,4,4,NA,NA,NA,NA,NA,4,4,3,3,4,NA
+270,3/11/22 11:00,3/11/22 11:01,0,NA,10,40,0,3/18/22 12:01,R_3e8LmAfitM4yhSZ,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+279,3/11/22 11:21,3/11/22 11:48,0,NA,71,1614,0,3/18/22 12:48,R_269JzrcSjAUYBTD,NA,EN,Communication,NA,2,2,2,1,2,2,2,1,2,7,7,7,6,6.75,7,6,6,6,6.25,NA,NA,NA,NA,NA,4,4,5,4,4,NA
+281,3/11/22 11:44,3/11/22 11:45,0,NA,19,51,0,3/18/22 12:45,R_3OeMXSNLKnp0Cmv,NA,EN,Organizational Communication,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+296,3/11/22 14:43,3/11/22 14:44,0,NA,19,28,0,3/18/22 15:44,R_2zkWb9xqz6kkIbk,NA,EN,Engineering,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+297,3/11/22 17:02,3/11/22 17:04,0,NA,71,157,0,3/18/22 18:04,R_3dNeg3phjWRPFKH,NA,EN,Communication,5,5,4,5,3,3,2,3,4,4,4,4,4,4,4,6,6,6,6,6,NA,NA,NA,NA,NA,1,1,2,2,4,NA
+298,3/11/22 18:22,3/11/22 18:24,0,NA,19,112,0,3/18/22 19:24,R_2zp84qyeRvhuhU4,NA,EN,Human Development,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+304,3/12/22 10:44,3/12/22 10:45,0,NA,19,87,0,3/19/22 11:45,R_1PY2EIBLCLMge1W,NA,EN,communication studies,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+306,3/12/22 10:50,3/12/22 10:51,0,NA,19,40,0,3/19/22 11:51,R_1mF3JlR90XW0vW8,NA,EN,Communication Studies,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+308,3/13/22 1:57,3/13/22 1:58,0,NA,10,91,0,3/20/22 2:58,R_1jdEkh0tYNdbo47,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+310,3/13/22 15:40,3/13/22 15:41,0,NA,19,25,0,3/20/22 15:41,R_2XiyfwMUSV3EvFG,NA,EN,Psychology,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+317,3/14/22 13:05,3/14/22 13:07,0,NA,19,95,0,3/21/22 13:07,R_3qO64cwvBIIdAAS,NA,EN,rhetoric,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+320,3/16/22 1:39,3/16/22 1:39,0,NA,19,33,0,3/23/22 1:39,R_V4rUBG3CfKdCYIV,NA,EN,linguistics,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+322,3/16/22 19:31,3/16/22 19:32,0,NA,71,54,0,3/23/22 19:32,R_1dzQi3YKmCz3MrK,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+324,3/18/22 14:14,3/18/22 14:20,0,NA,71,379,0,3/25/22 14:21,R_323MiWFjb8txERR,NA,EN,Sports Science,4,3,2,2,1,1,1,1,1,1,7,7,7,7,7,6,7,7,6,6.5,NA,NA,NA,NA,NA,3,4,5,5,5,NA
+327,3/20/22 1:02,3/20/22 1:03,0,NA,71,70,0,3/27/22 1:03,R_3KtHCpVAA1pmYUN,NA,EN,m,NA,NA,NA,NA,NA,5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+331,3/21/22 22:23,3/21/22 22:24,0,NA,19,25,0,3/28/22 22:24,R_1jJQo8YyukLGFgQ,NA,EN,Developmental psychology,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+332,3/22/22 10:47,3/22/22 10:48,0,NA,10,24,0,3/29/22 10:48,R_3UdXuS8zMxbjDXj,NA,EN,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

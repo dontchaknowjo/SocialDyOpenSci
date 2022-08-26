@@ -1,0 +1,1406 @@
+---
+title: "Beliefs about social dynamics and Open Science"
+author: ''
+output:
+  pdf_document:  
+  #   reference_docx: word-styles-ref.docx
+  # word_document:
+    toc: true
+    number_sections: true
+    df_print: paged
+csl: apa.csl
+figsintext: yes
+bibliography: references.bib
+fontfamily: mathpazo
+fontsize: 11pt
+geometry: margin = 1in
+header-includes:
+  
+- \usepackage[left]{lineno}
+- \linenumbers
+- \usepackage{dcolumn}
+- \usepackage{caption}
+- \usepackage{float}
+- \usepackage{afterpage}
+- \usepackage{siunitx}
+- \usepackage{amsmath}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,cache=FALSE)
+
+source("./custom_functions.R")
+
+packages<- c("afex", "vcd", "ggplot2", "likert", "lattice", "pbkrtest", "reshape2", "car",  "lme4", "effects", "lmerTest", "multcomp", "lsmeans", "Hmisc", "tidyr", "ordinal","brms","jtools","DHARMa","rstanarm","BayesFactor", "bayesplot","tidybayes", "magrittr","ggeffects","sjmisc","splines","tidyverse","bayestestR","brms","HDInterval","dplyr", "formattable","gt","tufte","tinytex","GPArotation","psych","corrplot","ltm","wordcloud","renv","performance","stringr","ggeffects","shinystan","shinybrms","brms","bayestestR","cowplot")
+
+ipak(packages)
+
+#Load Data from Study 1
+RawData1<-(read.csv("Study_1/RawData_S1.csv"))
+TEST_data_S1<-clean_data(RawData1)
+
+        ##### make a new data frame with only the items for factor analysis below
+        TEST_data_warmthcompete<-dplyr::select(TEST_data_S1,c('Hierarchy':'Cooperate','FriendlyR':'NiceR','CapableR':'SkillfulR'))
+        
+        ###### Remove NAs
+        TEST_data_warmthcompete=TEST_data_warmthcompete[complete.cases(TEST_data_warmthcompete), ]
+        
+          ##### make a new data frame with only the items for the Hierarchy/Zero Sum Items
+        TEST_data_HierarchZS<-dplyr::select(TEST_data_S1,c('Hierarchy':'Conferences'))
+        
+         ##### make a new data frame with only the items for Cooperation/Collaboration
+        TEST_data_Cooperate<-dplyr::select(TEST_data_S1,c('Collaborate':'Cooperate'))
+        
+        ##### make a new data frame with only the items for Warmth Items
+        TEST_data_warmth<-dplyr::select(TEST_data_S1,c('FriendlyR':'NiceR'))
+        
+        ##### make a new data frame with only the items for Competence Items
+        TEST_data_competence<-dplyr::select(TEST_data_S1,c('CapableR':'SkillfulR'))
+        
+        
+
+
+
+
+
+
+#Load Data from Study 2
+RawData2<-(read.csv("Study_2/RawData_S2.csv"))
+
+TEST_data_S2<-clean_data2(RawData2)
+
+ ##### make a new data frame with only the items for the Hierarchy/Zero Sum Items
+        TEST_data_HierarchZS_S2<-dplyr::select(TEST_data_S2,c('Hierarchy':'Conferences'))
+        
+         ##### make a new data frame with only the items for Cooperation/Collaboration
+        TEST_data_Cooperate_S2<-dplyr::select(TEST_data_S2,c('Collaborate':'Cooperate'))
+        
+        
+        TEST_data_plans_importance<- dplyr::select(TEST_data_S2, c('plan_MS', 'plan_data', 'plan_code', 'plan_instrument','important_manuscripts', 'important_materials'))
+TEST_data_plans_importance_cut=TEST_data_plans_importance[complete.cases(TEST_data_plans_importance), ]
+
+#Load Data from Study 3
+
+```
+
+# Abstract
+
+When people join new groups, they must learn about the relevent social dynamics or 'rules of engagement' within those groups. Here we ask if academic researchers have intuitive thoeries about the social dynamics of their field. Next we ask if these intuitive theories correspond to decisions to engage in open science. Study 1, was an survey open to all academic researchers. We found that researchers did think about the social dynamics in their field and that these attitudes did not laod onto warmth and competence. Study 2 was open to all researchers in MIT's school of science. We replicated the findings from Study 1 and in exploratory analyses, asked whether these attitudes corresponded to open science practices. We did not find consistent evidence that the way people think about the social dynamics of their field correspond to the their attitudes toward nor engagement with open science practices. Study 3 was a representative sample from the School of Science at MIT. Here we will repeat the analyses conducted in Study 2.
+
+\newpage
+
+# Introduction
+
+When people join new social groups, they must learn the social dynamics or 'rules of engagement' within that group. Previous research that ask how people think about groups has largely focused on people's impressions of societal groups (e.g., 'wealthy people, 'immigrants'). This research has found robust evidence that people tend to think about groups along two dimensions: warmth (approximately: do I expect that group to have interests aligned with my own?), and competence (approximately: do I expect that group to be able to effectively achieve its own interests?) [@fiske2018]. In other words, this research has found that people stereotype societal groups, assuming that people who belong to that group to share a trait, role, or characteristic.
+
+However, when people are reasoning about their own groups they must also learn about the group's social dynamics or its 'rules of engagement' \[@kemp2008, @desoto60\]. We hypothesized that once people have joined a group, they intuitively represent the type of social processes that occur within the group. These social processes are distinct from warmth and competence since they apply to properties of interdependent interaction between individuals within the group, rather than to the group as a whole or individuals within that group.
+
+In three studies, we test this hypotheses in the specific case of academic researchers the majority of whom have been in their field for less than ten years. We hypothesize that once people become researchers in an academic field, the social dynamics between other researchers in that field define how to become successful and influential. Thus we hypothesize that researchers intuitively characterize the social dynamics in their own academic disciplines.
+
+In Study 1, we asked how researchers perceive the social dynamics, or 'rules of engagement', between people within their academic field. We hypothesized that people intuitively represent social processes and social structures that occur within their field. The results supported this hypothesis: people's answers to six questions about whether their field is competitive/hierarchical emerged as one dimension. Two other questions, about whether collaboration and cooperation are important for success, weakly emerged as another dimension. People's perceptions of social dynamics within groups were distinct from their perceptions about whether people in their field are warm and competent, suggesting that representing the social dynamics within a field is a separate cognitive process than stereotyping.
+
+In Study 2 we replicated these findings, and also asked whether these intuitive theories affect people's behavior. We focus on open-science practices. While many people agree that open-science practices would positively impact the scientific process, these practices have not become the norm across many fields. Initiatives to encourage these practices often rely on intuitions about incentives, motivations, and social dynamics. We turned some of these intuitions into testable hypotheses.
+
+In Study 2 we performed a mixture of confirmatory and exploratory analysis. First, we replicated the findings from Study 1, finding that academic researchers represent the social dynamics of their field. Then we used factor analysis to ask about the structure in the survey items about open science practices, which were not included in Study 1. Finally, we explored ways to test the hypothesis that the dimensions of social dynamics relate to participants' plans to practice open science. Specifically, to the extent that a researcher has control over decisions to implement open science, we asked how their perceptions of the social dynamics of their field as well as perceptions about motivations to engage in open science relate to open science practices? Do these things relate in the same way or different ways to their ideas about how important these practices are? The reason we treated Study 2 as exploratory is that there are many possible ways to perform the analysis all of which depended on the structure of the data (e.g., how correlated individual items are with one another) as well as whether there were moderators or mediators in the correlations between the variables. Overall we did find that people's attitudes about open science were highly correlated, however we did not find consistent evidence that people's ideas about the social dynamics of their field predicted their open science attitudes or practices.
+
+In Study 3 we will repeat the analyses in Study 2 in a representative sample. First we will ask if we again replicate the findings from Studies 1 and 2 about people's attitudes about the social dynamics of their field. Next we will ask if we replicate the findings from Study 2 about people's practices and attitudes towards open science, and finally we will again test whether there are correlations between people's attitudes about the social dynamics of their field and their open science practices.
+
+# Study 1
+
+## S1: Methods
+
+## S1: Participants
+
+Participants were recruited for the survey via twitter, and field specific listservs. `r  nrow(TEST_data_S1)` researchers participated in our survey. We only collected three pieces of demographic information: the number of years that the researchers had been in their field, the extent that the participant identifies with their field, and the particupant's academic field. Below we include histograms of the number of years the participants have been in their field, the extent to which participants identify with their field, as well as a world cloud to describe the frequency with which participants entered words in the free response question asking them about their field.
+
+```{r, echo=FALSE,fig.align = 'center',warning=FALSE}
+x<-hist_functionc(TEST_data_S1,TEST_data_S1$Years,"Years in Academia")
+
+l<-hist_functionc(TEST_data_S1,TEST_data_S1$LogYears,"Log Transformed Years in Academia")
+
+g<-hist_functionc(TEST_data_S1,TEST_data_S1$Identify,"How much do you identify \n with your field?")
+
+plot_grid(x, l,g, ncol = 3, nrow = 1,scale=.9)
+
+wordcloudc(TEST_data_S1$Field)
+
+```
+
+## S1: Materials
+
+Participants took a survey that asked questions about the social dynamics of their field. The full text of the survey can be found here: <https://osf.io/4g2tu/> . See also supplemental materials for text of questions and additional analysis.
+
+## S1: Analysis Approach
+
+We used a combination of exploratory factor analysis and confirmatory factor analysis. For all factor analyses we first performed a Kaiser-Meyer-Olkin (KMO) Test for Sampling Adequacy test to test whether sampling is adequate and 'Bartlett's test for sphericity' test to ask whether there are redundancy within the variables, such that they might load onto factors, these analyses can be found in the supplemental materials. We also calculated Cronbach's alpha for the factors, using the alpha function in the 'psych' package in R. We compared the Cronbach's alpha for each sub scale and all questions. Then used exploratory factor analysis to see whether we indeed had evidence for four factors (warmth, competence, hierarchy, cooperation) or whether the questions about social dynamics loaded onto warmth and competence. See supplmentary materials for further analysis.
+
+## S1: Results
+
+Our hypotheses were fairly well supported. The survey questions did not load onto factors about warmth and competence, and loaded onto factors, just not in the way we hypothesized. We found evidence that the eight of questions about social dynamics loaded onto one factor, with two questions about collaboration and cooperation loading weakly onto another factor. Using exploratory factor analysis we found evidence for 4 factors: warmth, competence, hierarchy/zero-sum and collaboration/cooperation.
+
+#### Factor and Reliability Analysis
+
+```{r, echo=FALSE,fig.align = 'center',warning=FALSE,include=FALSE}
+
+
+TEST_data_HierarchZS<-TEST_data_HierarchZS[complete.cases(TEST_data_HierarchZS), ]
+
+x<-cronbach.alpha((TEST_data_HierarchZS), CI=TRUE)
+
+x.a<-as.numeric(x[1])
+x.n<-x[6]
+x.n<-as.numeric(unlist(x.n))
+
+
+TEST_data_Cooperate=TEST_data_Cooperate[complete.cases(TEST_data_Cooperate), ]
+y<-cronbach.alpha((TEST_data_Cooperate), CI=TRUE)
+y.a<-as.numeric(y[1])
+y.n<-y[6]
+y.n<-as.numeric(unlist(y.n))
+
+TEST_data_warmth=TEST_data_warmth[complete.cases(TEST_data_warmth), ]
+z<-cronbach.alpha((TEST_data_warmth), CI=TRUE)
+z.a<-as.numeric(z[1])
+z.n<-z[6]
+z.n<-as.numeric(unlist(z.n))
+
+
+TEST_data_competence=TEST_data_competence[complete.cases(TEST_data_competence), ]
+q<-cronbach.alpha((TEST_data_competence), CI=TRUE)
+q.a<-as.numeric(q[1])
+q.n<-q[6]
+q.n<-as.numeric(unlist(q.n))
+
+#exploratory factor analysis
+parallel <- fa.parallel(TEST_data_warmthcompete)
+unparallel<-unlist(parallel)
+```
+
+```{r, echo=FALSE,fig.align = 'center',warning=FALSE,include=TRUE}
+factorC(TEST_data_warmthcompete,4)
+```
+
+The exploratory factor analysis finds `r unparallel[["nfact"]]` factors. The parallel analysis also finds 4 factors. MR1 is warmth, MR2 is competence, MR3 we will call our hierarchy zero-sum factor and MR4 are two questions about the importance of collaboration and cooperation. The Cronbach Alpha for the hierarchical/zero sum factor, which includes eight items is `r x.a` with a 95% confidence interval of `r x.n[1]` , `r x.n[2]`. This is considered 'good/acceptable'. However, the Cronbach Alpha for the second factor, which only includes two questions that asked about cooperation and collaboration, is `r y.a` with a 95% confidence interval of `r y.n[1]` , `r y.n[2]` which is low. This is considered 'poor' Unsurprisingly the Cronbach Alpha for the warmth items (`r z.a` with a 95% confidence interval of `r z.n[1]` , `r z.n[2]`) and competence items (`r q.a` with a 95% confidence interval of `r q.n[1]` , `r q.n[2]`) were both high.
+
+See supplemental materials for histograms showing how participants answered each individual question, as well as exploratory analyses about what predicts participants' average on the hierarchy/zero-sum questions and cooperation/collaboration questions.
+
+To sum, in Study 1 we found evidence that participants' answers about the social dynamics of their field were somewhat coherent, with most of the items falling into one factor with fair reliability. Moreover, these questions did not load onto warmth/competence factors which suggests that the way that participants think about the social dynamics of their field is distinct from their perception of traits of individuals within their field.
+
+# Study 2
+
+In Study 2 we first sought to replicate the finding that participants' view of the social dynamics of their field are coherent in a different group of participants. In this study, we also asked participants about the importance of open science, their plans to implement open science practices, their own motivations to practice open science, and their ideas about other participants' motivations to engage in open science.
+
+## S2: Participants
+
+Participants were recruited for the survey via an email that was sent out to graduate students, postdocs, researchers and P.I.s in the School of Science at MIT. `r  nrow(TEST_data_S2)` researchers participated in our survey. Again, we only collected three pieces of demographic information: the number of years that the researchers had been in their field, the extent that they identify with their field, and their academic field. Below we include histograms of the number of years the participants had been in their field, the extent to which participants identify with their field, as well as a world cloud to describe the frequency with which participants entered words in the free response question asking them about their field.
+
+```{r, echo=FALSE,fig.align = 'center',warning=FALSE}
+x<-hist_functionc(TEST_data_S2,TEST_data_S2$Years,"Years in Academia")
+
+l<-hist_functionc(TEST_data_S2,TEST_data_S2$LogYears,"Log Transformed Years in Academia")
+
+g<-hist_functionc(TEST_data_S2,TEST_data_S2$Identify,"How much do you identify \n with your field?")
+
+plot_grid(x, l,g, ncol = 3, nrow = 1,scale=.9)
+
+wordcloudc(TEST_data_S2$Field)
+
+```
+
+The main difference between the participants in Study 1 and Study 2 is that they belong to different disciplines.
+
+## S2: Materials
+
+We used the same survey items we used in Study 1 but added questions about participants' attitudes about open science, their own open science practices, their underlying motivations to engage in open science, and their ideas about other participants' motivations to engage in open science. This survey did not include items about perceptions of warmth/competence. See supplementary materials for a full text of the questions. We pre-registered that we would first test whether the results of Study 1 replicate, then we would engage in exploratory analyses to explore structure in the remaining survey items (i.e., whether we find evidence for factors), how participants think about their own motivations versus the motivations of others, and finally, whether participants' attitudes about the social dynamics in their field correlated with their open-science practices.
+
+## S2: Results
+
+### Social Dynamics
+
+First we replicated the finding that the questions about social dynamics load onto two factors.
+
+#### Factor and Reliability Analysis
+
+```{r, echo=FALSE,fig.align = 'center',warning=FALSE,include=FALSE}
+
+TEST_data_hiercomp<- dplyr::select(TEST_data_S2, c('Hierarchy':'Cooperate'))
+TEST_data_hiercomp=TEST_data_hiercomp[complete.cases(TEST_data_hiercomp), ]
+
+factorC(TEST_data_hiercomp,2)
+
+TEST_data_HierarchZS_S2<-TEST_data_HierarchZS_S2[complete.cases(TEST_data_HierarchZS_S2), ]
+
+x<-cronbach.alpha((TEST_data_HierarchZS_S2), CI=TRUE)
+x.a<-as.numeric(x[1])
+x.n<-x[6]
+x.n<-as.numeric(unlist(x.n))
+
+TEST_data_Cooperate_S2=TEST_data_Cooperate_S2[complete.cases(TEST_data_Cooperate_S2), ]
+y<-cronbach.alpha((TEST_data_Cooperate_S2), CI=TRUE)
+y.a<-as.numeric(y[1])
+y.n<-y[6]
+y.n<-as.numeric(unlist(y.n))
+
+TEST_data_warmth=TEST_data_warmth[complete.cases(TEST_data_warmth), ]
+z<-cronbach.alpha((TEST_data_warmth), CI=TRUE)
+z.a<-as.numeric(z[1])
+z.n<-z[6]
+z.n<-as.numeric(unlist(z.n))
+
+TEST_data_competence=TEST_data_competence[complete.cases(TEST_data_competence), ]
+q<-cronbach.alpha((TEST_data_competence), CI=TRUE)
+q.a<-as.numeric(q[1])
+q.n<-q[6]
+q.n<-as.numeric(unlist(q.n))
+
+#exploratory factor analysis
+parallel <- fa.parallel(TEST_data_hiercomp)
+unparallel<-unlist(parallel)
+
+```
+
+```{r, echo=FALSE,fig.align = 'center',warning=FALSE,include=TRUE}
+factorC(TEST_data_hiercomp,2)
+```
+
+The exploratory factor analysis found 2 factors. The factor analysis diagram shows how the items load onto the 2 factors (MR1 is our hierarchy/zero-sum factor, and MR2 is the cooperation/collaboration factor).As in Study 1, the Cronbach Alpha was 'good/acceptable' for the hierarchical/zero sum factor( `r x.a` with a 95% confidence interval of `r x.n[1]` , `r x.n[2]`). Again, the Cronbach Alpha for the cooperation/collaboration items, was poor ( `r y.a` with a 95% confidence interval of `r y.n[1]` , `r y.n[2]`).Thus, we replicated the finding that 8 of the questions about social dynamics load onto one factor and the other two do not.
+
+### Plans to Practice Open Science and Ideas about its Importance
+
+We next asked participants about their plans to engage in open science as well as whether they think open science practices are important for their field. We asked what factors fall out of participants' answers to the plans and importance questions.
+
+#### Factor and Reliability Analysis
+
+```{r, echo=FALSE,fig.align = 'center',warning=FALSE,include=FALSE}
+
+factorC(TEST_data_plans_importance_cut,2)
+
+TEST_data_plan_MS<- dplyr::select(TEST_data_S2, c('plan_MS','important_manuscripts'))
+TEST_data_plan_MS=TEST_data_plan_MS[complete.cases(TEST_data_plan_MS), ]
+
+CAPLAN<-cronbach.alpha(TEST_data_plan_MS, CI=TRUE)
+CAPLAN.a<-as.numeric(CAPLAN[1])
+CAPLAN.n<-CAPLAN[6]
+CAPLAN.n<-as.numeric(unlist(CAPLAN.n))
+
+
+TEST_data_plan_materials<- dplyr::select(TEST_data_S2, c('plan_instrument','important_materials','plan_code','plan_data'))
+TEST_data_plan_materials=TEST_data_plan_materials[complete.cases(TEST_data_plan_materials), ]
+
+materialsy<-cronbach.alpha(TEST_data_plan_materials, CI=TRUE)
+materialsy.a<-as.numeric(materialsy[1])
+materialsy.n<-materialsy[6]
+materialsy.n<-as.numeric(unlist(materialsy.n))
+
+
+TEST_data_plan_MS<- dplyr::select(TEST_data_S2, c('plan_MS','important_manuscripts'))
+TEST_data_plan_MS=TEST_data_plan_MS[complete.cases(TEST_data_plan_MS), ]
+
+CAPLAN<-cronbach.alpha(TEST_data_plan_MS, CI=TRUE)
+CAPLAN.a<-as.numeric(CAPLAN[1])
+CAPLAN.n<-CAPLAN[6]
+CAPLAN.n<-as.numeric(unlist(CAPLAN.n))
+
+
+TEST_data_plan_ALL<- dplyr::select(TEST_data_S2, c('plan_instrument','important_materials','plan_code','plan_data','plan_MS','important_manuscripts'))
+TEST_data_plan_ALL=TEST_data_plan_ALL[complete.cases(TEST_data_plan_ALL), ]
+
+ALLy<-cronbach.alpha(TEST_data_plan_ALL, CI=TRUE)
+ALL.a<-as.numeric(ALLy[1])
+ALL.n<-ALLy[6]
+ALL.n<-as.numeric(unlist(ALL.n))
+
+#exploratory factor analysis
+parallel <- fa.parallel(TEST_data_plans_importance_cut)
+unparallel<-unlist(parallel)
+
+```
+
+```{r, echo=FALSE,fig.align = 'center',warning=FALSE,include=TRUE}
+factorC(TEST_data_plans_importance_cut,2)
+```
+
+Based on the screen plot there are 1 to 2 factors. The Cronbach Alphas for the factor about the importance and plan to share manuscripts, is `r CAPLAN.a` with a 95% confidence interval of `r CAPLAN.n[1]` , `r CAPLAN.n[2]`, and the Cronbach Alpha for the factor about the importance and plan to share materials is `r materialsy.a` with a 95% confidence interval of `r materialsy.n[1]` , `r materialsy.n[2]`. This is also considered 'acceptable'. However, the Cronbach Alpha for one factor that combines all of the items is `r ALL.a` with a 95% confidence interval of `r ALL.n[1]` , `r ALL.n[2]` which is slightly higher than the other two. Taken together with the scree plot it is uncertain whether these items should be separated by factors.
+
+### Motivations to Practice Open Science
+
+We also asked participants about they think others engage in open science as well as why they engage in open science (See supplemental materials for histograms of participants' answers). (We asked the relative importance of the following motivations in their own decisions to share manuscripts and materials and others' decisions: *Requirements or encouragement from funders/Institution*; *Requirements or encouragement from the P.I. of lab*; *Personal benefits such as prestige or citations*; *Benefits for (participant field), such as for other researchers who may be able to use the materials for their own work, or to encourage scientific progress in the field*; *Benefits for the public, such as increase in public trust of science, or downstream benefits of having reliable or reproducible science*).
+
+#### Factor Analysis
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+TEST_data_reasons_all<- dplyr::select(TEST_data_S2, c('other_MS_require':'self_materials_lab'))
+TEST_data_reasons_all_cut=TEST_data_reasons_all[complete.cases(TEST_data_reasons_all), ]
+
+factorC(TEST_data_reasons_all_cut,6)
+
+```
+
+Based on the scree plot, it seems like there are 5 to 6 factors that fall out of these questions. MR1 is requirements/encouragement from your lab; MR2 is for the public good; MR4 is that your institution requires/encourages, MR3 is prestige, and there are two cooperation ones, one that groups participant's answers when they were talking about themselves sharing materials and manuscripts to cooperate with other researchers and one that groups answers about others.
+
+#### Reliability Analysis
+
+```{r,echo=FALSE,fig.align = 'center'}
+
+#Cronbach's Alpha for factor that includes lab. 
+TEST_data_reason_lab<- dplyr::select(TEST_data_S2, c('self_MS_lab','other_MS_lab','self_materials_lab','other_materials_lab'))
+TEST_data_reason_lab=TEST_data_reason_lab[complete.cases(TEST_data_reason_lab), ]
+
+reasonsz<-cronbach.alpha(TEST_data_reason_lab, CI=TRUE)
+reasonsz.a<-as.numeric(reasonsz[1])
+reasonsz.n<-reasonsz[6]
+reasonsz.n<-as.numeric(unlist(reasonsz.n))
+
+TEST_data_reason_require<- dplyr::select(TEST_data_S2, c('self_MS_require','other_MS_require','self_materials_require','other_materials_require'))
+TEST_data_reason_require=TEST_data_reason_require[complete.cases(TEST_data_reason_require), ]
+
+motreq<-cronbach.alpha(TEST_data_reason_require, CI=TRUE)
+motreq.a<-as.numeric(motreq[1])
+motreq.n<-motreq[6]
+motreq.n<-as.numeric(unlist(motreq.n))
+
+
+TEST_data_reason_prestige<- dplyr::select(TEST_data_S2, c('self_MS_prestige','self_materials_prestige','other_materials_prestige','other_MS_prestige'))
+TEST_data_reason_prestige=TEST_data_reason_prestige[complete.cases(TEST_data_reason_prestige), ]
+
+prest<-cronbach.alpha(TEST_data_reason_prestige, CI=TRUE)
+prest.a<-as.numeric(prest[1])
+prest.n<-prest[6]
+prest.n<-as.numeric(unlist(prest.n))
+
+TEST_data_reason_coop_self<- dplyr::select(TEST_data_S2, c('self_MS_cooper','self_materials_cooper'))
+TEST_data_reason_coop_self=TEST_data_reason_coop_self[complete.cases(TEST_data_reason_coop_self), ]
+
+e<-cronbach.alpha(TEST_data_reason_coop_self, CI=TRUE)
+e.a<-as.numeric(e[1])
+e.n<-e[6]
+e.n<-as.numeric(unlist(e.n))
+
+TEST_data_reason_coop_other<- dplyr::select(TEST_data_S2, c('other_MS_cooper','other_materials_cooper'))
+TEST_data_reason_coop_other=TEST_data_reason_coop_other[complete.cases(TEST_data_reason_coop_other), ]
+
+f<-cronbach.alpha(TEST_data_reason_coop_other, CI=TRUE)
+f.a<-as.numeric(f[1])
+f.n<-f[6]
+f.n<-as.numeric(unlist(f.n))
+
+TEST_data_reason_public<- dplyr::select(TEST_data_S2, c('other_MS_public','other_materials_public','self_materials_public','self_MS_public'))
+TEST_data_reason_public=TEST_data_reason_public[complete.cases(TEST_data_reason_public), ]
+
+public<-cronbach.alpha(TEST_data_reason_public, CI=TRUE)
+public.a<-as.numeric(public[1])
+public.n<-public[6]
+public.n<-as.numeric(unlist(public.n))
+
+
+```
+
+There was high reliability between items that asked about motivations based on *encouragement or requirements from a person's lab or P.I*. (`r reasonsz.a` with a 95% confidence interval of `r reasonsz.n[1]` , `r reasonsz.n[2]`). There was high reliability between items that asked about motivations about *requirements or encouragement from funding or journals* (`r motreq.a` with a 95% confidence interval of `r motreq.n[1]` , `r motreq.n[2]`). There was medium reliability between items that asked about motivations about *prestige* ( `r prest.a` with a 95% confidence interval of `r prest.n[1]` , `r prest.n[2]`). There was high reliability for items about motivations based on the public good (`r public.a` with a 95% confidence interval of `r public.n[1]` , `r public.n[2]`). There was poor reliability for the items about self motivations to *cooperate with other researchers* (`r e.a` with a 95% confidence interval of `r e.n[1]` , `r e.n[2]`). There was poor reliability for the items about others' motivations to *cooperate with other researchers* ( `r f.a` with a 95% confidence interval of `r f.n[1]` , `r f.n[2]`)
+
+Because there was poor reliability in the cooperation questions, we looked at each of the four questions separately in analyses below. First, we asked whether people think that others are motivated by different reasons to engage in open science practices compared to themselves.
+
+## Do participants think that other people are motivated to share for different reasons than themselves?
+
+To investigate whether people have different ideas about why they compared to other people in their field engage in open science, we used the package brms [@bürkner2017] to compare a model that included an interaction between the specific motivation and whether the participants were answering about themselves or others and a model that did not include this interaction.
+
+```{r, echo=FALSE,fig.align = 'center',echo=FALSE,warnings=FALSE,include=FALSE}
+
+#First we'll transform the data into 'long' format
+
+##
+
+Long_reasons <- gather(TEST_data_S2, condition, measurement, other_MS_require:self_materials_lab, factor_key=TRUE)
+
+#make a three new columns for 'self/other', type of thing shared, and reason.
+for (i in 1:nrow(Long_reasons)) {
+  if (grepl("self", Long_reasons$condition[i]) == TRUE) {
+    Long_reasons$relation[i] <- "self"
+  }
+  else if (grepl("other", Long_reasons$condition[i]) == TRUE) {
+    Long_reasons$relation[i] <- "other"
+  }
+  
+}
+
+
+for (i in 1:nrow(Long_reasons)) {
+  if (grepl("MS", Long_reasons$condition[i]) == TRUE) {
+    Long_reasons$type[i] <- "MS"
+  }
+  else if (grepl("materials", Long_reasons$condition[i]) == TRUE) {
+    Long_reasons$type[i] <- "materials"
+  }
+}
+
+
+for (i in 1:nrow(Long_reasons)) {
+if (grepl("public", Long_reasons$condition[i]) == TRUE) {
+    Long_reasons$reason[i] <- "public"
+  }
+  else if (grepl("cooper", Long_reasons$condition[i]) == TRUE) {
+    Long_reasons$reason[i] <- "zcooper"
+  }
+  else if (grepl("require", Long_reasons$condition[i]) == TRUE) {
+    Long_reasons$reason[i] <- "Ins_require"
+  }
+   else if (grepl("lab", Long_reasons$condition[i]) == TRUE) {
+    Long_reasons$reason[i] <- "Lab_require"
+  }
+    else if (grepl("prestige", Long_reasons$condition[i]) == TRUE) {
+    Long_reasons$reason[i] <- "prestige"
+  }
+  
+}
+
+Long_reasons$measurement<-ordered(factor(Long_reasons$measurement))
+Long_reasons$measurement_num<-as.numeric(Long_reasons$measurement)
+
+Long_reasons[Long_reasons == NA] <- NA
+
+
+#model for whether there are interactions between self/other and reasons
+
+##Uncomment this if you want to run the model
+
+# fit_reasons <- brm( formula = measurement ~ reason*relation+type+(1|ID), Long_reasons, family = cumulative('probit'),save_all_pars = TRUE,inits = 0,iter= 6000, warmup= 500)
+# #
+# fit_reasons_null <- brm( formula = measurement ~ reason+relation+type+(1|ID), Long_reasons, family = cumulative('probit'),save_all_pars = TRUE,inits = 0,iter= 6000, warmup= 500)
+# #
+# saveRDS(fit_reasons,file="fit_reasons.rds")
+# saveRDS(fit_reasons_null,file="fit_reasons_null.rds")
+
+##Or load this if you do not want to run the model
+fit_reasons <-readRDS(file="fit_reasons.rds")
+fit_reasons_null <-readRDS(file="fit_reasons_null.rds")
+
+BF_reasons<-bayes_factor(fit_reasons,fit_reasons_null)
+
+me<-(conditional_effects(fit_reasons,"reason:relation",points=TRUE,categorical=FALSE,probs=c(.025,.975),jitter_width = .5))
+x<-plot(me,plot=FALSE)[[1]] 
+
+plot_<-x+ylim(1,5)+
+  theme(panel.grid.major = element_line(colour="gray"), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_blank(),panel.grid.major.x = element_blank())+xlab("Motivations")+ylab("How much does X affect your/others' decisions to share?")+guides(color=guide_legend(title="Other/Self"))+scale_x_discrete(labels=c("Ins_require" = "Institutional \n Requirements", "Lab_require" = "Lab\n Requirements", "prestige" = "Prestige", "public" = "Public Good","zcooper"="Cooperation w/ \n Other Researchers"))
+
+Long_reasons_no<-dplyr::filter(Long_reasons, measurement>1)
+
+scatter<-
+  ggplot(data=Long_reasons_no,aes(x=reason,y=measurement,color=relation))+
+  theme(panel.grid.major = element_line(colour="gray"), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.line = element_blank(),panel.grid.major.x = element_blank())+
+geom_point(alpha=0.2, size=.4, stroke=1, position=position_jitter(width=0.3,height=0.4))+
+labs(x="Motivations",y="How much does this affect decisions share?")+guides(color=guide_legend(title="Other/Self"))+scale_x_discrete(labels=c("Ins_require" = "Institutional \n Requirements", "Lab_require" = "Lab\n Requirements", "prestige" = "Prestige", "public" = "Public Good","zcooper"="Cooperation w/ \n Other Researchers"))
+
+
+
+```
+
+```{r, echo=FALSE,fig.align = 'center',echo=FALSE,warnings=FALSE}
+
+plot_
+```
+
+When participants reasoned about themselves compared to others they rated the different motivations in different ways (BF=`r BF_reasons[1]`) Participants think others are more motivated by institutional requirements, lab requirements, and prestige. They say they are more motivated by public good, and to cooperate with other researchers.
+
+```{r, echo=FALSE,fig.align = 'center',echo=FALSE,warnings=FALSE,include=FALSE}
+
+ROPEC(fit_reasons,"Motivations to Practice Open Science")
+```
+
+## How do ideas about social dynamics and ideas about motivations predict participant's plans to share their materials?
+
+Next we did exploratory analysis to ask whether participant's perceptions of the social dynamics in their field, their perceptions of motivations to engage in open science, or a interaction between the two predicted their own plans to share manuscripts, materials, or whether they think its important to do so. In each case, we use the package brms to fit a cumulative model which is appropriate for fitting models with predictors that use likert scales. All models were checked using the pp_check function in brms. See supplemental materials for the results of these checks. We then run a probability of direction test as a first pass to ask whether the factors have an affect on the outcome variable. The higher these numbers are the more likely it is that the factor has an effect. Our analyses are informed by the the factor analysis / reliability analysis above. First we test a model that asks whether participants' ideas about the social dynamics in their field correlates with their decisions to share manuscripts and materials and whether it informs their opinions about whether it is important to do so.
+
+## Perceptions of social dynamics and open science practices attitudes
+
+### Plans: Do participants' ideas about social dynamics correlate with whether they plan to share their manuscript or materials?
+
+We use the factor that combines the eight items about Hierarchy and Zero-Sum Competition, and keep the two questions about Cooperation and Collaboration separate since they did not load onto a factor.
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+priors = c(prior(normal(-0.97, 1), class = Intercept, coef = 1),
+            prior(normal(-0.43, 1), class = Intercept, coef = 2),
+            prior(normal( 0.00, 1), class = Intercept, coef = 3),
+            prior(normal( 0.43, 1), class = Intercept, coef = 4))
+##Uncomment this if you want to run the model
+
+# fit_sd <- brm(formula = plan_MS ~ Hierarchy_ZeroSum+Collaborate+Cooperate+Identify+LogYears, 
+#               TEST_data_S2, family = cumulative('probit'),
+#               save_all_pars = TRUE,
+#               inits = 0,
+#               prior=priors)
+
+
+# # # 
+# # # marginal_effects(fit_sd, 'Collaborate', categorical = TRUE)
+# # # 
+# saveRDS(fit_sd,file="fit_sd.rds")
+
+# ##Or load this if you do not want to run the model
+fit_sd <-readRDS(file="fit_sd.rds")
+
+
+#Uncomment the following if you want to run and save the model
+# fit_sd_materials <- brm( formula = plan_materials ~ Hierarchy_ZeroSum+Collaborate+Cooperate+Identify+LogYears, 
+#                          TEST_data_S2, 
+#                          save_all_pars = TRUE,
+#                          family = cumulative('probit'),
+#                          inits = 0,
+#                           prior=priors)
+# # # 
+# saveRDS(fit_sd_materials,file="fit_sd_materials.rds")
+
+#Or load this:
+fit_sd_materials <-readRDS(file="fit_sd_materials.rds")
+
+
+```
+
+#### Manuscripts
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+pd2<-p_direction(fit_sd)
+
+p3<-plot(pd2) +
+  ggplot2::labs(title = "Do you plan to share your next manuscript?")+xlim(-1,1)
+pd2
+p3
+
+#Since Identity may have an effect we will calculate a Bayes Facor. 
+# fit_sd_nullI <-brm(formula = plan_MS ~ Hierarchy_ZeroSum+Collaborate+Cooperate+LogYears, 
+#                TEST_data_S2, family = cumulative('probit'),
+#               save_all_pars = TRUE,
+#               inits = 0,
+#              prior=priors)
+# 
+# saveRDS(fit_sd_nullI,file="fit_sd_nullI.rds")
+
+fit_sd_nullI <-readRDS(file="fit_sd_nullI.rds")
+
+bf_I<-bayes_factor(fit_sd,fit_sd_nullI)
+
+```
+
+```{r,echo=FALSE,fig.align = 'center'}
+pd2
+p3
+
+```
+
+Based on the pd calculations the only factor that may influence people is how much they identify with their field, however when we compare a model that does and does not include this factor, we find inconclusive evidence (BF=`r bf_I[1]`). Thus the way that participants perceived social dynamics in their field did not have an affect on their plans to share manuscripts.
+
+#### Materials
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+pd2<-p_direction(fit_sd_materials)
+
+p3<-plot(pd2) +
+  ggplot2::labs(title = "Do you plan to share your materials?")+xlim(-1,1)
+pd2
+p3
+
+
+```
+
+```{r,echo=FALSE,fig.align = 'center'}
+pd2
+p3
+
+```
+
+None of the factors influenced participants answers to whether they plan to share their materials.
+
+### Importance: Do participants' ideas about social dynamics correlate with whether they think it is important to share their manuscripts and materials?
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+
+##Uncomment this if you want to run the model
+TEST_data_S2$important_manuscripts<-ordered(factor(TEST_data_S2$important_manuscripts))
+
+
+# fit_sd_impMS <- brm(formula = important_manuscripts ~ Hierarchy_ZeroSum+
+#                       Collaborate+Cooperate+Identify+LogYears,
+#                     TEST_data_S2,
+#                     family = cumulative("probit"),
+#                     save_all_pars = TRUE,
+#                     inits = 0,iter=6000)
+# 
+# 
+# saveRDS(fit_sd_impMS,file="fit_sd_impMS.rds")
+
+
+##Or load this if you do not want to run the model
+fit_sd_impMS <-readRDS(file="fit_sd_impMS.rds")
+
+##Uncomment this if you want to run the model
+# fit_sd_imp_mat <- brm(formula = important_materials ~Hierarchy_ZeroSum+Collaborate+
+# Cooperate+Identify+LogYears,
+#                       TEST_data_S2,
+#                       family = cumulative("probit"),
+#                       save_all_pars = TRUE,
+#                       inits = 0,
+#                       iter=6000)
+# 
+# saveRDS(fit_sd_imp_mat,file="fit_sd_imp_mat.rds")
+
+##Or load this if you do not want to run the model
+fit_sd_imp_mat <-readRDS(file="fit_sd_imp_mat.rds")
+
+
+
+
+```
+
+#### Manuscripts
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+pd2<-p_direction(fit_sd_impMS)
+
+p3<-plot(pd2) +
+  ggplot2::labs(title = "Is it important that researchers share their manuscripts?")+xlim(-1,1)
+pd2
+p3
+
+
+```
+
+```{r,echo=FALSE,fig.align = 'center'}
+pd2
+p3
+
+```
+
+Based on the pd calculations there are no factors that have an effect on whether participants said it was important to sahare manuscripts.
+
+#### Materials
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+pd2<-p_direction(fit_sd_imp_mat)
+
+p3<-plot(pd2) +
+  ggplot2::labs(title = "Do you plan to share your materials?")+xlim(-1,1)
+pd2
+p3
+
+#we will calculate a bayes factor for the effect of 'Collaborate' based on the pd analysis. 
+#first we will fit a null model
+##Uncomment this if you want to run the model
+# fit_sd_imp_mat_n <- brm(formula = important_materials ~Hierarchy_ZeroSum+
+# Cooperate+Identify+LogYears,
+#                       TEST_data_S2,
+#                       family = cumulative("probit"),
+#                       save_all_pars = TRUE,
+#                       inits = 0,
+#                       iter=6000)
+# 
+# saveRDS(fit_sd_imp_mat_n,file="fit_sd_imp_mat_n.rds")
+
+##Or load this if you do not want to run the model
+fit_sd_imp_mat_n <-readRDS(file="fit_sd_imp_mat_n.rds")
+
+BF_C<-bayes_factor(fit_sd_imp_mat,fit_sd_imp_mat_n)
+
+```
+
+```{r,echo=FALSE,fig.align = 'center'}
+pd2
+p3
+
+```
+
+Based on the pd analysis none of the factors seem to have an effect on whether people said that it was important to share materials, with the exception of the 'Collaborate' factor. Thus we calculated a Bayes Factor, but it was inconclusive (BF=`r BF_C[1]`).
+
+Next we will ask about whether participants' perceptions of open science (their own and others' motivations when they do share) predict their answers to whether they plan to share.
+
+## Motivations and open science practices/attitudes
+
+### Plans: Do participants' ideas about motivations correlate with whether they plan to share their manuscripts or materials?
+
+Here we will use the factors that fell out of the analysis we did for motivations -- prestige (all items); lab encouragement/requirements (all items); institution encouragement/requirements; public good; and we will keep all of the cooperation questions separate and use the questions about manuscripts when asking about manuscripts and the questions about materials when asking about materials.
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+##Uncomment this if you want to run the model
+
+# fit_reasons_MS <- brm(formula = plan_MS ~ reason_prestige+reason_lab+reason_require+reason_public+other_MS_cooper+self_MS_cooper+Identify+LogYears,
+#                       TEST_data_S2,
+#                       family = cumulative("probit"),
+#                       save_all_pars = TRUE,
+#                       inits = 0,
+#                       prior=priors)
+# # # #
+# saveRDS(fit_reasons_MS,file="fit_reasons_MS.rds")
+
+
+
+##Or load this if you do not want to run the model
+fit_reasons_MS <-readRDS(file="fit_reasons_MS.rds")
+
+# fit_reasons_Mat <- brm(formula = plan_materials ~ reason_prestige+reason_lab+reason_require+reason_public+other_materials_cooper+self_materials_cooper+Identify+LogYears,
+#                        TEST_data_S2,
+#                        family = cumulative('probit'),
+#                        save_all_pars = TRUE,
+#                        inits = 0,
+#                        iter=6000)
+# #
+# saveRDS(fit_reasons_Mat,file="fit_reasons_Mat.rds")
+
+##Or load this if you do not want to run the model
+fit_reasons_Mat <-readRDS(file="fit_reasons_Mat.rds")
+
+```
+
+#### Manuscripts
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+pd2<-p_direction(fit_reasons_MS)
+
+p3<-plot(pd2) +
+  ggplot2::labs(title = "Do you plan to share your next manuscript?")+xlim(-1,1)
+pd2
+p3
+
+#Since reason_public,_other_MS_cooper,and Identify may have an effect we will calculate a Bayes Facor for each. 
+
+#reason_public
+# fit_reasons_MS_np <-brm(formula = plan_MS ~ reason_prestige+reason_lab+reason_require+other_MS_cooper+self_MS_cooper+Identify+LogYears,
+#                TEST_data_S2, family = cumulative('probit'),
+#               save_all_pars = TRUE,
+#               inits = 0,
+#              prior=priors)
+# 
+# saveRDS(fit_reasons_MS_np,file="fit_reasons_MS_np.rds")
+
+fit_reasons_MS_np <-readRDS(file="fit_reasons_MS_np.rds")
+
+#other_MS_cooper
+# fit_reasons_MS_nc <-brm(formula = plan_MS ~ reason_prestige+reason_lab+reason_require+reason_public+self_MS_cooper+Identify+LogYears,
+#                TEST_data_S2, family = cumulative('probit'),
+#               save_all_pars = TRUE,
+#               inits = 0,
+#              prior=priors)
+# 
+# saveRDS(fit_reasons_MS_nc,file="fit_reasons_MS_nc.rds")
+
+fit_reasons_MS_nc <-readRDS(file="fit_reasons_MS_nc.rds")
+
+#Identify
+# fit_reasons_MS_nI <-brm(formula = plan_MS ~ reason_prestige+reason_lab+reason_require+reason_public+other_MS_cooper+self_MS_cooper+LogYears,
+#                TEST_data_S2, family = cumulative('probit'),
+#               save_all_pars = TRUE,
+#               inits = 0,
+#              prior=priors)
+# 
+# saveRDS(fit_reasons_MS_nI,file="fit_reasons_MS_nI.rds")
+
+fit_reasons_MS_nI <-readRDS(file="fit_reasons_MS_nI.rds")
+
+bf_Co<-bayes_factor(fit_reasons_MS,fit_reasons_MS_nc)
+bf_P<-bayes_factor(fit_reasons_MS,fit_reasons_MS_np)
+bf_I<-bayes_factor(fit_reasons_MS,fit_reasons_MS_nI)
+
+
+```
+
+```{r,echo=FALSE,fig.align = 'center'}
+pd2
+p3
+
+```
+
+Based on the pd calculations, we calculated Bayes Factors. We find moderate evidence that the more a participant identifies with their field the more likely they plan to share their MS (BF=`r bf_I[1]`), we find strong evidence that the more someone thinks that public good is a motivation the more likely they plan to share their MS (BF=`r bf_P[1]`), and inconclusive evidence as to whether people think that the more others are motivated to cooperate the more likely they plan to share their MS (BF=`r bf_Co[1]`).
+
+#### Materials
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+pd2<-p_direction(fit_reasons_Mat)
+
+p3<-plot(pd2) +
+  ggplot2::labs(title = "Do you plan to share your materials?")+xlim(-1,1)
+pd2
+p3
+
+#lab 
+# fit_reasons_Mat_nL <- brm(formula = plan_materials ~ reason_prestige+reason_require+reason_public+other_materials_cooper+self_materials_cooper+Identify+LogYears,
+#                        TEST_data_S2,
+#                        family = cumulative('probit'),
+#                        save_all_pars = TRUE,
+#                        inits = 0,
+#                        prior=priors,
+#                        iter=6000)
+# # #
+#  saveRDS(fit_reasons_Mat_nL,file="fit_reasons_Mat_nL.rds")
+
+##Or load this if you do not want to run the model
+fit_reasons_Mat_nL <-readRDS(file="fit_reasons_Mat_nL.rds")
+
+## self_cooper
+# fit_reasons_Mat_nSMC <- brm(formula = plan_materials ~ reason_prestige+reason_lab+reason_require+reason_public+other_materials_cooper+Identify+LogYears,
+#                        TEST_data_S2,
+#                        family = cumulative('probit'),
+#                        save_all_pars = TRUE,
+#                        inits = 0,
+#                        iter=6000)
+# # #
+#  saveRDS(fit_reasons_Mat_nSMC,file="fit_reasons_Mat_nSMC.rds")
+
+##Or load this if you do not want to run the model
+fit_reasons_Mat_nSMC <-readRDS(file="fit_reasons_Mat_nSMC.rds")
+
+
+
+
+BF_sc=bayes_factor(fit_reasons_Mat,fit_reasons_Mat_nSMC)
+BF_nL=bayes_factor(fit_reasons_Mat,fit_reasons_Mat_nL)
+
+```
+
+```{r,echo=FALSE,fig.align = 'center'}
+pd2
+p3
+
+```
+
+Here we find evidence that people who say that lab requirements play a role in people's and their own decisions to share materials are more likely to say they plan to share materials (BF=`r BF_nL[1]`) and that people who say they share to cooperate with other researchers are more likely to share their materials (BF=`r BF_sc[1]`).
+
+### Importance: Do participants' reasons for sharing or their ideas about other participants' reasons correlate with whether they thinks its important to share?
+
+We will repeat the same analyses above, but ask whether participants' answers about motivations predicts participants' ideas about whether its important to share.
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+
+##Uncomment this if you want to run the model
+
+# fit_reasons_MS_imp <- brm(formula = important_manuscripts ~ reason_prestige+reason_lab+reason_require+reason_public+other_MS_cooper+self_MS_cooper+Identify+LogYears, 
+#                           TEST_data_S2,
+#                           family = cumulative("probit"),
+#                           save_all_pars = TRUE,
+#                           inits=0,
+#                           prior=priors)
+# # # #
+# saveRDS(fit_reasons_MS_imp,file="fit_reasons_MS_imp.rds")
+
+
+##Or load this if you do not want to run the model
+fit_reasons_MS_imp <-readRDS(file="fit_reasons_MS_imp.rds")
+
+
+# fit_reasons_Mat_imp <- brm(formula = important_materials ~ reason_prestige+reason_lab+reason_require+reason_public+other_materials_cooper+self_materials_cooper+Identify+LogYears, 
+#                            TEST_data_S2,
+#                            family = cumulative('probit'),
+#                            save_all_pars = TRUE,
+#                            inits=0,
+#                            prior=priors)
+# #
+# saveRDS(fit_reasons_Mat_imp,file="fit_reasons_Mat_imp.rds")
+
+
+##Or load this if you do not want to run the model
+fit_reasons_Mat_imp <-readRDS(file="fit_reasons_Mat_imp.rds")
+
+
+```
+
+#### Manuscripts
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+pd2<-p_direction(fit_reasons_MS_imp)
+
+p3<-plot(pd2) +
+  ggplot2::labs(title = "Is it important to share manuscripts?")+xlim(-1,1)
+pd2
+p3
+
+#Since reason_public,_other_MS_cooper,and Identify may have an effect we will calculate a Bayes Facor for each. 
+
+
+#other_MS_cooper
+# fit_reasons_MSimp_nc <-brm(formula = important_manuscripts ~ reason_prestige+reason_lab+reason_require+reason_public+self_MS_cooper+Identify+LogYears,
+#                TEST_data_S2, family = cumulative('probit'),
+#               save_all_pars = TRUE,
+#               inits = 0,
+#              prior=priors)
+# 
+# saveRDS(fit_reasons_MSimp_nc,file="fit_reasons_MSimp_nc.rds")
+
+fit_reasons_MSimp_nc <-readRDS(file="fit_reasons_MSimp_nc.rds")
+
+
+bf_CoIMP<-bayes_factor(fit_reasons_MS_imp,fit_reasons_MSimp_nc)
+
+
+
+```
+
+```{r,echo=FALSE,fig.align = 'center'}
+pd2
+p3
+
+```
+
+Based on the pd calculations, we calculated a bayes factor to ask about the effect on whether participants say others are motivated to share manuscripts to cooperate with other researchers, but found inconclusive evidence `r bf_CoIMP[1]`.
+
+#### Materials
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+pd2<-p_direction(fit_reasons_Mat_imp)
+
+p3<-plot(pd2) +
+  ggplot2::labs(title = "Is it important to share materials?")+xlim(-1,1)
+pd2
+p3
+
+
+
+
+## self_cooper
+# fit_reasons_Mat_imp_nsc <- brm(formula = important_materials ~ reason_prestige+reason_lab+reason_require+reason_public+other_materials_cooper+Identify+LogYears,
+#                            TEST_data_S2,
+#                            family = cumulative('probit'),
+#                            save_all_pars = TRUE,
+#                            inits=0,
+#                            prior=priors)
+# #
+# saveRDS(fit_reasons_Mat_imp_nsc,file="fit_reasons_Mat_imp_nsc.rds")
+
+##Or load this if you do not want to run the model
+fit_reasons_Mat_imp_nsc <-readRDS(file="fit_reasons_Mat_imp_nsc.rds")
+
+
+
+
+BF_impsc=bayes_factor(fit_reasons_Mat_imp,fit_reasons_Mat_imp_nsc)
+
+
+```
+
+```{r,echo=FALSE,fig.align = 'center'}
+pd2
+p3
+
+```
+
+Here we find evidence that people who say that they share materials to cooperate with other researchers are more likely to say that they think sharing materials is important (BF=`r BF_impsc[1]`).
+
+## Interactions between perceptions of social dynamics and motivations
+
+### Plans: Do beliefs about social dynamics and motivations interact to predict participants' plans to share (including only self cooperation ratings)?
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+ TEST_data_S2$plan_MSf<-ordered(factor(TEST_data_S2$plan_MS))
+
+##Uncomment this if you want to run the model
+# TEST_data_S2$plan_MS<-ordered(TEST_data_S2$plan_MS)
+# 
+# fit_interact<- brm(plan_MS ~ Hierarchy_ZeroSum*self_MS_cooper+Identify+LogYears, 
+#                    data=TEST_data_S2 
+#                    family=cumulative(probit),
+#                    save_all_pars = TRUE, 
+#                    iter= 6000, 
+#                    warmup= 1000, 
+#                    thin= 1,
+#                    inits = "0")
+# #
+# #
+# saveRDS(fit_interact,file="fit_interact.rds")
+
+##Or load this if you do not want to run the model
+fit_interact <-readRDS(file="fit_interact.rds")
+# 
+
+
+# TEST_data_S2$plan_materials<-ordered(TEST_data_S2$plan_materials)
+
+# fit_interact_mat <- brm( formula = plan_materials ~ Hierarchy_ZeroSum*self_materials_cooper+Identify+LogYears, 
+#                          TEST_data_S2 
+#                          family = cumulative('probit'),
+#                          save_all_pars = TRUE,
+#                          inits = "0",
+#                          prior=priors)
+# # # # #
+# saveRDS(fit_interact_mat,file="fit_interact_mat.rds")
+
+##Or load this if you do not want to run the model
+fit_interact_mat<-readRDS(file="fit_interact_mat.rds")
+
+
+pp_interact<-pp_check(fit_interact)
+pp_int_mat<-pp_check(fit_interact_mat)
+
+plot_grid(pp_interact,pp_int_mat, ncol = 2, nrow = 2,scale=.9)
+
+
+```
+
+#### Manuscripts
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+pd2<-p_direction(fit_interact)
+
+p3<-plot(pd2) +
+  ggplot2::labs(title = "Do you plan to share your next manuscript?")+xlim(-1,1)
+pd2
+p3
+
+
+
+```
+
+```{r,echo=FALSE,fig.align = 'center'}
+pd2
+p3
+
+```
+
+#### Materials
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+pd2<-p_direction(fit_interact_mat)
+
+p3<-plot(pd2) +
+  ggplot2::labs(title = "Do you plan to share your materials?")+xlim(-1,1)
+pd2
+p3
+
+
+
+```
+
+```{r,echo=FALSE,fig.align = 'center'}
+pd2
+p3
+
+```
+
+We don't find any evidence of an interaction between whether someone says they share materials to cooperate with others and how hierarchical/zero-sum they think their field is on either plans to share manuscripts or plans to share materials.
+
+### Importance: Do participants' ideas of social dynamics and ideas about reasons interact to predict whether they say its important to share? (including only self cooperation ratings)
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+##Uncomment this if you want to run the model
+# TEST_data_S2$plan_MS<-ordered(TEST_data_S2$plan_MS)
+# 
+# fit_interact_imp<- brm(important_manuscripts ~ Hierarchy_ZeroSum*self_MS_cooper+Identify+LogYears, 
+#                        data=TEST_data_S2 
+#                        family=cumulative(probit),
+#                        save_all_pars = TRUE, 
+#                        iter= 6000, warmup= 1000, 
+#                        thin= 1,
+#                        inits = "0",
+#                        prior=priors)
+# # # #
+# # # #
+# saveRDS(fit_interact_imp,file="fit_interact_imp.rds")
+
+##Or load this if you do not want to run the model
+fit_interact_imp <-readRDS(file="fit_interact_imp.rds")
+# 
+
+# TEST_data_S2$plan_materials<-ordered(TEST_data_S2$plan_materials)
+
+# fit_interact_mat_imp <- brm( formula = important_materials ~ Hierarchy_ZeroSum*self_materials_cooper+Identify+LogYears, 
+#                              TEST_data_S2 
+#                              family = cumulative('probit'),
+#                              save_all_pars = TRUE,
+#                              inits = "0",
+#                              prior=priors)
+# # # # # #
+# saveRDS(fit_interact_mat_imp,file="fit_interact_mat_imp.rds")
+
+##Or load this if you do not want to run the model
+fit_interact_mat_imp <-readRDS(file="fit_interact_mat_imp.rds")
+
+
+
+
+
+```
+
+#### Manuscript
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+pd2<-p_direction(fit_interact_imp)
+
+p3<-plot(pd2) +
+  ggplot2::labs(title = "Is it important so share manuscripts?")+xlim(-1,1)
+pd2
+p3
+
+
+```
+
+```{r,echo=FALSE,fig.align = 'center'}
+pd2
+p3
+
+```
+
+#### Materials
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+pd2<-p_direction(fit_interact_mat_imp)
+
+p3<-plot(pd2) +
+  ggplot2::labs(title = "Is it important so share materials?")+xlim(-1,1)
+pd2
+p3
+
+
+```
+
+```{r,echo=FALSE,fig.align = 'center'}
+pd2
+p3
+
+```
+
+We don't find any evidence of an interaction effect on whether people say its important to share manuscripts or materials. Now we will investigate whether we find evidence for a three way interaction between people's perceptions of the social dynamics of their field and whether they say they share to cooperate with others and whether others say they share to cooperate with others.
+
+## 3-way interaction between social dynamics, self cooperation and other cooperation
+
+### Plans: Do beliefs about social dynamics and reasons interact to predict participants' plans to share? Including a 2 way interaction with self cooperation and other cooperation
+
+```{r, echo=FALSE,fig.align = 'center'}
+ ##Uncomment this if you want to run the model
+TEST_data_S2$plan_MS<-ordered(TEST_data_S2$plan_MS)
+
+
+# 
+# fit3_interact<- brm(plan_MS ~ Hierarchy_ZeroSum*self_MS_cooper*other_MS_cooper+Identify+LogYears,
+#                     data=TEST_data_S2,
+#                     family=cumulative(probit),
+#                     save_all_pars = TRUE,
+#                     iter= 6000,
+#                     warmup= 1000,
+#                     thin= 1,
+#                     init= "0",
+#                     prior = priors)
+# # #
+# # #
+
+
+# saveRDS(fit3_interact,file="fit3_interact.rds")
+
+##Or load this if you do not want to run the model
+fit3_interact <-readRDS(file="fit3_interact.rds")
+# 
+
+# TEST_data_S2$plan_materials<-ordered(TEST_data_S2$plan_materials)
+
+# fit3_interact_mat <- brm( 
+#   formula = plan_materials ~Hierarchy_ZeroSum*self_materials_cooper*other_MS_cooper+Identify+LogYears, 
+#   TEST_data_S2 family = cumulative('probit'),
+#   save_all_pars = TRUE,
+#   inits = "0",
+#   prior=priors)
+# # # # #
+# saveRDS(fit3_interact_mat,file="fit3_interact_mat.rds")
+
+##Or load this if you do not want to run the model
+fit3_interact_mat<-readRDS(file="fit3_interact_mat.rds")
+
+
+
+```
+
+#### Manuscripts
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+pdfit3_interact<-p_direction(fit3_interact)
+
+p3fit3_interact<-plot(pdfit3_interact) +
+  ggplot2::labs(title = "Do you plan to share your manuscript?")
+
+p3fit3_interact
+
+pdfit3_interact
+
+#Calculating Bayes Fators wil a null model that doesn't have the three way interaction
+
+
+
+fit3_interact_n3 <-readRDS(file="fit3_interact_n3.rds")
+
+
+# fit3_interact_nh<- brm(plan_MS ~ self_MS_cooper*other_MS_cooper+Identify+LogYears,
+#                     data=TEST_data_S2,
+#                     family=cumulative(probit),
+#                     save_all_pars = TRUE,
+#                     iter= 6000,
+#                     warmup= 1000,
+#                     thin= 1,
+#                     init= "0",
+#                     prior = priors)
+# 
+# saveRDS(fit3_interact_nh,file="fit3_interact_nh.rds")
+fit3_interact_nh <-readRDS(file="fit3_interact_nh.rds")
+
+# 
+# fit3_interact_nother_MS<- brm(plan_MS ~ self_MS_cooper*Hierarchy_ZeroSum+Identify+LogYears,
+#                     data=TEST_data_S2,
+#                     family=cumulative(probit),
+#                     save_all_pars = TRUE,
+#                     iter= 6000,
+#                     warmup= 1000,
+#                     thin= 1,
+#                     init= "0",
+#                     prior = priors)
+# saveRDS(fit3_interact_nother_MS,file="fit3_interact_nother_MS.rds")
+fit3_interact_nother_MS <-readRDS(file="fit3_interact_nother_MS.rds")
+# fit3_interact_nself_MS<- brm(plan_MS ~ other_MS_cooper*Hierarchy_ZeroSum+Identify+LogYears,
+#                     data=TEST_data_S2,
+#                     family=cumulative(probit),
+#                     save_all_pars = TRUE,
+#                     iter= 6000,
+#                     warmup= 1000,
+#                     thin= 1,
+#                     init= "0",
+#                     prior = priors)
+# saveRDS(fit3_interact_nself_MS,file="fit3_interact_nself_MS.rds")
+
+fit3_interact_nself_MS <-readRDS(file="fit3_interact_nself_MS.rds")
+# # #
+# # #
+# 
+# 
+
+BF_nother<-bayes_factor(fit3_interact,fit3_interact_nother_MS)
+BF_nh<-bayes_factor(fit3_interact,fit3_interact_nh)
+BF_nself<-bayes_factor(fit3_interact,fit3_interact_nself_MS)
+BF_n3<-bayes_factor(fit3_interact,fit3_interact_n3)
+```
+
+```{r}
+p3fit3_interact
+
+pdfit3_interact
+```
+
+Based on the pd analyses, we calculated Bayes Factors for several of the factors in our model. When we include the three-way interaction we find strong evidence that a person's perceptions of social dynamics in their field (BF=`r BF_nh[1]`), whether they say they share to cooperate with other researchers (BF=`r BF_nself[1]`) and whether they think others share to cooperate with other researchers (BF=`r BF_nother[1]`). However, we find evidence that the model that does not include the 3-way interaction is a better fit than one that doess not (BF=`r BF_n3[1]`).
+
+#### Materials
+
+```{r, echo=FALSE,fig.align = 'center'}
+
+pd_fit3_interact_mat<-p_direction(fit3_interact_mat)
+
+p3fit3_interact_mat<-plot(pd_fit3_interact_mat) +
+  ggplot2::labs(title = 'Do you plan to share your manuscript?')+xlim(-10,10)
+p3fit3_interact_mat
+
+pd_fit3_interact_mat
+
+```
+
+Since none of the pds are over 95% it seems unlikely that any of these interactions have an effect on whether people plan to share materials, however, they are trending in a similar direction as the effects on sharing manuscripts.
+
+### Importance: Do participants' ideas of social dynamics and ideas about reasons interact to predict whether they say its important to share? (Including self cooperation and other cooperation)
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+##Uncomment this if you want to run the model
+# TEST_data_S2$plan_MS<-ordered(TEST_data_S2$plan_MS)
+# 
+# fit3_interact_imp<- brm(important_manuscripts ~ Hierarchy_ZeroSum*self_MS_cooper*other_MS_cooper+Identify+LogYears, 
+#                         data=TEST_data_S2 
+#                         family=cumulative(probit),
+#                         save_all_pars = TRUE, 
+#                         iter= 6000, warmup= 1000, 
+#                         thin= 1,
+#                         inits = "0",
+# 
+# saveRDS(fit3_interact_imp,file="fit3_interact_imp.rds")
+
+##Or load this if you do not want to run the model
+fit3_interact_imp <-readRDS(file="fit3_interact_imp.rds")
+# 
+
+TEST_data_S2$plan_materials<-ordered(TEST_data_S2$plan_materials)
+# 
+# fit3_interact_mat_imp <- brm( formula = important_materials ~ Hierarchy_ZeroSum*self_materials_cooper*other_MS_cooper+Identify+LogYears, 
+#                               TEST_data_S2 
+#                               family = cumulative('probit'),
+#                               save_all_pars = TRUE,
+#                               inits = "0",
+#                               prior=priors)
+# # # # # # #
+# saveRDS(fit3_interact_mat_imp,file="fit3_interact_mat_imp.rds")
+
+##Or load this if you do not want to run the model
+fit3_interact_mat_imp <-readRDS(file="fit3_interact_mat_imp.rds")
+
+
+```
+
+#### Manuscripts
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+
+
+## PD Analysis
+
+pdfit3_interact_imp<-p_direction(fit3_interact_imp)
+
+p3fit3_interact_imp<-plot(pdfit3_interact_imp) +
+  ggplot2::labs(title = "Is it important to share manuscripts")
+
+pdfit3_interact_imp
+
+p3fit3_interact_imp
+
+```
+
+We don't find evidence that any of the factors influence people's answers on whether it is important to share manuscripts.
+
+#### Materials
+
+```{r, echo=FALSE,fig.align = 'center',include=FALSE}
+
+
+## PD Analysis
+
+pdfit3_interact_imp_mat<-p_direction(fit3_interact_mat_imp)
+
+p3fit3_interact_imp_mat<-plot(pdfit3_interact_imp_mat) +
+  ggplot2::labs(title = "Is it important to share materials?")
+
+pdfit3_interact_imp_mat
+
+p3fit3_interact_imp_mat
+
+
+# fit3_interact_mat_imp_n <- brm( formula = important_materials ~ Hierarchy_ZeroSum*other_MS_cooper+Identify+LogYears, 
+#                               TEST_data_S2,
+#                               family = cumulative('probit'),
+#                               save_all_pars = TRUE,
+#                               inits = "0",
+#                               prior=priors)
+# # # # # # # #
+# saveRDS(fit3_interact_mat_imp_n,file="fit3_interact_mat_imp_n.rds")
+
+##Or load this if you do not want to run the model
+fit3_interact_mat_imp_n <-readRDS(file="fit3_interact_mat_imp_n.rds")
+
+BF_n<-bayes_factor(fit3_interact_mat_imp,fit3_interact_mat_imp_n)
+
+```
+
+We do find strong evidence of including whether someone says they share materials to cooperate with other researchers on their answers for sharing materials (BF= `r BF_n[1]`).
+
+# Discussion
+
+In Study 2 we replicated our finding from Study 1, that most of the questions about social dynamics fall into 1 factor about hierarchy/zero-sum. We also found that people's reported motivations for sharing manuscripts and materials differ from their perceptions of why others share manuscripts and materials, seeing themselves as more motivated by prosocial motives (cooperating with other researchers, public good) and others as more motivated by requirements or prestige.
+
+Next we performed exploratory analyses, asking whether perceptions of social dynamics, people's reasons for sharing, people's perceptions of other people's reasons for sharing, were affected plans for or perceptions of sharing manuscripts and materials. There are hints in the data that people's own motivations for sharing and their perceptions of other people's motivations for sharing, especially when it comes to the extent to which people do so to cooperate with other researchers may correlate with their views. However, the results were inconsistent and were found using exploratory analysis. In Study 3 we plan to repeat the analyses we did in Study 2 to ask whether the effects found in Study 2 replicate in a representative sample with a very high participation rate.
+
+One reason as to why we found no relation between people's perceptions of social dynamics and their ideas about motivations were because the participants in Study 2 were self-selecting, and likely to be more supportive of open-science than a representative sample. Thus, in addition to the analyses we performed in Study 2, in Study 3 we will also compare people's plans and their importance ratings to ask whether the populations we tested in Studies 2 and 3 were different in regards to their support for open science.
+
+# Session Info
+
+```{r, echo=FALSE,fig.align = 'center'}
+sessionInfo()
+
+```

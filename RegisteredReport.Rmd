@@ -1,0 +1,103 @@
+---
+title             : "Registered Report: Researcher's Perceptions of Social Dynamics and Attitudes about Open Science "
+shorttitle        : "Social Dynamics Open Science"
+
+author: 
+  - name          : "Ashley J Thomas"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "43 Vassar, Cambridge"
+    email         : "ajthomas@mit.edu"
+    role:         # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
+      - "Conceptualization"
+      - "Writing - Original Draft Preparation"
+      - "Writing - Review & Editing"
+  - name          : "Rebecca Saxe"
+    affiliation   : "1,2"
+    role:
+      - "Writing - Review & Editing"
+      - "Supervision"
+
+affiliation:
+  - id            : "1"
+    institution   : "MIT"
+  - id            : "2"
+    institution   : "CREOS"
+
+
+abstract: 
+  When people join new groups, they must learn about the relevent social dynamics or 'rules of engagement' within those groups. Here we ask if academic researchers have intuitive thoeries about the social dynamics of their field. Next we ask if these intuitive theories correspond to decisions to engage in open science. Study 1, was an survey open to all academic researchers. We found that researchers did think about the social dynamics in their field and that these attitudes did not laod onto warmth and competence. Study 2 was open to all researchers in MIT's school of science. We replicated the findings from Study 1 and in exploratory analyses, asked whether these attitudes corresponded to open science practices. We did not find consistent evidence that the way people think about the social dynamics of their field correspond to the their attitudes toward nor engagment with open science practices. Study 3 was a representative sample from the School of Science at MIT. Here we will repeat the analyses conducted in Study 2.
+  
+  <!-- https://tinyurl.com/ybremelq -->
+  
+keywords          : "intuitive sociology, open scholarship, social dynamics, meta-science"
+wordcount         : "X"
+
+bibliography      : 
+
+floatsintext      : no
+linenumbers       : yes
+draft             : no
+mask              : no
+
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+
+classoption       : "man"
+output            : papaja::apa6_pdf
+bibliography: references.bib
+---
+
+```{r setup, include = FALSE}
+knitr.duplicate.label = "allow"
+library("papaja")
+r_refs("r-references.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+# Introduction
+
+When people join new social groups, they must learn the social dynamics or 'rules of engagement' within that group. Previous research that ask how people think about groups has largely focused on people's impressions of societal groups (e.g., 'wealthy people, 'immigrants'). This research has found robust evidence that people tend to think about groups along two dimensions: warmth (approximately: do I expect that group to have interests aligned with my own?), and competence (approximately: do I expect that group to be able to effectively achieve its own interests?) [@fiske2018]. In other words, this research has found that people stereotype societal groups, assuming that people who belong to that group to share a trait, role, or characteristic.
+
+However, when people are reasoning about their own groups they must also learn about the group's social dynamics or its 'rules of engagement'. We hypothesized that once people have joined a group, they intuitively represent the type of social processes that occur within the group. These social processes are distinct from warmth and competence since they apply to properties of interdependent interaction between individuals within the group, rather than to the group as a whole or individuals within that group.
+
+In three studies, we test this hypotheses in the specific case of academic researchers the majority of whom have been in their field for less than ten years. We hypothesize that once people become researchers in an academic field, the social dynamics between other researchers in that field define how to become successful and influential. Thus we hypothesize that researchers intuitively characterize the social dynamics in their own academic disciplines.
+
+In Study 1, we asked how researchers perceive the social dynamics, or 'rules of engagement', between people within their academic field. We hypothesized that people intuitively represent social processes and social structures that occur within their field. The results supported this hypothesis: people's answers to six questions about whether their field is competitive/hierarchical emerged as one dimension. Two other questions, about whether collaboration and cooperation are important for success, weakly emerged as another dimension. People's perceptions of social dynamics within groups were distinct from their perceptions about whether people in their field are warm and competent, suggesting that representing the social dynamics within a field is a seperate cognitive process than stereotyping.
+
+In Study 2 we replicated these findings, and also asked whether these intuitive theories affect people's behavior. We focus on open-science practices. While many people agree that open-science practices would positively impact the scientific process, these practices have not become the norm across many fields. Initiatives to encourage these practices often rely on intuitions about incentives, motivations, and social dynamics. We turned some of these intuitions into testable hypotheses.
+
+In Study 2 we performed a mixture of confirmatory and exploratory analysis. First, we replicated the findings from Study 1, finding that academic researchers represent the social dynamics of their field. Then we used factor analysis to ask about the structure in the survey items about open science practices, which were not included in Study 1. Finally, we explored ways to test the hypothesis that the dimensions of social dynamics relate to participants' plans to practice open science. Specifically, to the extent that a researcher has control over decisions to implement open science, we asked how their perceptions of the social dynamics of their field as well as perceptions about motivations to engage in open science relate to open science practices? Do these things relate in the same way or different ways to their ideas about how important these practices are? The reason we treated Study 2 as exploratory is that there are many possible ways to perform the analysis all of which depended on the structure of the data (e.g., how correlated individual items are with one another) as well as whether there were moderators or mediators in the correlations between the variables. Overall we did find that people's attitudes about open science were highly correlated, however we did not find consistent evidence that people's ideas about the social dynamics of their field predicted their open science attitudes or practices.
+
+In Study 3 we will repeat the analyses in Study 2 in a representative sample. First we will ask if we again replicate the findings from Studies 1 and 2 about people's attitudes about the social dynamics of their field. Next we will ask if we replicate the findings from Study 2 about people's practices and attitudes towards open science, and finally we will again test whether there are correlations between people's attitudes about the social dynamics of their field and their open science practices.
+
+# Study 1
+
+## Methods
+
+### Participants
+
+### Material
+
+### Procedure
+
+### Data analysis
+
+We used `r cite_r("r-references.bib")` for all our analyses.
+
+## Results
+
+# Study 2
+
+\newpage
+
+# References
+
+::: {#refs custom-style="Bibliography"}
+:::
